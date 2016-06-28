@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');//log 记录器
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var routers = require('./routers/index');
+var routes = require('./routers/index');
 var app = express();
 
 //设置端口
@@ -33,6 +33,14 @@ app.use(bodyParser.urlencoded({
 */
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname,'public')));
+
+routes(app);
+
+app.listen(app.get('port'),function(){
+	console.log('Express server listening on port ' + app.get('port'));
+})
 
 
 module.exports = app;
