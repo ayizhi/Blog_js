@@ -5,6 +5,10 @@ var logger = require('morgan');//log 记录器
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routers/index');
+var settings = require('./settings');
+var db = require('./models/db');
+var session = require('express-session');
+var MongoStore = require('connect-mongo')(session);
 var app = express();
 
 //设置端口
@@ -35,6 +39,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname,'public')));
+app.use(session({
+	secret: settings.cookieSecret,
+	key: settings.db,
+	cookie: {maxAge: 1000*60*60*24*30},//30 days
+	store: new MongoStore({
+		// db: settings.db,
+		// host: settings.host,
+		// port: settings.port
+		url: settings.dbUrl
+	})
+}));
+
+
+
 
 routes(app);
 
