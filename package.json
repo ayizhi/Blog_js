@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/zhangyiizhi/tryNode2.0_js/issues"
   },
-  "homepage": "https://github.com/zhangyiizhi/tryNode2.0_js#readme"
+  "homepage": "https://github.com/zhangyiizhi/tryNode2.0_js#readme",
+  "connect-flash": "0.1.1"
 }

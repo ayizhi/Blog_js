@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routers/index');
 var settings = require('./settings');
+var flash = require('connect-flash');
 var db = require('./models/db');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
@@ -16,6 +17,7 @@ app.set('port',process.env.PORT || 3000);
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs');
 
+app.use(flash());
 app.use(logger('dev'));
 /*
 express项目中通常使用body-parser进行post参数的解析，最常用的是其中的json和urlencoded的parser，可分别对以JSON格式的post参数和urlencoeded的post参数进行解析，均可获得一个JSON化的req.body，如：

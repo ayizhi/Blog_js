@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<%= title %>
-</body>
-</html>
+<%- include header%>
+<form method='post' action="/reg">
+	username: <input type="text" name="name"/><br/>
+	password: <input type="password" name="password"/><br/>
+	password-confirm: <input type="password" name="password-confirm"/><br/>
+	email: <input type="email" name="email"/><br/>
+<button class="submit">注册</button>
+</form>
+<%- include footer%>

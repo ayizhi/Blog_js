@@ -8,9 +8,11 @@ var db = mongoose.connect(dbUrl)//数据库实际操作
 //create 和 remove 操作返回 promise 对象， update 和 find 操作返回 query 对象，需要注意的是，使用 find前缀 方法（如：Model.findOneAndRemove、Model.findByIdAndRemove、Model.findByIdAndUpdate）时返回对象均为 query
 
 
+
+
 //创建model的封装
-exports.buildModel = function(model,json){
-	var theModel = new BuildModel(model,json);
+exports.buildModel = function(modelName,json){
+	var theModel = new BuildModel(modelName,json);
 	return theModel;
 };
 
@@ -28,7 +30,7 @@ function BuildModel(modelName,json){
 //model为实例化Entity对象，不是collection的名字
 //conditions为json
 exports.addData = function(model,conditions,callback){
-	model.create(json,function(err,result){
+	model.create(conditions,function(err,result){
 		if(err){
 			console.log(err)
 			callback({'status':false,'message':'add fail'},result);
@@ -100,7 +102,7 @@ exports.removeData = function(model,conditions,callback){
 //fields:需要查询的字段
 //options: {'skip':10,'limit':'10'...etc}
 //例子:Blog.find({}, null, {sort: {'_id': -1}, skip : ( pageIndex - 1 ) * pageSize, limit : pageSize },function)
-exports.findData = function(model,conditions,fields,options,callback){
+exports.findData = function(model,conditions,callback,fields,options){
 	model.find(conditions,fields,options,function(err,result){
 		if(err){
 			console.log(err);

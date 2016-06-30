@@ -5,7 +5,13 @@
 	<title>Document</title>
 </head>
 <body>
-	<%= title %>
+	<%- include header %>
+	<form action="/login" method='post'>
+		username: <input name="name" type="text"/><br/>
+		password: <input name="password" type="password"><br/>
+	<button class="submit">登录</button>
+	</form>
+	<%- include footer %>
 	
 </body>
 </html>
