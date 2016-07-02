@@ -2,7 +2,7 @@ var db = require('./db');
 
 module.exports = User;
 
-var Classmate = db.buildModel('classmate',{
+var Users = db.buildModel('user',{
 		name: {type: String},
 		password: {type: String},
 		email: {type: String},
@@ -22,12 +22,12 @@ User.prototype.save = function(callback){
 		email: this.email
 	};
 
-	db.addData(Classmate,user,callback);
+	db.addData(Users,user,callback);
 }
 
 //查
 User.get = function(name,callback){
-	db.findData(Classmate,{name:name},callback)
+	db.findData(Users,{name:name},callback)
 }
 
 
