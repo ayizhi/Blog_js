@@ -1,23 +1,33 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/user.js');
-var crypto = require('crypto');
 var Post = require('../models/post.js');
-
-
+var crypto = require('crypto');
 
 
 
 module.exports = function(app){
 	app.get('/',function(req,res){
-		console.log(req.session.user)
-		res.render('index',{
-			title: '主页' ,
-			user: req.session.user,
-			success: req.flash('success').toString(),
-			error: req.flash('error').toString(),
-		});
+		Post.get(null,function(reply,result){
+			var posts = [];
+			if(reply.status){
+				posts = result;
+			};
+
+			console.log(posts)
+			console.log(req.session.user);
+
+			res.render('index',{
+				title: '主页',
+				user: req.session.user,
+				posts: posts,
+				success: req.flash('success').toString(),
+				error: req.flash('error').toString() 
+			})
+
+		})
 	});
+
 	app.get('/reg',checknotLogin);
 	app.get('/reg',function(req,res){
 		res.render('reg',{
@@ -118,7 +128,17 @@ module.exports = function(app){
 
 	app.post('/post',checkLogin)
 	app.post('/post',function(req,res){
-
+		var currentUser = req.session.user;
+		console.log('asd asd asd sad ads as: ',currentUser)
+		var post = new Post(currentUser[0].name,req.body.title,req.body.post);
+		post.save(function(reply,result){
+			if(!reply.status){
+				req.flash('error',reply.message);
+				return res.redirect('/');
+			}
+			req.flash('success',reply.message);
+			res.redirect('/');
+		})
 	});
 
 	app.get('/logout',checkLogin)

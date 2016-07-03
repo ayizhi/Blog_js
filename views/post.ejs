@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<%= title %>
-</body>
-</html>
+<%- include header %>
+<form action="/post" method='post'>
+	标题：<br/>
+	<input name="title" type="text"/><br/>
+	正文：<br/>
+	<textarea name="post" id="" cols="100" rows="20"></textarea><br/>
+	<button class="submit"></button>
+</form>
+<%- include footer %>

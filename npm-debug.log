@@ -1,0 +1,261 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install', 'ejs' ]
+2 info using npm@2.14.12
+3 info using node@v4.3.1
+4 verbose install initial load of /Users/zhangyizhi/GitHub/tryNode2.0_js/package.json
+5 warn package.json trynode2.0@1.0.0 No description
+6 warn package.json trynode2.0@1.0.0 No README data
+7 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/body-parser/package.json
+8 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/connect/package.json
+9 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/connect-flash/package.json
+10 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/connect-mongo/package.json
+11 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/cookie-parser/package.json
+12 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/crypto/package.json
+13 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/debug/package.json
+14 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs/package.json
+15 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/express/package.json
+16 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/express-session/package.json
+17 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/mongoose/package.json
+18 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/morgan/package.json
+19 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/serve-favicon/package.json
+20 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/session-mongoose/package.json
+21 info package.json connect-mongo@1.2.1 No README data
+22 info package.json connect-flash@0.1.1 No license field.
+23 info package.json session-mongoose@0.5.2 No license field.
+24 info package.json crypto@0.0.3 crypto is also the name of a node core module.
+25 info package.json crypto@0.0.3 No license field.
+26 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/package.json
+27 verbose install ejs is installed as 2.4.2
+28 silly cache add args [ 'ejs', null ]
+29 verbose cache add spec ejs
+30 silly cache add parsed spec Result {
+30 silly cache add   raw: 'ejs',
+30 silly cache add   scope: null,
+30 silly cache add   name: 'ejs',
+30 silly cache add   rawSpec: '',
+30 silly cache add   spec: 'latest',
+30 silly cache add   type: 'tag' }
+31 silly addNamed ejs@latest
+32 verbose addNamed "latest" is being treated as a dist-tag for ejs
+33 info addNameTag [ 'ejs', 'latest' ]
+34 silly mapToRegistry name ejs
+35 silly mapToRegistry using default registry
+36 silly mapToRegistry registry https://registry.npmjs.org/
+37 silly mapToRegistry uri https://registry.npmjs.org/ejs
+38 verbose addNameTag registry:https://registry.npmjs.org/ejs not in flight; fetching
+39 verbose request uri https://registry.npmjs.org/ejs
+40 verbose request no auth needed
+41 info attempt registry request try #1 at 15:24:13
+42 verbose request id a7c8c1c966c7829b
+43 verbose etag "EK7ZHWH3B4U2Y1HE5P48XTPMP"
+44 http request GET https://registry.npmjs.org/ejs
+45 http 304 https://registry.npmjs.org/ejs
+46 verbose headers { date: 'Sun, 03 Jul 2016 07:24:15 GMT',
+46 verbose headers   via: '1.1 varnish',
+46 verbose headers   'cache-control': 'max-age=300',
+46 verbose headers   etag: '"EK7ZHWH3B4U2Y1HE5P48XTPMP"',
+46 verbose headers   age: '171',
+46 verbose headers   connection: 'keep-alive',
+46 verbose headers   'x-served-by': 'cache-lcy1123-LCY',
+46 verbose headers   'x-cache': 'HIT',
+46 verbose headers   'x-cache-hits': '1',
+46 verbose headers   'x-timer': 'S1467530655.073395,VS0,VE0',
+46 verbose headers   vary: 'Accept-Encoding' }
+47 silly get cb [ 304,
+47 silly get   { date: 'Sun, 03 Jul 2016 07:24:15 GMT',
+47 silly get     via: '1.1 varnish',
+47 silly get     'cache-control': 'max-age=300',
+47 silly get     etag: '"EK7ZHWH3B4U2Y1HE5P48XTPMP"',
+47 silly get     age: '171',
+47 silly get     connection: 'keep-alive',
+47 silly get     'x-served-by': 'cache-lcy1123-LCY',
+47 silly get     'x-cache': 'HIT',
+47 silly get     'x-cache-hits': '1',
+47 silly get     'x-timer': 'S1467530655.073395,VS0,VE0',
+47 silly get     vary: 'Accept-Encoding' } ]
+48 verbose etag https://registry.npmjs.org/ejs from cache
+49 verbose get saving ejs to /Users/zhangyizhi/.npm/registry.npmjs.org/ejs/.cache.json
+50 silly addNameTag next cb for ejs with tag latest
+51 silly addNamed ejs@2.4.2
+52 verbose addNamed "2.4.2" is a plain semver version for ejs
+53 silly cache afterAdd ejs@2.4.2
+54 verbose afterAdd /Users/zhangyizhi/.npm/ejs/2.4.2/package/package.json not in flight; writing
+55 verbose afterAdd /Users/zhangyizhi/.npm/ejs/2.4.2/package/package.json written
+56 silly install resolved [ { name: 'ejs',
+56 silly install resolved     description: 'Embedded JavaScript templates',
+56 silly install resolved     keywords: [ 'template', 'engine', 'ejs' ],
+56 silly install resolved     version: '2.4.2',
+56 silly install resolved     author:
+56 silly install resolved      { name: 'Matthew Eernisse',
+56 silly install resolved        email: 'mde@fleegix.org',
+56 silly install resolved        url: 'http://fleegix.org' },
+56 silly install resolved     contributors: [ [Object] ],
+56 silly install resolved     license: 'Apache-2.0',
+56 silly install resolved     main: './lib/ejs.js',
+56 silly install resolved     repository: { type: 'git', url: 'git://github.com/mde/ejs.git' },
+56 silly install resolved     bugs: { url: 'https://github.com/mde/ejs/issues' },
+56 silly install resolved     homepage: 'https://github.com/mde/ejs',
+56 silly install resolved     dependencies: {},
+56 silly install resolved     devDependencies:
+56 silly install resolved      { browserify: '^8.0.3',
+56 silly install resolved        istanbul: '~0.3.5',
+56 silly install resolved        jake: '^8.0.0',
+56 silly install resolved        jsdoc: '^3.3.0-beta1',
+56 silly install resolved        'lru-cache': '^2.5.0',
+56 silly install resolved        mocha: '^2.1.0',
+56 silly install resolved        rimraf: '^2.2.8',
+56 silly install resolved        'uglify-js': '^2.4.16' },
+56 silly install resolved     engines: { node: '>=0.10.0' },
+56 silly install resolved     scripts:
+56 silly install resolved      { test: 'mocha',
+56 silly install resolved        sample: 'npm install express && node sample/index.js',
+56 silly install resolved        coverage: 'istanbul cover node_modules/mocha/bin/_mocha',
+56 silly install resolved        doc: 'rimraf out && jsdoc -c jsdoc.json lib/* docs/jsdoc/*',
+56 silly install resolved        devdoc: 'rimraf out && jsdoc -p -c jsdoc.json lib/* docs/jsdoc/*' },
+56 silly install resolved     _id: 'ejs@2.4.2',
+56 silly install resolved     _shasum: '7057eb4812958fb731841cd9ca353343efe597b1',
+56 silly install resolved     _resolved: 'https://registry.npmjs.org/ejs/-/ejs-2.4.2.tgz',
+56 silly install resolved     _from: 'ejs@latest',
+56 silly install resolved     _npmVersion: '2.15.1',
+56 silly install resolved     _nodeVersion: '4.4.4',
+56 silly install resolved     _npmUser: { name: 'mde', email: 'mde@fleegix.org' },
+56 silly install resolved     maintainers: [ [Object], [Object] ],
+56 silly install resolved     dist:
+56 silly install resolved      { shasum: '7057eb4812958fb731841cd9ca353343efe597b1',
+56 silly install resolved        tarball: 'https://registry.npmjs.org/ejs/-/ejs-2.4.2.tgz' },
+56 silly install resolved     _npmOperationalInternal:
+56 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+56 silly install resolved        tmp: 'tmp/ejs-2.4.2.tgz_1464117640663_0.8193834638223052' },
+56 silly install resolved     directories: {},
+56 silly install resolved     readme: 'ERROR: No README data found!' } ]
+57 info install ejs@2.4.2 into /Users/zhangyizhi/GitHub/tryNode2.0_js
+58 info installOne ejs@2.4.2
+59 verbose installOne of ejs to /Users/zhangyizhi/GitHub/tryNode2.0_js not in flight; installing
+60 verbose lock using /Users/zhangyizhi/.npm/_locks/ejs-004e88395de9eacb.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs
+61 silly install write writing ejs 2.4.2 to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs
+62 verbose unbuild node_modules/ejs
+63 info preuninstall ejs@2.4.2
+64 info uninstall ejs@2.4.2
+65 verbose unbuild rmStuff ejs@2.4.2 from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules
+66 info postuninstall ejs@2.4.2
+67 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs is being purged from base /Users/zhangyizhi/GitHub/tryNode2.0_js
+68 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs
+69 silly vacuum-fs purging /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs
+70 silly vacuum-fs quitting because other entries in /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules
+71 verbose tar unpack /Users/zhangyizhi/.npm/ejs/2.4.2/package.tgz
+72 verbose tar unpacking to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs
+73 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs is being purged
+74 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs
+75 silly gunzTarPerm modes [ '755', '644' ]
+76 silly gunzTarPerm extractEntry
+77 silly gunzTarPerm extractEntry ejs.js
+78 silly gunzTarPerm extractEntry ejs.min.js
+79 silly gunzTarPerm extractEntry Jakefile
+80 silly gunzTarPerm extractEntry lib/
+81 silly gunzTarPerm extractEntry LICENSE
+82 silly gunzTarPerm extractEntry package.json
+83 silly gunzTarPerm extractEntry README.md
+84 silly gunzTarPerm extractEntry test/
+85 silly gunzTarPerm extractEntry test/ejs.js
+86 silly gunzTarPerm extractEntry test/fixtures/
+87 silly gunzTarPerm extractEntry test/mocha.opts
+88 silly gunzTarPerm extractEntry test/fixtures/backslash.ejs
+89 silly gunzTarPerm extractEntry test/fixtures/backslash.html
+90 silly gunzTarPerm extractEntry test/fixtures/comments.ejs
+91 silly gunzTarPerm extractEntry test/fixtures/comments.html
+92 silly gunzTarPerm extractEntry test/fixtures/consecutive-tags.ejs
+93 silly gunzTarPerm extractEntry test/fixtures/consecutive-tags.html
+94 silly gunzTarPerm extractEntry test/fixtures/double-quote.ejs
+95 silly gunzTarPerm extractEntry test/fixtures/double-quote.html
+96 silly gunzTarPerm extractEntry test/fixtures/error.ejs
+97 silly gunzTarPerm extractEntry test/fixtures/error.out
+98 silly gunzTarPerm extractEntry test/fixtures/fail.ejs
+99 silly gunzTarPerm extractEntry test/fixtures/hello-world.ejs
+100 silly gunzTarPerm extractEntry test/fixtures/include-abspath.ejs
+101 silly gunzTarPerm extractEntry test/fixtures/include-simple.ejs
+102 silly gunzTarPerm extractEntry test/fixtures/include-simple.html
+103 silly gunzTarPerm extractEntry test/fixtures/include.css.ejs
+104 silly gunzTarPerm extractEntry test/fixtures/include.css.html
+105 silly gunzTarPerm extractEntry test/fixtures/include.ejs
+106 silly gunzTarPerm extractEntry test/fixtures/include.html
+107 silly gunzTarPerm extractEntry test/fixtures/include_cache.ejs
+108 silly gunzTarPerm extractEntry test/fixtures/include_cache.html
+109 silly gunzTarPerm extractEntry test/fixtures/include_preprocessor.css.ejs
+110 silly gunzTarPerm extractEntry test/fixtures/include_preprocessor.css.html
+111 silly gunzTarPerm extractEntry test/fixtures/include_preprocessor.ejs
+112 silly gunzTarPerm extractEntry test/fixtures/include_preprocessor.html
+113 silly gunzTarPerm extractEntry test/fixtures/include_preprocessor_cache.ejs
+114 silly gunzTarPerm extractEntry test/fixtures/include_preprocessor_cache.html
+115 silly gunzTarPerm extractEntry test/fixtures/includes/
+116 silly gunzTarPerm extractEntry test/fixtures/literal.ejs
+117 silly gunzTarPerm extractEntry test/fixtures/literal.html
+118 silly gunzTarPerm extractEntry test/fixtures/menu.ejs
+119 silly gunzTarPerm extractEntry test/fixtures/menu.html
+120 silly gunzTarPerm extractEntry test/fixtures/menu_preprocessor.ejs
+121 silly gunzTarPerm extractEntry test/fixtures/menu_preprocessor.html
+122 silly gunzTarPerm extractEntry test/fixtures/menu_var.ejs
+123 silly gunzTarPerm extractEntry test/fixtures/messed.ejs
+124 silly gunzTarPerm extractEntry test/fixtures/messed.html
+125 silly gunzTarPerm extractEntry test/fixtures/newlines.ejs
+126 silly gunzTarPerm extractEntry test/fixtures/newlines.html
+127 silly gunzTarPerm extractEntry test/fixtures/newlines.mixed.ejs
+128 silly gunzTarPerm extractEntry test/fixtures/newlines.mixed.html
+129 silly gunzTarPerm extractEntry test/fixtures/no.newlines.ejs
+130 silly gunzTarPerm extractEntry test/fixtures/no.newlines.error.ejs
+131 silly gunzTarPerm extractEntry test/fixtures/no.newlines.html
+132 silly gunzTarPerm extractEntry test/fixtures/no.semicolons.ejs
+133 silly gunzTarPerm extractEntry test/fixtures/no.semicolons.html
+134 silly gunzTarPerm extractEntry test/fixtures/para.ejs
+135 silly gunzTarPerm extractEntry test/fixtures/pet.ejs
+136 silly gunzTarPerm extractEntry test/fixtures/rmWhitespace.ejs
+137 silly gunzTarPerm extractEntry test/fixtures/rmWhitespace.html
+138 silly gunzTarPerm extractEntry test/fixtures/single-quote.ejs
+139 silly gunzTarPerm extractEntry test/fixtures/single-quote.html
+140 silly gunzTarPerm extractEntry test/fixtures/space-and-tab-slurp.ejs
+141 silly gunzTarPerm extractEntry test/fixtures/space-and-tab-slurp.html
+142 silly gunzTarPerm extractEntry test/fixtures/style.css
+143 silly gunzTarPerm extractEntry test/fixtures/user-no-with.ejs
+144 silly gunzTarPerm extractEntry test/fixtures/user.ejs
+145 silly gunzTarPerm extractEntry test/fixtures/with-context.ejs
+146 silly gunzTarPerm extractEntry test/fixtures/includes/bom.ejs
+147 silly gunzTarPerm extractEntry test/fixtures/includes/menu/
+148 silly gunzTarPerm extractEntry test/fixtures/includes/menu-item.ejs
+149 silly gunzTarPerm extractEntry test/fixtures/includes/menu/item.ejs
+150 silly gunzTarPerm extractEntry lib/ejs.js
+151 silly gunzTarPerm extractEntry lib/utils.js
+152 verbose write writing to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs/package.json
+153 info preinstall ejs@2.4.2
+154 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs/package.json
+155 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs/package.json
+156 silly install resolved []
+157 verbose about to build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs
+158 info build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs
+159 info linkStuff ejs@2.4.2
+160 silly linkStuff ejs@2.4.2 has /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules as its parent node_modules
+161 verbose linkBins ejs@2.4.2
+162 verbose linkMans ejs@2.4.2
+163 verbose rebuildBundles ejs@2.4.2
+164 info install ejs@2.4.2
+165 info postinstall ejs@2.4.2
+166 verbose unlock done using /Users/zhangyizhi/.npm/_locks/ejs-004e88395de9eacb.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs
+167 verbose validateInstall loading /Users/zhangyizhi/GitHub/tryNode2.0_js/package.json for validation
+168 verbose stack Error: The package connect@3.4.1 does not satisfy its siblings' peerDependencies requirements!
+168 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+168 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:268:7
+168 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+168 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+168 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+168 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+168 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+168 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+168 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+168 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+169 verbose cwd /Users/zhangyizhi/GitHub/tryNode2.0_js
+170 error Darwin 15.5.0
+171 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "ejs"
+172 error node v4.3.1
+173 error npm  v2.14.12
+174 error code EPEERINVALID
+175 error peerinvalid The package connect@3.4.1 does not satisfy its siblings' peerDependencies requirements!
+175 error peerinvalid Peer session-mongoose@0.5.2 wants connect@^2.0
+176 verbose exit [ 1, true ]
