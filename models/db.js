@@ -146,8 +146,8 @@ path <Object, String> either the path to populate or an object specifying all pa
 */
 
 exports.populateFind = function(model,conditions,callback,path,fields,refmodel,match,options){
-	var promise = model.find(conditions).populate(path,fields,refmodel,match,options).exec()
-	promise.then(function(err,result){
+	var promise = model.find(conditions).populate(path,fields,refmodel,match,options).exec(
+		function(err,result){
 		 if(err) {
                 console.log(err);
                 callback({status: false, message: 'population find fail'},result);
@@ -161,6 +161,7 @@ exports.populateFind = function(model,conditions,callback,path,fields,refmodel,m
                     callback({status: false, message: 'cannot find data'},result);
                 }
             }
-	})
+	});
+
 }
 

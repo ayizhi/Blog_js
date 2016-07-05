@@ -1,5 +1,8 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install', 'ejs' ]
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'multer@0.1.8' ]
 2 info using npm@2.14.12
 3 info using node@v4.3.1
 4 verbose install initial load of /Users/zhangyizhi/GitHub/tryNode2.0_js/package.json
@@ -15,247 +18,2476 @@
 14 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs/package.json
 15 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/express/package.json
 16 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/express-session/package.json
-17 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/mongoose/package.json
-18 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/morgan/package.json
-19 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/serve-favicon/package.json
-20 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/session-mongoose/package.json
-21 info package.json connect-mongo@1.2.1 No README data
-22 info package.json connect-flash@0.1.1 No license field.
-23 info package.json session-mongoose@0.5.2 No license field.
-24 info package.json crypto@0.0.3 crypto is also the name of a node core module.
-25 info package.json crypto@0.0.3 No license field.
-26 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/package.json
-27 verbose install ejs is installed as 2.4.2
-28 silly cache add args [ 'ejs', null ]
-29 verbose cache add spec ejs
-30 silly cache add parsed spec Result {
-30 silly cache add   raw: 'ejs',
-30 silly cache add   scope: null,
-30 silly cache add   name: 'ejs',
-30 silly cache add   rawSpec: '',
-30 silly cache add   spec: 'latest',
-30 silly cache add   type: 'tag' }
-31 silly addNamed ejs@latest
-32 verbose addNamed "latest" is being treated as a dist-tag for ejs
-33 info addNameTag [ 'ejs', 'latest' ]
-34 silly mapToRegistry name ejs
-35 silly mapToRegistry using default registry
-36 silly mapToRegistry registry https://registry.npmjs.org/
-37 silly mapToRegistry uri https://registry.npmjs.org/ejs
-38 verbose addNameTag registry:https://registry.npmjs.org/ejs not in flight; fetching
-39 verbose request uri https://registry.npmjs.org/ejs
-40 verbose request no auth needed
-41 info attempt registry request try #1 at 15:24:13
-42 verbose request id a7c8c1c966c7829b
-43 verbose etag "EK7ZHWH3B4U2Y1HE5P48XTPMP"
-44 http request GET https://registry.npmjs.org/ejs
-45 http 304 https://registry.npmjs.org/ejs
-46 verbose headers { date: 'Sun, 03 Jul 2016 07:24:15 GMT',
-46 verbose headers   via: '1.1 varnish',
-46 verbose headers   'cache-control': 'max-age=300',
-46 verbose headers   etag: '"EK7ZHWH3B4U2Y1HE5P48XTPMP"',
-46 verbose headers   age: '171',
-46 verbose headers   connection: 'keep-alive',
-46 verbose headers   'x-served-by': 'cache-lcy1123-LCY',
-46 verbose headers   'x-cache': 'HIT',
-46 verbose headers   'x-cache-hits': '1',
-46 verbose headers   'x-timer': 'S1467530655.073395,VS0,VE0',
-46 verbose headers   vary: 'Accept-Encoding' }
-47 silly get cb [ 304,
-47 silly get   { date: 'Sun, 03 Jul 2016 07:24:15 GMT',
-47 silly get     via: '1.1 varnish',
-47 silly get     'cache-control': 'max-age=300',
-47 silly get     etag: '"EK7ZHWH3B4U2Y1HE5P48XTPMP"',
-47 silly get     age: '171',
-47 silly get     connection: 'keep-alive',
-47 silly get     'x-served-by': 'cache-lcy1123-LCY',
-47 silly get     'x-cache': 'HIT',
-47 silly get     'x-cache-hits': '1',
-47 silly get     'x-timer': 'S1467530655.073395,VS0,VE0',
-47 silly get     vary: 'Accept-Encoding' } ]
-48 verbose etag https://registry.npmjs.org/ejs from cache
-49 verbose get saving ejs to /Users/zhangyizhi/.npm/registry.npmjs.org/ejs/.cache.json
-50 silly addNameTag next cb for ejs with tag latest
-51 silly addNamed ejs@2.4.2
-52 verbose addNamed "2.4.2" is a plain semver version for ejs
-53 silly cache afterAdd ejs@2.4.2
-54 verbose afterAdd /Users/zhangyizhi/.npm/ejs/2.4.2/package/package.json not in flight; writing
-55 verbose afterAdd /Users/zhangyizhi/.npm/ejs/2.4.2/package/package.json written
-56 silly install resolved [ { name: 'ejs',
-56 silly install resolved     description: 'Embedded JavaScript templates',
-56 silly install resolved     keywords: [ 'template', 'engine', 'ejs' ],
-56 silly install resolved     version: '2.4.2',
-56 silly install resolved     author:
-56 silly install resolved      { name: 'Matthew Eernisse',
-56 silly install resolved        email: 'mde@fleegix.org',
-56 silly install resolved        url: 'http://fleegix.org' },
-56 silly install resolved     contributors: [ [Object] ],
-56 silly install resolved     license: 'Apache-2.0',
-56 silly install resolved     main: './lib/ejs.js',
-56 silly install resolved     repository: { type: 'git', url: 'git://github.com/mde/ejs.git' },
-56 silly install resolved     bugs: { url: 'https://github.com/mde/ejs/issues' },
-56 silly install resolved     homepage: 'https://github.com/mde/ejs',
-56 silly install resolved     dependencies: {},
-56 silly install resolved     devDependencies:
-56 silly install resolved      { browserify: '^8.0.3',
-56 silly install resolved        istanbul: '~0.3.5',
-56 silly install resolved        jake: '^8.0.0',
-56 silly install resolved        jsdoc: '^3.3.0-beta1',
-56 silly install resolved        'lru-cache': '^2.5.0',
-56 silly install resolved        mocha: '^2.1.0',
-56 silly install resolved        rimraf: '^2.2.8',
-56 silly install resolved        'uglify-js': '^2.4.16' },
-56 silly install resolved     engines: { node: '>=0.10.0' },
-56 silly install resolved     scripts:
-56 silly install resolved      { test: 'mocha',
-56 silly install resolved        sample: 'npm install express && node sample/index.js',
-56 silly install resolved        coverage: 'istanbul cover node_modules/mocha/bin/_mocha',
-56 silly install resolved        doc: 'rimraf out && jsdoc -c jsdoc.json lib/* docs/jsdoc/*',
-56 silly install resolved        devdoc: 'rimraf out && jsdoc -p -c jsdoc.json lib/* docs/jsdoc/*' },
-56 silly install resolved     _id: 'ejs@2.4.2',
-56 silly install resolved     _shasum: '7057eb4812958fb731841cd9ca353343efe597b1',
-56 silly install resolved     _resolved: 'https://registry.npmjs.org/ejs/-/ejs-2.4.2.tgz',
-56 silly install resolved     _from: 'ejs@latest',
-56 silly install resolved     _npmVersion: '2.15.1',
-56 silly install resolved     _nodeVersion: '4.4.4',
-56 silly install resolved     _npmUser: { name: 'mde', email: 'mde@fleegix.org' },
-56 silly install resolved     maintainers: [ [Object], [Object] ],
-56 silly install resolved     dist:
-56 silly install resolved      { shasum: '7057eb4812958fb731841cd9ca353343efe597b1',
-56 silly install resolved        tarball: 'https://registry.npmjs.org/ejs/-/ejs-2.4.2.tgz' },
-56 silly install resolved     _npmOperationalInternal:
-56 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
-56 silly install resolved        tmp: 'tmp/ejs-2.4.2.tgz_1464117640663_0.8193834638223052' },
-56 silly install resolved     directories: {},
-56 silly install resolved     readme: 'ERROR: No README data found!' } ]
-57 info install ejs@2.4.2 into /Users/zhangyizhi/GitHub/tryNode2.0_js
-58 info installOne ejs@2.4.2
-59 verbose installOne of ejs to /Users/zhangyizhi/GitHub/tryNode2.0_js not in flight; installing
-60 verbose lock using /Users/zhangyizhi/.npm/_locks/ejs-004e88395de9eacb.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs
-61 silly install write writing ejs 2.4.2 to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs
-62 verbose unbuild node_modules/ejs
-63 info preuninstall ejs@2.4.2
-64 info uninstall ejs@2.4.2
-65 verbose unbuild rmStuff ejs@2.4.2 from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules
-66 info postuninstall ejs@2.4.2
-67 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs is being purged from base /Users/zhangyizhi/GitHub/tryNode2.0_js
-68 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs
-69 silly vacuum-fs purging /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs
-70 silly vacuum-fs quitting because other entries in /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules
-71 verbose tar unpack /Users/zhangyizhi/.npm/ejs/2.4.2/package.tgz
-72 verbose tar unpacking to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs
-73 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs is being purged
-74 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs
-75 silly gunzTarPerm modes [ '755', '644' ]
-76 silly gunzTarPerm extractEntry
-77 silly gunzTarPerm extractEntry ejs.js
-78 silly gunzTarPerm extractEntry ejs.min.js
-79 silly gunzTarPerm extractEntry Jakefile
-80 silly gunzTarPerm extractEntry lib/
-81 silly gunzTarPerm extractEntry LICENSE
-82 silly gunzTarPerm extractEntry package.json
-83 silly gunzTarPerm extractEntry README.md
-84 silly gunzTarPerm extractEntry test/
-85 silly gunzTarPerm extractEntry test/ejs.js
-86 silly gunzTarPerm extractEntry test/fixtures/
-87 silly gunzTarPerm extractEntry test/mocha.opts
-88 silly gunzTarPerm extractEntry test/fixtures/backslash.ejs
-89 silly gunzTarPerm extractEntry test/fixtures/backslash.html
-90 silly gunzTarPerm extractEntry test/fixtures/comments.ejs
-91 silly gunzTarPerm extractEntry test/fixtures/comments.html
-92 silly gunzTarPerm extractEntry test/fixtures/consecutive-tags.ejs
-93 silly gunzTarPerm extractEntry test/fixtures/consecutive-tags.html
-94 silly gunzTarPerm extractEntry test/fixtures/double-quote.ejs
-95 silly gunzTarPerm extractEntry test/fixtures/double-quote.html
-96 silly gunzTarPerm extractEntry test/fixtures/error.ejs
-97 silly gunzTarPerm extractEntry test/fixtures/error.out
-98 silly gunzTarPerm extractEntry test/fixtures/fail.ejs
-99 silly gunzTarPerm extractEntry test/fixtures/hello-world.ejs
-100 silly gunzTarPerm extractEntry test/fixtures/include-abspath.ejs
-101 silly gunzTarPerm extractEntry test/fixtures/include-simple.ejs
-102 silly gunzTarPerm extractEntry test/fixtures/include-simple.html
-103 silly gunzTarPerm extractEntry test/fixtures/include.css.ejs
-104 silly gunzTarPerm extractEntry test/fixtures/include.css.html
-105 silly gunzTarPerm extractEntry test/fixtures/include.ejs
-106 silly gunzTarPerm extractEntry test/fixtures/include.html
-107 silly gunzTarPerm extractEntry test/fixtures/include_cache.ejs
-108 silly gunzTarPerm extractEntry test/fixtures/include_cache.html
-109 silly gunzTarPerm extractEntry test/fixtures/include_preprocessor.css.ejs
-110 silly gunzTarPerm extractEntry test/fixtures/include_preprocessor.css.html
-111 silly gunzTarPerm extractEntry test/fixtures/include_preprocessor.ejs
-112 silly gunzTarPerm extractEntry test/fixtures/include_preprocessor.html
-113 silly gunzTarPerm extractEntry test/fixtures/include_preprocessor_cache.ejs
-114 silly gunzTarPerm extractEntry test/fixtures/include_preprocessor_cache.html
-115 silly gunzTarPerm extractEntry test/fixtures/includes/
-116 silly gunzTarPerm extractEntry test/fixtures/literal.ejs
-117 silly gunzTarPerm extractEntry test/fixtures/literal.html
-118 silly gunzTarPerm extractEntry test/fixtures/menu.ejs
-119 silly gunzTarPerm extractEntry test/fixtures/menu.html
-120 silly gunzTarPerm extractEntry test/fixtures/menu_preprocessor.ejs
-121 silly gunzTarPerm extractEntry test/fixtures/menu_preprocessor.html
-122 silly gunzTarPerm extractEntry test/fixtures/menu_var.ejs
-123 silly gunzTarPerm extractEntry test/fixtures/messed.ejs
-124 silly gunzTarPerm extractEntry test/fixtures/messed.html
-125 silly gunzTarPerm extractEntry test/fixtures/newlines.ejs
-126 silly gunzTarPerm extractEntry test/fixtures/newlines.html
-127 silly gunzTarPerm extractEntry test/fixtures/newlines.mixed.ejs
-128 silly gunzTarPerm extractEntry test/fixtures/newlines.mixed.html
-129 silly gunzTarPerm extractEntry test/fixtures/no.newlines.ejs
-130 silly gunzTarPerm extractEntry test/fixtures/no.newlines.error.ejs
-131 silly gunzTarPerm extractEntry test/fixtures/no.newlines.html
-132 silly gunzTarPerm extractEntry test/fixtures/no.semicolons.ejs
-133 silly gunzTarPerm extractEntry test/fixtures/no.semicolons.html
-134 silly gunzTarPerm extractEntry test/fixtures/para.ejs
-135 silly gunzTarPerm extractEntry test/fixtures/pet.ejs
-136 silly gunzTarPerm extractEntry test/fixtures/rmWhitespace.ejs
-137 silly gunzTarPerm extractEntry test/fixtures/rmWhitespace.html
-138 silly gunzTarPerm extractEntry test/fixtures/single-quote.ejs
-139 silly gunzTarPerm extractEntry test/fixtures/single-quote.html
-140 silly gunzTarPerm extractEntry test/fixtures/space-and-tab-slurp.ejs
-141 silly gunzTarPerm extractEntry test/fixtures/space-and-tab-slurp.html
-142 silly gunzTarPerm extractEntry test/fixtures/style.css
-143 silly gunzTarPerm extractEntry test/fixtures/user-no-with.ejs
-144 silly gunzTarPerm extractEntry test/fixtures/user.ejs
-145 silly gunzTarPerm extractEntry test/fixtures/with-context.ejs
-146 silly gunzTarPerm extractEntry test/fixtures/includes/bom.ejs
-147 silly gunzTarPerm extractEntry test/fixtures/includes/menu/
-148 silly gunzTarPerm extractEntry test/fixtures/includes/menu-item.ejs
-149 silly gunzTarPerm extractEntry test/fixtures/includes/menu/item.ejs
-150 silly gunzTarPerm extractEntry lib/ejs.js
-151 silly gunzTarPerm extractEntry lib/utils.js
-152 verbose write writing to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs/package.json
-153 info preinstall ejs@2.4.2
-154 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs/package.json
-155 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs/package.json
-156 silly install resolved []
-157 verbose about to build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs
-158 info build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs
-159 info linkStuff ejs@2.4.2
-160 silly linkStuff ejs@2.4.2 has /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules as its parent node_modules
-161 verbose linkBins ejs@2.4.2
-162 verbose linkMans ejs@2.4.2
-163 verbose rebuildBundles ejs@2.4.2
-164 info install ejs@2.4.2
-165 info postinstall ejs@2.4.2
-166 verbose unlock done using /Users/zhangyizhi/.npm/_locks/ejs-004e88395de9eacb.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/ejs
-167 verbose validateInstall loading /Users/zhangyizhi/GitHub/tryNode2.0_js/package.json for validation
-168 verbose stack Error: The package connect@3.4.1 does not satisfy its siblings' peerDependencies requirements!
-168 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
-168 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:268:7
-168 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
-168 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
-168 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
-168 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
-168 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
-168 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
-168 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
-168 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
-169 verbose cwd /Users/zhangyizhi/GitHub/tryNode2.0_js
-170 error Darwin 15.5.0
-171 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "ejs"
-172 error node v4.3.1
-173 error npm  v2.14.12
-174 error code EPEERINVALID
-175 error peerinvalid The package connect@3.4.1 does not satisfy its siblings' peerDependencies requirements!
-175 error peerinvalid Peer session-mongoose@0.5.2 wants connect@^2.0
-176 verbose exit [ 1, true ]
+17 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/markdown/package.json
+18 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/mongoose/package.json
+19 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/morgan/package.json
+20 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/package.json
+21 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/serve-favicon/package.json
+22 verbose installManyTop reading scoped package data from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/session-mongoose/package.json
+23 info package.json connect-flash@0.1.1 No license field.
+24 info package.json connect-mongo@1.2.1 No README data
+25 info package.json session-mongoose@0.5.2 No license field.
+26 info package.json crypto@0.0.3 crypto is also the name of a node core module.
+27 info package.json crypto@0.0.3 No license field.
+28 info package.json markdown@0.5.0 No license field.
+29 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/package.json
+30 silly cache add args [ 'multer@0.1.8', null ]
+31 verbose cache add spec multer@0.1.8
+32 silly cache add parsed spec Result {
+32 silly cache add   raw: 'multer@0.1.8',
+32 silly cache add   scope: null,
+32 silly cache add   name: 'multer',
+32 silly cache add   rawSpec: '0.1.8',
+32 silly cache add   spec: '0.1.8',
+32 silly cache add   type: 'version' }
+33 silly addNamed multer@0.1.8
+34 verbose addNamed "0.1.8" is a plain semver version for multer
+35 silly mapToRegistry name multer
+36 silly mapToRegistry using default registry
+37 silly mapToRegistry registry https://registry.npmjs.org/
+38 silly mapToRegistry uri https://registry.npmjs.org/multer
+39 verbose addNameVersion registry:https://registry.npmjs.org/multer not in flight; fetching
+40 verbose request uri https://registry.npmjs.org/multer
+41 verbose request no auth needed
+42 info attempt registry request try #1 at 17:55:22
+43 verbose request id d7f1ee858d6ac86f
+44 verbose etag "41DAFK6URNAI0Q6YV1GMYEGP"
+45 http request GET https://registry.npmjs.org/multer
+46 http 304 https://registry.npmjs.org/multer
+47 verbose headers { date: 'Mon, 04 Jul 2016 09:55:21 GMT',
+47 verbose headers   via: '1.1 varnish',
+47 verbose headers   'cache-control': 'max-age=300',
+47 verbose headers   etag: '"41DAFK6URNAI0Q6YV1GMYEGP"',
+47 verbose headers   age: '187',
+47 verbose headers   connection: 'keep-alive',
+47 verbose headers   'x-served-by': 'cache-lcy1126-LCY',
+47 verbose headers   'x-cache': 'HIT',
+47 verbose headers   'x-cache-hits': '4',
+47 verbose headers   'x-timer': 'S1467626121.232447,VS0,VE0',
+47 verbose headers   vary: 'Accept-Encoding' }
+48 silly get cb [ 304,
+48 silly get   { date: 'Mon, 04 Jul 2016 09:55:21 GMT',
+48 silly get     via: '1.1 varnish',
+48 silly get     'cache-control': 'max-age=300',
+48 silly get     etag: '"41DAFK6URNAI0Q6YV1GMYEGP"',
+48 silly get     age: '187',
+48 silly get     connection: 'keep-alive',
+48 silly get     'x-served-by': 'cache-lcy1126-LCY',
+48 silly get     'x-cache': 'HIT',
+48 silly get     'x-cache-hits': '4',
+48 silly get     'x-timer': 'S1467626121.232447,VS0,VE0',
+48 silly get     vary: 'Accept-Encoding' } ]
+49 verbose etag https://registry.npmjs.org/multer from cache
+50 verbose get saving multer to /Users/zhangyizhi/.npm/registry.npmjs.org/multer/.cache.json
+51 silly mapToRegistry name multer
+52 silly mapToRegistry using default registry
+53 silly mapToRegistry registry https://registry.npmjs.org/
+54 silly mapToRegistry uri https://registry.npmjs.org/multer
+55 verbose addRemoteTarball https://registry.npmjs.org/multer/-/multer-0.1.8.tgz not in flight; adding
+56 verbose addRemoteTarball [ 'https://registry.npmjs.org/multer/-/multer-0.1.8.tgz',
+56 verbose addRemoteTarball   '551b8a6015093701bcacc964916b1ae06578f37b' ]
+57 info retry fetch attempt 1 at 17:55:24
+58 info attempt registry request try #1 at 17:55:24
+59 http fetch GET https://registry.npmjs.org/multer/-/multer-0.1.8.tgz
+60 http fetch 200 https://registry.npmjs.org/multer/-/multer-0.1.8.tgz
+61 silly fetchAndShaCheck shasum 551b8a6015093701bcacc964916b1ae06578f37b
+62 verbose addTmpTarball /var/folders/nc/t1m74zt536z1tkgxc_qxlmyr0000gn/T/npm-27711-6d0b3140/registry.npmjs.org/multer/-/multer-0.1.8.tgz not in flight; adding
+63 verbose addTmpTarball already have metadata; skipping unpack for multer@0.1.8
+64 silly cache afterAdd multer@0.1.8
+65 verbose afterAdd /Users/zhangyizhi/.npm/multer/0.1.8/package/package.json not in flight; writing
+66 verbose afterAdd /Users/zhangyizhi/.npm/multer/0.1.8/package/package.json written
+67 silly install resolved [ { name: 'multer',
+67 silly install resolved     description: 'Middleware for handling `multipart/form-data`.',
+67 silly install resolved     version: '0.1.8',
+67 silly install resolved     contributors: [ [Object], [Object] ],
+67 silly install resolved     license: 'MIT',
+67 silly install resolved     repository: { type: 'git', url: 'https://github.com/expressjs/multer' },
+67 silly install resolved     keywords:
+67 silly install resolved      [ 'form',
+67 silly install resolved        'post',
+67 silly install resolved        'multipart',
+67 silly install resolved        'form-data',
+67 silly install resolved        'formdata',
+67 silly install resolved        'express',
+67 silly install resolved        'middleware' ],
+67 silly install resolved     dependencies:
+67 silly install resolved      { busboy: '~0.2.9',
+67 silly install resolved        mkdirp: '~0.3.5',
+67 silly install resolved        qs: '~1.2.2',
+67 silly install resolved        'type-is': '~1.5.2' },
+67 silly install resolved     devDependencies:
+67 silly install resolved      { chai: '^1.9.1',
+67 silly install resolved        co: '^3.0.6',
+67 silly install resolved        express: '*',
+67 silly install resolved        mocha: '*',
+67 silly install resolved        rimraf: '^2.2.8',
+67 silly install resolved        supertest: '^0.13.0' },
+67 silly install resolved     engines: { node: '>= 0.10.0' },
+67 silly install resolved     files: [ 'LICENSE', 'index.js' ],
+67 silly install resolved     scripts: { test: 'mocha --reporter spec --bail --check-leaks' },
+67 silly install resolved     gitHead: '58ee463ab42accf3e910ceb6e095a90de6b41ae7',
+67 silly install resolved     bugs: { url: 'https://github.com/expressjs/multer/issues' },
+67 silly install resolved     homepage: 'https://github.com/expressjs/multer',
+67 silly install resolved     _id: 'multer@0.1.8',
+67 silly install resolved     _shasum: '551b8a6015093701bcacc964916b1ae06578f37b',
+67 silly install resolved     _from: 'multer@0.1.8',
+67 silly install resolved     _npmVersion: '2.5.1',
+67 silly install resolved     _nodeVersion: '0.10.32',
+67 silly install resolved     _npmUser: { name: 'hacksparrow', email: 'captain@hacksparrow.com' },
+67 silly install resolved     maintainers: [ [Object], [Object] ],
+67 silly install resolved     dist:
+67 silly install resolved      { shasum: '551b8a6015093701bcacc964916b1ae06578f37b',
+67 silly install resolved        tarball: 'https://registry.npmjs.org/multer/-/multer-0.1.8.tgz' },
+67 silly install resolved     directories: {},
+67 silly install resolved     _resolved: 'https://registry.npmjs.org/multer/-/multer-0.1.8.tgz' } ]
+68 info install multer@0.1.8 into /Users/zhangyizhi/GitHub/tryNode2.0_js
+69 info installOne multer@0.1.8
+70 verbose installOne of multer to /Users/zhangyizhi/GitHub/tryNode2.0_js not in flight; installing
+71 verbose lock using /Users/zhangyizhi/.npm/_locks/multer-c8b9ae482393caa3.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer
+72 silly install write writing multer 0.1.8 to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer
+73 verbose unbuild node_modules/multer
+74 info preuninstall multer@1.1.0
+75 info uninstall multer@1.1.0
+76 verbose unbuild rmStuff multer@1.1.0 from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules
+77 info postuninstall multer@1.1.0
+78 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer is being purged from base /Users/zhangyizhi/GitHub/tryNode2.0_js
+79 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer
+80 silly vacuum-fs purging /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer
+81 silly vacuum-fs quitting because other entries in /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules
+82 verbose tar unpack /Users/zhangyizhi/.npm/multer/0.1.8/package.tgz
+83 verbose tar unpacking to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer
+84 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer is being purged
+85 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer
+86 silly gunzTarPerm modes [ '755', '644' ]
+87 silly gunzTarPerm extractEntry package.json
+88 silly gunzTarPerm extractEntry README.md
+89 silly gunzTarPerm extractEntry LICENSE
+90 silly gunzTarPerm extractEntry index.js
+91 verbose write writing to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/package.json
+92 info preinstall multer@0.1.8
+93 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/package.json
+94 silly prepareForInstallMany adding busboy@~0.2.9 from multer dependencies
+95 silly prepareForInstallMany adding mkdirp@~0.3.5 from multer dependencies
+96 silly prepareForInstallMany adding qs@~1.2.2 from multer dependencies
+97 silly prepareForInstallMany adding type-is@~1.5.2 from multer dependencies
+98 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/package.json
+99 silly cache add args [ 'mkdirp@~0.3.5', null ]
+100 verbose cache add spec mkdirp@~0.3.5
+101 silly cache add parsed spec Result {
+101 silly cache add   raw: 'mkdirp@~0.3.5',
+101 silly cache add   scope: null,
+101 silly cache add   name: 'mkdirp',
+101 silly cache add   rawSpec: '~0.3.5',
+101 silly cache add   spec: '>=0.3.5 <0.4.0',
+101 silly cache add   type: 'range' }
+102 silly addNamed mkdirp@>=0.3.5 <0.4.0
+103 verbose addNamed ">=0.3.5 <0.4.0" is a valid semver range for mkdirp
+104 silly addNameRange { name: 'mkdirp', range: '>=0.3.5 <0.4.0', hasData: false }
+105 silly mapToRegistry name mkdirp
+106 silly mapToRegistry using default registry
+107 silly mapToRegistry registry https://registry.npmjs.org/
+108 silly mapToRegistry uri https://registry.npmjs.org/mkdirp
+109 verbose addNameRange registry:https://registry.npmjs.org/mkdirp not in flight; fetching
+110 silly cache add args [ 'qs@~1.2.2', null ]
+111 verbose cache add spec qs@~1.2.2
+112 silly cache add parsed spec Result {
+112 silly cache add   raw: 'qs@~1.2.2',
+112 silly cache add   scope: null,
+112 silly cache add   name: 'qs',
+112 silly cache add   rawSpec: '~1.2.2',
+112 silly cache add   spec: '>=1.2.2 <1.3.0',
+112 silly cache add   type: 'range' }
+113 silly addNamed qs@>=1.2.2 <1.3.0
+114 verbose addNamed ">=1.2.2 <1.3.0" is a valid semver range for qs
+115 silly addNameRange { name: 'qs', range: '>=1.2.2 <1.3.0', hasData: false }
+116 silly mapToRegistry name qs
+117 silly mapToRegistry using default registry
+118 silly mapToRegistry registry https://registry.npmjs.org/
+119 silly mapToRegistry uri https://registry.npmjs.org/qs
+120 verbose addNameRange registry:https://registry.npmjs.org/qs not in flight; fetching
+121 silly cache add args [ 'type-is@~1.5.2', null ]
+122 verbose cache add spec type-is@~1.5.2
+123 silly cache add parsed spec Result {
+123 silly cache add   raw: 'type-is@~1.5.2',
+123 silly cache add   scope: null,
+123 silly cache add   name: 'type-is',
+123 silly cache add   rawSpec: '~1.5.2',
+123 silly cache add   spec: '>=1.5.2 <1.6.0',
+123 silly cache add   type: 'range' }
+124 silly addNamed type-is@>=1.5.2 <1.6.0
+125 verbose addNamed ">=1.5.2 <1.6.0" is a valid semver range for type-is
+126 silly addNameRange { name: 'type-is', range: '>=1.5.2 <1.6.0', hasData: false }
+127 silly mapToRegistry name type-is
+128 silly mapToRegistry using default registry
+129 silly mapToRegistry registry https://registry.npmjs.org/
+130 silly mapToRegistry uri https://registry.npmjs.org/type-is
+131 verbose addNameRange registry:https://registry.npmjs.org/type-is not in flight; fetching
+132 silly cache add args [ 'busboy@~0.2.9', null ]
+133 verbose cache add spec busboy@~0.2.9
+134 silly cache add parsed spec Result {
+134 silly cache add   raw: 'busboy@~0.2.9',
+134 silly cache add   scope: null,
+134 silly cache add   name: 'busboy',
+134 silly cache add   rawSpec: '~0.2.9',
+134 silly cache add   spec: '>=0.2.9 <0.3.0',
+134 silly cache add   type: 'range' }
+135 silly addNamed busboy@>=0.2.9 <0.3.0
+136 verbose addNamed ">=0.2.9 <0.3.0" is a valid semver range for busboy
+137 silly addNameRange { name: 'busboy', range: '>=0.2.9 <0.3.0', hasData: false }
+138 silly mapToRegistry name busboy
+139 silly mapToRegistry using default registry
+140 silly mapToRegistry registry https://registry.npmjs.org/
+141 silly mapToRegistry uri https://registry.npmjs.org/busboy
+142 verbose addNameRange registry:https://registry.npmjs.org/busboy not in flight; fetching
+143 verbose request uri https://registry.npmjs.org/mkdirp
+144 verbose request no auth needed
+145 info attempt registry request try #1 at 17:55:26
+146 verbose etag "CVN414WULFYEIMA412CQ7KULR"
+147 http request GET https://registry.npmjs.org/mkdirp
+148 verbose request uri https://registry.npmjs.org/type-is
+149 verbose request no auth needed
+150 info attempt registry request try #1 at 17:55:26
+151 verbose etag "6MF2TP522BDBG0RWZVQFH30D1"
+152 http request GET https://registry.npmjs.org/type-is
+153 verbose request uri https://registry.npmjs.org/busboy
+154 verbose request no auth needed
+155 info attempt registry request try #1 at 17:55:26
+156 verbose etag "7E2L276DAPXV4ZA3UWFDGZZUV"
+157 http request GET https://registry.npmjs.org/busboy
+158 verbose request uri https://registry.npmjs.org/qs
+159 verbose request no auth needed
+160 info attempt registry request try #1 at 17:55:26
+161 verbose etag "7GFRDFKHTA98LGH1RG2YJ5622"
+162 http request GET https://registry.npmjs.org/qs
+163 http 304 https://registry.npmjs.org/busboy
+164 verbose headers { date: 'Mon, 04 Jul 2016 09:55:23 GMT',
+164 verbose headers   via: '1.1 varnish',
+164 verbose headers   'cache-control': 'max-age=300',
+164 verbose headers   etag: '"7E2L276DAPXV4ZA3UWFDGZZUV"',
+164 verbose headers   age: '42',
+164 verbose headers   connection: 'keep-alive',
+164 verbose headers   'x-served-by': 'cache-lcy1132-LCY',
+164 verbose headers   'x-cache': 'HIT',
+164 verbose headers   'x-cache-hits': '1',
+164 verbose headers   'x-timer': 'S1467626123.936213,VS0,VE0',
+164 verbose headers   vary: 'Accept-Encoding' }
+165 silly get cb [ 304,
+165 silly get   { date: 'Mon, 04 Jul 2016 09:55:23 GMT',
+165 silly get     via: '1.1 varnish',
+165 silly get     'cache-control': 'max-age=300',
+165 silly get     etag: '"7E2L276DAPXV4ZA3UWFDGZZUV"',
+165 silly get     age: '42',
+165 silly get     connection: 'keep-alive',
+165 silly get     'x-served-by': 'cache-lcy1132-LCY',
+165 silly get     'x-cache': 'HIT',
+165 silly get     'x-cache-hits': '1',
+165 silly get     'x-timer': 'S1467626123.936213,VS0,VE0',
+165 silly get     vary: 'Accept-Encoding' } ]
+166 verbose etag https://registry.npmjs.org/busboy from cache
+167 verbose get saving busboy to /Users/zhangyizhi/.npm/registry.npmjs.org/busboy/.cache.json
+168 silly addNameRange number 2 { name: 'busboy', range: '>=0.2.9 <0.3.0', hasData: true }
+169 silly addNameRange versions [ 'busboy',
+169 silly addNameRange   [ '0.0.1',
+169 silly addNameRange     '0.0.2',
+169 silly addNameRange     '0.0.3',
+169 silly addNameRange     '0.0.4',
+169 silly addNameRange     '0.0.5',
+169 silly addNameRange     '0.0.6',
+169 silly addNameRange     '0.0.7',
+169 silly addNameRange     '0.0.8',
+169 silly addNameRange     '0.0.9',
+169 silly addNameRange     '0.0.10',
+169 silly addNameRange     '0.0.11',
+169 silly addNameRange     '0.0.12',
+169 silly addNameRange     '0.0.13',
+169 silly addNameRange     '0.0.14',
+169 silly addNameRange     '0.0.15',
+169 silly addNameRange     '0.1.0',
+169 silly addNameRange     '0.1.1',
+169 silly addNameRange     '0.2.0',
+169 silly addNameRange     '0.2.1',
+169 silly addNameRange     '0.2.2',
+169 silly addNameRange     '0.2.3',
+169 silly addNameRange     '0.2.4',
+169 silly addNameRange     '0.2.5',
+169 silly addNameRange     '0.2.6',
+169 silly addNameRange     '0.2.7',
+169 silly addNameRange     '0.2.8',
+169 silly addNameRange     '0.2.9',
+169 silly addNameRange     '0.2.10',
+169 silly addNameRange     '0.2.11',
+169 silly addNameRange     '0.2.12',
+169 silly addNameRange     '0.2.13' ] ]
+170 silly addNamed busboy@0.2.13
+171 verbose addNamed "0.2.13" is a plain semver version for busboy
+172 silly cache afterAdd busboy@0.2.13
+173 verbose afterAdd /Users/zhangyizhi/.npm/busboy/0.2.13/package/package.json not in flight; writing
+174 verbose afterAdd /Users/zhangyizhi/.npm/busboy/0.2.13/package/package.json written
+175 http 304 https://registry.npmjs.org/type-is
+176 verbose headers { date: 'Mon, 04 Jul 2016 09:55:23 GMT',
+176 verbose headers   via: '1.1 varnish',
+176 verbose headers   'cache-control': 'max-age=300',
+176 verbose headers   etag: '"6MF2TP522BDBG0RWZVQFH30D1"',
+176 verbose headers   age: '136',
+176 verbose headers   connection: 'keep-alive',
+176 verbose headers   'x-served-by': 'cache-lcy1133-LCY',
+176 verbose headers   'x-cache': 'HIT',
+176 verbose headers   'x-cache-hits': '57',
+176 verbose headers   'x-timer': 'S1467626123.949756,VS0,VE0',
+176 verbose headers   vary: 'Accept-Encoding' }
+177 silly get cb [ 304,
+177 silly get   { date: 'Mon, 04 Jul 2016 09:55:23 GMT',
+177 silly get     via: '1.1 varnish',
+177 silly get     'cache-control': 'max-age=300',
+177 silly get     etag: '"6MF2TP522BDBG0RWZVQFH30D1"',
+177 silly get     age: '136',
+177 silly get     connection: 'keep-alive',
+177 silly get     'x-served-by': 'cache-lcy1133-LCY',
+177 silly get     'x-cache': 'HIT',
+177 silly get     'x-cache-hits': '57',
+177 silly get     'x-timer': 'S1467626123.949756,VS0,VE0',
+177 silly get     vary: 'Accept-Encoding' } ]
+178 verbose etag https://registry.npmjs.org/type-is from cache
+179 verbose get saving type-is to /Users/zhangyizhi/.npm/registry.npmjs.org/type-is/.cache.json
+180 http 304 https://registry.npmjs.org/qs
+181 verbose headers { date: 'Mon, 04 Jul 2016 09:55:23 GMT',
+181 verbose headers   via: '1.1 varnish',
+181 verbose headers   'cache-control': 'max-age=300',
+181 verbose headers   etag: '"7GFRDFKHTA98LGH1RG2YJ5622"',
+181 verbose headers   age: '26',
+181 verbose headers   connection: 'keep-alive',
+181 verbose headers   'x-served-by': 'cache-lcy1129-LCY',
+181 verbose headers   'x-cache': 'HIT',
+181 verbose headers   'x-cache-hits': '7',
+181 verbose headers   'x-timer': 'S1467626123.949638,VS0,VE0',
+181 verbose headers   vary: 'Accept-Encoding' }
+182 silly get cb [ 304,
+182 silly get   { date: 'Mon, 04 Jul 2016 09:55:23 GMT',
+182 silly get     via: '1.1 varnish',
+182 silly get     'cache-control': 'max-age=300',
+182 silly get     etag: '"7GFRDFKHTA98LGH1RG2YJ5622"',
+182 silly get     age: '26',
+182 silly get     connection: 'keep-alive',
+182 silly get     'x-served-by': 'cache-lcy1129-LCY',
+182 silly get     'x-cache': 'HIT',
+182 silly get     'x-cache-hits': '7',
+182 silly get     'x-timer': 'S1467626123.949638,VS0,VE0',
+182 silly get     vary: 'Accept-Encoding' } ]
+183 verbose etag https://registry.npmjs.org/qs from cache
+184 verbose get saving qs to /Users/zhangyizhi/.npm/registry.npmjs.org/qs/.cache.json
+185 silly addNameRange number 2 { name: 'type-is', range: '>=1.5.2 <1.6.0', hasData: true }
+186 silly addNameRange versions [ 'type-is',
+186 silly addNameRange   [ '1.0.0',
+186 silly addNameRange     '1.0.1',
+186 silly addNameRange     '1.1.0',
+186 silly addNameRange     '1.2.0',
+186 silly addNameRange     '1.2.1',
+186 silly addNameRange     '1.2.2',
+186 silly addNameRange     '1.3.0',
+186 silly addNameRange     '1.3.1',
+186 silly addNameRange     '1.3.2',
+186 silly addNameRange     '1.4.0',
+186 silly addNameRange     '1.5.0',
+186 silly addNameRange     '1.5.1',
+186 silly addNameRange     '1.5.2',
+186 silly addNameRange     '1.5.3',
+186 silly addNameRange     '1.5.4',
+186 silly addNameRange     '1.5.5',
+186 silly addNameRange     '1.5.6',
+186 silly addNameRange     '1.5.7',
+186 silly addNameRange     '1.6.0',
+186 silly addNameRange     '1.6.1',
+186 silly addNameRange     '1.6.2',
+186 silly addNameRange     '1.6.3',
+186 silly addNameRange     '1.6.4',
+186 silly addNameRange     '1.6.5',
+186 silly addNameRange     '1.6.6',
+186 silly addNameRange     '1.6.7',
+186 silly addNameRange     '1.6.8',
+186 silly addNameRange     '1.6.9',
+186 silly addNameRange     '1.6.10',
+186 silly addNameRange     '1.6.11',
+186 silly addNameRange     '1.6.12',
+186 silly addNameRange     '1.6.13' ] ]
+187 silly addNamed type-is@1.5.7
+188 verbose addNamed "1.5.7" is a plain semver version for type-is
+189 silly addNameRange number 2 { name: 'qs', range: '>=1.2.2 <1.3.0', hasData: true }
+190 silly addNameRange versions [ 'qs',
+190 silly addNameRange   [ '0.0.1',
+190 silly addNameRange     '0.0.2',
+190 silly addNameRange     '0.0.3',
+190 silly addNameRange     '0.0.4',
+190 silly addNameRange     '0.0.5',
+190 silly addNameRange     '0.0.6',
+190 silly addNameRange     '0.0.7',
+190 silly addNameRange     '0.1.0',
+190 silly addNameRange     '0.2.0',
+190 silly addNameRange     '0.3.0',
+190 silly addNameRange     '0.3.1',
+190 silly addNameRange     '0.3.2',
+190 silly addNameRange     '0.4.0',
+190 silly addNameRange     '0.4.1',
+190 silly addNameRange     '0.4.2',
+190 silly addNameRange     '0.5.0',
+190 silly addNameRange     '0.5.1',
+190 silly addNameRange     '0.5.2',
+190 silly addNameRange     '0.5.3',
+190 silly addNameRange     '0.5.4',
+190 silly addNameRange     '0.5.5',
+190 silly addNameRange     '0.5.6',
+190 silly addNameRange     '0.6.0',
+190 silly addNameRange     '0.6.1',
+190 silly addNameRange     '0.6.2',
+190 silly addNameRange     '0.6.3',
+190 silly addNameRange     '0.6.4',
+190 silly addNameRange     '0.6.5',
+190 silly addNameRange     '0.6.6',
+190 silly addNameRange     '1.0.0',
+190 silly addNameRange     '1.0.1',
+190 silly addNameRange     '1.0.2',
+190 silly addNameRange     '1.1.0',
+190 silly addNameRange     '1.2.0',
+190 silly addNameRange     '1.2.1',
+190 silly addNameRange     '1.2.2',
+190 silly addNameRange     '2.0.0',
+190 silly addNameRange     '2.1.0',
+190 silly addNameRange     '2.2.0',
+190 silly addNameRange     '2.2.1',
+190 silly addNameRange     '2.2.2',
+190 silly addNameRange     '2.2.3',
+190 silly addNameRange     '2.2.4',
+190 silly addNameRange     '2.2.5',
+190 silly addNameRange     '2.3.0',
+190 silly addNameRange     '2.3.1',
+190 silly addNameRange     '2.3.2',
+190 silly addNameRange     '2.3.3',
+190 silly addNameRange     '2.4.0',
+190 silly addNameRange     '2.4.1',
+190 silly addNameRange     '2.4.2',
+190 silly addNameRange     '3.0.0',
+190 silly addNameRange     '3.1.0',
+190 silly addNameRange     '4.0.0',
+190 silly addNameRange     '5.0.0',
+190 silly addNameRange     '5.1.0',
+190 silly addNameRange     '5.2.0',
+190 silly addNameRange     '6.0.0',
+190 silly addNameRange     '6.0.1',
+190 silly addNameRange     '6.0.2',
+190 silly addNameRange     '6.1.0',
+190 silly addNameRange     '6.2.0' ] ]
+191 silly addNamed qs@1.2.2
+192 verbose addNamed "1.2.2" is a plain semver version for qs
+193 silly mapToRegistry name type-is
+194 silly mapToRegistry using default registry
+195 silly mapToRegistry registry https://registry.npmjs.org/
+196 silly mapToRegistry uri https://registry.npmjs.org/type-is
+197 verbose addRemoteTarball https://registry.npmjs.org/type-is/-/type-is-1.5.7.tgz not in flight; adding
+198 verbose addRemoteTarball [ 'https://registry.npmjs.org/type-is/-/type-is-1.5.7.tgz',
+198 verbose addRemoteTarball   'b9368a593cc6ef7d0645e78b2f4c64cbecd05e90' ]
+199 silly mapToRegistry name qs
+200 silly mapToRegistry using default registry
+201 silly mapToRegistry registry https://registry.npmjs.org/
+202 silly mapToRegistry uri https://registry.npmjs.org/qs
+203 verbose addRemoteTarball https://registry.npmjs.org/qs/-/qs-1.2.2.tgz not in flight; adding
+204 verbose addRemoteTarball [ 'https://registry.npmjs.org/qs/-/qs-1.2.2.tgz',
+204 verbose addRemoteTarball   '19b57ff24dc2a99ce1f8bdf6afcda59f8ef61f88' ]
+205 info retry fetch attempt 1 at 17:55:27
+206 info attempt registry request try #1 at 17:55:27
+207 http fetch GET https://registry.npmjs.org/type-is/-/type-is-1.5.7.tgz
+208 info retry fetch attempt 1 at 17:55:27
+209 info attempt registry request try #1 at 17:55:27
+210 http fetch GET https://registry.npmjs.org/qs/-/qs-1.2.2.tgz
+211 http 304 https://registry.npmjs.org/mkdirp
+212 verbose headers { date: 'Mon, 04 Jul 2016 09:55:23 GMT',
+212 verbose headers   via: '1.1 varnish',
+212 verbose headers   'cache-control': 'max-age=300',
+212 verbose headers   etag: '"CVN414WULFYEIMA412CQ7KULR"',
+212 verbose headers   age: '49',
+212 verbose headers   connection: 'keep-alive',
+212 verbose headers   'x-served-by': 'cache-lcy1122-LCY',
+212 verbose headers   'x-cache': 'HIT',
+212 verbose headers   'x-cache-hits': '13',
+212 verbose headers   'x-timer': 'S1467626123.953676,VS0,VE0',
+212 verbose headers   vary: 'Accept-Encoding' }
+213 silly get cb [ 304,
+213 silly get   { date: 'Mon, 04 Jul 2016 09:55:23 GMT',
+213 silly get     via: '1.1 varnish',
+213 silly get     'cache-control': 'max-age=300',
+213 silly get     etag: '"CVN414WULFYEIMA412CQ7KULR"',
+213 silly get     age: '49',
+213 silly get     connection: 'keep-alive',
+213 silly get     'x-served-by': 'cache-lcy1122-LCY',
+213 silly get     'x-cache': 'HIT',
+213 silly get     'x-cache-hits': '13',
+213 silly get     'x-timer': 'S1467626123.953676,VS0,VE0',
+213 silly get     vary: 'Accept-Encoding' } ]
+214 verbose etag https://registry.npmjs.org/mkdirp from cache
+215 verbose get saving mkdirp to /Users/zhangyizhi/.npm/registry.npmjs.org/mkdirp/.cache.json
+216 silly addNameRange number 2 { name: 'mkdirp', range: '>=0.3.5 <0.4.0', hasData: true }
+217 silly addNameRange versions [ 'mkdirp',
+217 silly addNameRange   [ '0.0.1',
+217 silly addNameRange     '0.0.2',
+217 silly addNameRange     '0.0.3',
+217 silly addNameRange     '0.0.4',
+217 silly addNameRange     '0.0.5',
+217 silly addNameRange     '0.0.6',
+217 silly addNameRange     '0.0.7',
+217 silly addNameRange     '0.1.0',
+217 silly addNameRange     '0.2.0',
+217 silly addNameRange     '0.2.1',
+217 silly addNameRange     '0.2.2',
+217 silly addNameRange     '0.3.0',
+217 silly addNameRange     '0.3.1',
+217 silly addNameRange     '0.3.2',
+217 silly addNameRange     '0.3.3',
+217 silly addNameRange     '0.3.4',
+217 silly addNameRange     '0.3.5',
+217 silly addNameRange     '0.4.0',
+217 silly addNameRange     '0.4.1',
+217 silly addNameRange     '0.4.2',
+217 silly addNameRange     '0.5.0',
+217 silly addNameRange     '0.5.1' ] ]
+218 silly addNamed mkdirp@0.3.5
+219 verbose addNamed "0.3.5" is a plain semver version for mkdirp
+220 silly mapToRegistry name mkdirp
+221 silly mapToRegistry using default registry
+222 silly mapToRegistry registry https://registry.npmjs.org/
+223 silly mapToRegistry uri https://registry.npmjs.org/mkdirp
+224 verbose addRemoteTarball https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz not in flight; adding
+225 verbose addRemoteTarball [ 'https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz',
+225 verbose addRemoteTarball   'de3e5f8961c88c787ee1368df849ac4413eca8d7' ]
+226 info retry fetch attempt 1 at 17:55:27
+227 info attempt registry request try #1 at 17:55:27
+228 http fetch GET https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz
+229 http fetch 200 https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz
+230 http fetch 200 https://registry.npmjs.org/type-is/-/type-is-1.5.7.tgz
+231 http fetch 200 https://registry.npmjs.org/qs/-/qs-1.2.2.tgz
+232 silly fetchAndShaCheck shasum b9368a593cc6ef7d0645e78b2f4c64cbecd05e90
+233 verbose addTmpTarball /var/folders/nc/t1m74zt536z1tkgxc_qxlmyr0000gn/T/npm-27711-6d0b3140/registry.npmjs.org/type-is/-/type-is-1.5.7.tgz not in flight; adding
+234 verbose addTmpTarball already have metadata; skipping unpack for type-is@1.5.7
+235 silly cache afterAdd type-is@1.5.7
+236 verbose afterAdd /Users/zhangyizhi/.npm/type-is/1.5.7/package/package.json not in flight; writing
+237 verbose afterAdd /Users/zhangyizhi/.npm/type-is/1.5.7/package/package.json written
+238 silly fetchAndShaCheck shasum de3e5f8961c88c787ee1368df849ac4413eca8d7
+239 verbose addTmpTarball /var/folders/nc/t1m74zt536z1tkgxc_qxlmyr0000gn/T/npm-27711-6d0b3140/registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz not in flight; adding
+240 verbose addTmpTarball already have metadata; skipping unpack for mkdirp@0.3.5
+241 silly cache afterAdd mkdirp@0.3.5
+242 verbose afterAdd /Users/zhangyizhi/.npm/mkdirp/0.3.5/package/package.json not in flight; writing
+243 silly fetchAndShaCheck shasum 19b57ff24dc2a99ce1f8bdf6afcda59f8ef61f88
+244 verbose afterAdd /Users/zhangyizhi/.npm/mkdirp/0.3.5/package/package.json written
+245 verbose addTmpTarball /var/folders/nc/t1m74zt536z1tkgxc_qxlmyr0000gn/T/npm-27711-6d0b3140/registry.npmjs.org/qs/-/qs-1.2.2.tgz not in flight; adding
+246 verbose addTmpTarball already have metadata; skipping unpack for qs@1.2.2
+247 silly cache afterAdd qs@1.2.2
+248 verbose afterAdd /Users/zhangyizhi/.npm/qs/1.2.2/package/package.json not in flight; writing
+249 verbose afterAdd /Users/zhangyizhi/.npm/qs/1.2.2/package/package.json written
+250 silly install resolved [ { name: 'busboy',
+250 silly install resolved     version: '0.2.13',
+250 silly install resolved     author: { name: 'Brian White', email: 'mscdex@mscdex.net' },
+250 silly install resolved     description: 'A streaming parser for HTML form data for node.js',
+250 silly install resolved     main: './lib/main',
+250 silly install resolved     dependencies: { dicer: '0.2.5', 'readable-stream': '1.1.x' },
+250 silly install resolved     scripts: { test: 'node test/test.js' },
+250 silly install resolved     engines: { node: '>=0.8.0' },
+250 silly install resolved     keywords: [ 'uploads', 'forms', 'multipart', 'form-data' ],
+250 silly install resolved     licenses: [ [Object] ],
+250 silly install resolved     repository:
+250 silly install resolved      { type: 'git',
+250 silly install resolved        url: 'git+ssh://git@github.com/mscdex/busboy.git' },
+250 silly install resolved     bugs: { url: 'https://github.com/mscdex/busboy/issues' },
+250 silly install resolved     homepage: 'https://github.com/mscdex/busboy#readme',
+250 silly install resolved     _id: 'busboy@0.2.13',
+250 silly install resolved     _shasum: '90fc4f6a3967d815616fc976bfa8e56aed0c58b6',
+250 silly install resolved     _resolved: 'https://registry.npmjs.org/busboy/-/busboy-0.2.13.tgz',
+250 silly install resolved     _from: 'busboy@>=0.2.9 <0.3.0',
+250 silly install resolved     _npmVersion: '3.7.3',
+250 silly install resolved     _nodeVersion: '5.8.0',
+250 silly install resolved     _npmUser: { name: 'mscdex', email: 'mscdex@mscdex.net' },
+250 silly install resolved     maintainers: [ [Object] ],
+250 silly install resolved     dist:
+250 silly install resolved      { shasum: '90fc4f6a3967d815616fc976bfa8e56aed0c58b6',
+250 silly install resolved        tarball: 'https://registry.npmjs.org/busboy/-/busboy-0.2.13.tgz' },
+250 silly install resolved     _npmOperationalInternal:
+250 silly install resolved      { host: 'packages-13-west.internal.npmjs.com',
+250 silly install resolved        tmp: 'tmp/busboy-0.2.13.tgz_1458666955253_0.557709296233952' },
+250 silly install resolved     directories: {},
+250 silly install resolved     readme: 'ERROR: No README data found!' },
+250 silly install resolved   { name: 'type-is',
+250 silly install resolved     description: 'Infer the content-type of a request.',
+250 silly install resolved     version: '1.5.7',
+250 silly install resolved     author:
+250 silly install resolved      { name: 'Jonathan Ong',
+250 silly install resolved        email: 'me@jongleberry.com',
+250 silly install resolved        url: 'http://jongleberry.com' },
+250 silly install resolved     contributors: [ [Object] ],
+250 silly install resolved     license: 'MIT',
+250 silly install resolved     repository: { type: 'git', url: 'https://github.com/jshttp/type-is' },
+250 silly install resolved     dependencies: { 'media-typer': '0.3.0', 'mime-types': '~2.0.9' },
+250 silly install resolved     devDependencies: { istanbul: '0.3.5', mocha: '~1.21.5' },
+250 silly install resolved     engines: { node: '>= 0.6' },
+250 silly install resolved     files: [ 'LICENSE', 'HISTORY.md', 'index.js' ],
+250 silly install resolved     scripts:
+250 silly install resolved      { test: 'mocha --reporter spec --check-leaks --bail test/',
+250 silly install resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/',
+250 silly install resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/' },
+250 silly install resolved     keywords: [ 'content', 'type', 'checking' ],
+250 silly install resolved     gitHead: 'f4335cc563a98ee80366f04f67c50cef089ae803',
+250 silly install resolved     bugs: { url: 'https://github.com/jshttp/type-is/issues' },
+250 silly install resolved     homepage: 'https://github.com/jshttp/type-is',
+250 silly install resolved     _id: 'type-is@1.5.7',
+250 silly install resolved     _shasum: 'b9368a593cc6ef7d0645e78b2f4c64cbecd05e90',
+250 silly install resolved     _from: 'type-is@>=1.5.2 <1.6.0',
+250 silly install resolved     _npmVersion: '1.4.28',
+250 silly install resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+250 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+250 silly install resolved     dist:
+250 silly install resolved      { shasum: 'b9368a593cc6ef7d0645e78b2f4c64cbecd05e90',
+250 silly install resolved        tarball: 'https://registry.npmjs.org/type-is/-/type-is-1.5.7.tgz' },
+250 silly install resolved     directories: {},
+250 silly install resolved     _resolved: 'https://registry.npmjs.org/type-is/-/type-is-1.5.7.tgz' },
+250 silly install resolved   { name: 'mkdirp',
+250 silly install resolved     description: 'Recursively mkdir, like `mkdir -p`',
+250 silly install resolved     version: '0.3.5',
+250 silly install resolved     author:
+250 silly install resolved      { name: 'James Halliday',
+250 silly install resolved        email: 'mail@substack.net',
+250 silly install resolved        url: 'http://substack.net' },
+250 silly install resolved     main: './index',
+250 silly install resolved     keywords: [ 'mkdir', 'directory' ],
+250 silly install resolved     repository:
+250 silly install resolved      { type: 'git',
+250 silly install resolved        url: 'http://github.com/substack/node-mkdirp.git' },
+250 silly install resolved     scripts: { test: 'tap test/*.js' },
+250 silly install resolved     devDependencies: { tap: '~0.4.0' },
+250 silly install resolved     license: 'MIT',
+250 silly install resolved     _id: 'mkdirp@0.3.5',
+250 silly install resolved     dist:
+250 silly install resolved      { shasum: 'de3e5f8961c88c787ee1368df849ac4413eca8d7',
+250 silly install resolved        tarball: 'https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz' },
+250 silly install resolved     _from: 'mkdirp@>=0.3.5 <0.4.0',
+250 silly install resolved     _npmVersion: '1.2.2',
+250 silly install resolved     _npmUser: { name: 'substack', email: 'mail@substack.net' },
+250 silly install resolved     maintainers: [ [Object] ],
+250 silly install resolved     directories: {},
+250 silly install resolved     _shasum: 'de3e5f8961c88c787ee1368df849ac4413eca8d7',
+250 silly install resolved     _resolved: 'https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz' },
+250 silly install resolved   { name: 'qs',
+250 silly install resolved     version: '1.2.2',
+250 silly install resolved     description: 'A querystring parser that supports nesting and arrays, with a depth limit',
+250 silly install resolved     homepage: 'https://github.com/hapijs/qs',
+250 silly install resolved     main: 'index.js',
+250 silly install resolved     dependencies: {},
+250 silly install resolved     devDependencies: { lab: '3.x.x' },
+250 silly install resolved     scripts: { test: 'make test-cov' },
+250 silly install resolved     repository: { type: 'git', url: 'https://github.com/hapijs/qs.git' },
+250 silly install resolved     keywords: [ 'querystring', 'qs' ],
+250 silly install resolved     author: { name: 'Nathan LaFreniere', email: 'quitlahok@gmail.com' },
+250 silly install resolved     licenses: [ [Object] ],
+250 silly install resolved     gitHead: 'bd9455fea88d1c51a80dbf57ef0f99b4e553177d',
+250 silly install resolved     bugs: { url: 'https://github.com/hapijs/qs/issues' },
+250 silly install resolved     _id: 'qs@1.2.2',
+250 silly install resolved     _shasum: '19b57ff24dc2a99ce1f8bdf6afcda59f8ef61f88',
+250 silly install resolved     _from: 'qs@>=1.2.2 <1.3.0',
+250 silly install resolved     _npmVersion: '1.4.21',
+250 silly install resolved     _npmUser: { name: 'hueniverse', email: 'eran@hueniverse.com' },
+250 silly install resolved     maintainers: [ [Object], [Object] ],
+250 silly install resolved     dist:
+250 silly install resolved      { shasum: '19b57ff24dc2a99ce1f8bdf6afcda59f8ef61f88',
+250 silly install resolved        tarball: 'https://registry.npmjs.org/qs/-/qs-1.2.2.tgz' },
+250 silly install resolved     directories: {},
+250 silly install resolved     _resolved: 'https://registry.npmjs.org/qs/-/qs-1.2.2.tgz' } ]
+251 info install busboy@0.2.13 into /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer
+252 info install type-is@1.5.7 into /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer
+253 info install mkdirp@0.3.5 into /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer
+254 info install qs@1.2.2 into /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer
+255 info installOne busboy@0.2.13
+256 verbose installOne of busboy to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer not in flight; installing
+257 info installOne type-is@1.5.7
+258 verbose installOne of type-is to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer not in flight; installing
+259 info installOne mkdirp@0.3.5
+260 verbose installOne of mkdirp to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer not in flight; installing
+261 info installOne qs@1.2.2
+262 verbose installOne of qs to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer not in flight; installing
+263 verbose lock using /Users/zhangyizhi/.npm/_locks/busboy-36193f060a6d97fd.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy
+264 verbose lock using /Users/zhangyizhi/.npm/_locks/type-is-73f2ec2e717d0ba8.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is
+265 verbose lock using /Users/zhangyizhi/.npm/_locks/qs-cbb29f3c17bbbeb2.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/qs
+266 silly install write writing busboy 0.2.13 to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy
+267 silly install write writing type-is 1.5.7 to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is
+268 verbose lock using /Users/zhangyizhi/.npm/_locks/mkdirp-0773352ec0419b96.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/mkdirp
+269 silly install write writing qs 1.2.2 to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/qs
+270 silly install write writing mkdirp 0.3.5 to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/mkdirp
+271 verbose unbuild node_modules/multer/node_modules/type-is
+272 verbose unbuild node_modules/multer/node_modules/busboy
+273 verbose unbuild node_modules/multer/node_modules/qs
+274 verbose unbuild node_modules/multer/node_modules/mkdirp
+275 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is is being purged from base /Users/zhangyizhi/GitHub/tryNode2.0_js
+276 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is
+277 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy is being purged from base /Users/zhangyizhi/GitHub/tryNode2.0_js
+278 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy
+279 verbose tar unpack /Users/zhangyizhi/.npm/type-is/1.5.7/package.tgz
+280 verbose tar unpacking to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is
+281 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is is being purged
+282 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is
+283 verbose tar unpack /Users/zhangyizhi/.npm/busboy/0.2.13/package.tgz
+284 verbose tar unpacking to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy
+285 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy is being purged
+286 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy
+287 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/qs is being purged from base /Users/zhangyizhi/GitHub/tryNode2.0_js
+288 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/qs
+289 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/mkdirp is being purged from base /Users/zhangyizhi/GitHub/tryNode2.0_js
+290 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/mkdirp
+291 silly gunzTarPerm modes [ '755', '644' ]
+292 silly gunzTarPerm modes [ '755', '644' ]
+293 verbose tar unpack /Users/zhangyizhi/.npm/qs/1.2.2/package.tgz
+294 verbose tar unpacking to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/qs
+295 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/qs is being purged
+296 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/qs
+297 verbose tar unpack /Users/zhangyizhi/.npm/mkdirp/0.3.5/package.tgz
+298 verbose tar unpacking to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/mkdirp
+299 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/mkdirp is being purged
+300 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/mkdirp
+301 silly gunzTarPerm modes [ '755', '644' ]
+302 silly gunzTarPerm modes [ '755', '644' ]
+303 silly gunzTarPerm extractEntry package.json
+304 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+305 silly gunzTarPerm extractEntry
+306 silly gunzTarPerm modified mode [ '', 509, 493 ]
+307 silly gunzTarPerm extractEntry package.json
+308 silly gunzTarPerm modified mode [ 'package.json', 509, 493 ]
+309 silly gunzTarPerm extractEntry package.json
+310 silly gunzTarPerm extractEntry README.md
+311 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+312 silly gunzTarPerm extractEntry LICENSE
+313 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+314 silly gunzTarPerm extractEntry .travis.yml
+315 silly gunzTarPerm modified mode [ '.travis.yml', 436, 420 ]
+316 silly gunzTarPerm extractEntry LICENSE
+317 silly gunzTarPerm modified mode [ 'LICENSE', 436, 420 ]
+318 silly gunzTarPerm extractEntry README.md
+319 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+320 silly gunzTarPerm extractEntry .npmignore
+321 silly gunzTarPerm extractEntry LICENSE
+322 silly gunzTarPerm extractEntry .npmignore
+323 silly gunzTarPerm modified mode [ '.npmignore', 436, 420 ]
+324 silly gunzTarPerm extractEntry README.md
+325 silly gunzTarPerm modified mode [ 'README.md', 509, 493 ]
+326 silly gunzTarPerm extractEntry deps/
+327 silly gunzTarPerm modified mode [ 'deps/', 509, 493 ]
+328 silly gunzTarPerm extractEntry deps/encoding/
+329 silly gunzTarPerm modified mode [ 'deps/encoding/', 509, 493 ]
+330 silly gunzTarPerm extractEntry index.js
+331 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+332 silly gunzTarPerm extractEntry HISTORY.md
+333 silly gunzTarPerm modified mode [ 'HISTORY.md', 438, 420 ]
+334 silly gunzTarPerm extractEntry LICENSE
+335 silly gunzTarPerm modified mode [ 'LICENSE', 508, 492 ]
+336 silly gunzTarPerm extractEntry index.js
+337 silly gunzTarPerm modified mode [ 'index.js', 436, 420 ]
+338 silly gunzTarPerm extractEntry index.js
+339 silly gunzTarPerm extractEntry examples/pow.js
+340 silly gunzTarPerm extractEntry deps/encoding/encoding-indexes.js
+341 silly gunzTarPerm modified mode [ 'deps/encoding/encoding-indexes.js', 436, 420 ]
+342 silly gunzTarPerm extractEntry test/parse.js
+343 silly gunzTarPerm modified mode [ 'test/parse.js', 509, 493 ]
+344 silly gunzTarPerm extractEntry test/stringify.js
+345 silly gunzTarPerm modified mode [ 'test/stringify.js', 509, 493 ]
+346 silly gunzTarPerm extractEntry .jshintignore
+347 silly gunzTarPerm modified mode [ '.jshintignore', 436, 420 ]
+348 silly gunzTarPerm extractEntry .jshintrc
+349 silly gunzTarPerm modified mode [ '.jshintrc', 436, 420 ]
+350 silly gunzTarPerm extractEntry .travis.yml
+351 silly gunzTarPerm modified mode [ '.travis.yml', 436, 420 ]
+352 silly gunzTarPerm extractEntry lib/index.js
+353 silly gunzTarPerm modified mode [ 'lib/index.js', 508, 492 ]
+354 silly gunzTarPerm extractEntry lib/parse.js
+355 silly gunzTarPerm modified mode [ 'lib/parse.js', 509, 493 ]
+356 silly gunzTarPerm extractEntry lib/stringify.js
+357 silly gunzTarPerm modified mode [ 'lib/stringify.js', 509, 493 ]
+358 silly gunzTarPerm extractEntry lib/utils.js
+359 silly gunzTarPerm modified mode [ 'lib/utils.js', 509, 493 ]
+360 silly gunzTarPerm extractEntry CONTRIBUTING.md
+361 silly gunzTarPerm modified mode [ 'CONTRIBUTING.md', 436, 420 ]
+362 silly gunzTarPerm extractEntry Makefile
+363 silly gunzTarPerm modified mode [ 'Makefile', 436, 420 ]
+364 silly gunzTarPerm extractEntry readme.markdown
+365 silly gunzTarPerm extractEntry test/perm.js
+366 silly gunzTarPerm extractEntry test/perm_sync.js
+367 silly gunzTarPerm extractEntry test/race.js
+368 silly gunzTarPerm extractEntry test/rel.js
+369 silly gunzTarPerm extractEntry test/return.js
+370 silly gunzTarPerm extractEntry test/clobber.js
+371 silly gunzTarPerm extractEntry deps/encoding/encoding.js
+372 silly gunzTarPerm modified mode [ 'deps/encoding/encoding.js', 436, 420 ]
+373 verbose write writing to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/package.json
+374 silly gunzTarPerm extractEntry lib/
+375 silly gunzTarPerm modified mode [ 'lib/', 509, 493 ]
+376 info preinstall type-is@1.5.7
+377 silly gunzTarPerm extractEntry test/root.js
+378 silly gunzTarPerm extractEntry test/umask.js
+379 silly gunzTarPerm extractEntry lib/main.js
+380 silly gunzTarPerm modified mode [ 'lib/main.js', 436, 420 ]
+381 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/package.json
+382 silly gunzTarPerm extractEntry lib/types/
+383 silly gunzTarPerm modified mode [ 'lib/types/', 509, 493 ]
+384 silly gunzTarPerm extractEntry lib/types/multipart.js
+385 silly gunzTarPerm modified mode [ 'lib/types/multipart.js', 436, 420 ]
+386 silly gunzTarPerm extractEntry lib/types/urlencoded.js
+387 silly gunzTarPerm modified mode [ 'lib/types/urlencoded.js', 436, 420 ]
+388 silly gunzTarPerm extractEntry lib/utils.js
+389 silly gunzTarPerm modified mode [ 'lib/utils.js', 436, 420 ]
+390 silly gunzTarPerm extractEntry test/sync.js
+391 silly gunzTarPerm extractEntry test/chmod.js
+392 silly prepareForInstallMany adding media-typer@0.3.0 from type-is dependencies
+393 silly prepareForInstallMany adding mime-types@~2.0.9 from type-is dependencies
+394 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/package.json
+395 silly gunzTarPerm extractEntry package.json
+396 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+397 silly gunzTarPerm extractEntry test/
+398 silly gunzTarPerm modified mode [ 'test/', 509, 493 ]
+399 silly gunzTarPerm extractEntry test/test-types-multipart.js
+400 silly gunzTarPerm modified mode [ 'test/test-types-multipart.js', 436, 420 ]
+401 silly gunzTarPerm extractEntry test/test-types-urlencoded.js
+402 silly gunzTarPerm modified mode [ 'test/test-types-urlencoded.js', 436, 420 ]
+403 silly gunzTarPerm extractEntry test/umask_sync.js
+404 silly gunzTarPerm extractEntry test/return_sync.js
+405 silly gunzTarPerm extractEntry test/test-utils-decoder.js
+406 silly gunzTarPerm modified mode [ 'test/test-utils-decoder.js', 436, 420 ]
+407 silly cache add args [ 'media-typer@0.3.0', null ]
+408 verbose cache add spec media-typer@0.3.0
+409 silly cache add args [ 'mime-types@~2.0.9', null ]
+410 verbose cache add spec mime-types@~2.0.9
+411 silly cache add parsed spec Result {
+411 silly cache add   raw: 'media-typer@0.3.0',
+411 silly cache add   scope: null,
+411 silly cache add   name: 'media-typer',
+411 silly cache add   rawSpec: '0.3.0',
+411 silly cache add   spec: '0.3.0',
+411 silly cache add   type: 'version' }
+412 silly addNamed media-typer@0.3.0
+413 verbose addNamed "0.3.0" is a plain semver version for media-typer
+414 silly mapToRegistry name media-typer
+415 silly mapToRegistry using default registry
+416 silly mapToRegistry registry https://registry.npmjs.org/
+417 silly mapToRegistry uri https://registry.npmjs.org/media-typer
+418 verbose addNameVersion registry:https://registry.npmjs.org/media-typer not in flight; fetching
+419 silly cache add parsed spec Result {
+419 silly cache add   raw: 'mime-types@~2.0.9',
+419 silly cache add   scope: null,
+419 silly cache add   name: 'mime-types',
+419 silly cache add   rawSpec: '~2.0.9',
+419 silly cache add   spec: '>=2.0.9 <2.1.0',
+419 silly cache add   type: 'range' }
+420 silly addNamed mime-types@>=2.0.9 <2.1.0
+421 verbose addNamed ">=2.0.9 <2.1.0" is a valid semver range for mime-types
+422 silly addNameRange { name: 'mime-types', range: '>=2.0.9 <2.1.0', hasData: false }
+423 silly mapToRegistry name mime-types
+424 silly mapToRegistry using default registry
+425 silly mapToRegistry registry https://registry.npmjs.org/
+426 silly mapToRegistry uri https://registry.npmjs.org/mime-types
+427 verbose addNameRange registry:https://registry.npmjs.org/mime-types not in flight; fetching
+428 silly gunzTarPerm extractEntry test/test-utils-parse-params.js
+429 silly gunzTarPerm modified mode [ 'test/test-utils-parse-params.js', 436, 420 ]
+430 silly gunzTarPerm extractEntry test/test.js
+431 silly gunzTarPerm modified mode [ 'test/test.js', 436, 420 ]
+432 verbose request uri https://registry.npmjs.org/media-typer
+433 verbose request no auth needed
+434 info attempt registry request try #1 at 17:55:28
+435 verbose etag "5ORHZTRRI5PL86YTBCZIWPFWT"
+436 http request GET https://registry.npmjs.org/media-typer
+437 verbose request uri https://registry.npmjs.org/mime-types
+438 verbose request no auth needed
+439 info attempt registry request try #1 at 17:55:28
+440 verbose etag "3O7DWUBEADFVPGVCL21NGLBAG"
+441 http request GET https://registry.npmjs.org/mime-types
+442 silly gunzTarPerm extractEntry test/mkdirp.js
+443 silly gunzTarPerm extractEntry .travis.yml
+444 verbose write writing to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/qs/package.json
+445 info preinstall qs@1.2.2
+446 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/qs/package.json
+447 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/qs/package.json
+448 silly install resolved []
+449 verbose about to build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/qs
+450 info build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/qs
+451 info linkStuff qs@1.2.2
+452 silly linkStuff qs@1.2.2 has /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules as its parent node_modules
+453 verbose write writing to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/mkdirp/package.json
+454 verbose linkBins qs@1.2.2
+455 verbose linkMans qs@1.2.2
+456 verbose rebuildBundles qs@1.2.2
+457 info preinstall mkdirp@0.3.5
+458 info install qs@1.2.2
+459 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/mkdirp/package.json
+460 info postinstall qs@1.2.2
+461 verbose unlock done using /Users/zhangyizhi/.npm/_locks/qs-cbb29f3c17bbbeb2.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/qs
+462 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/mkdirp/package.json
+463 silly install resolved []
+464 verbose about to build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/mkdirp
+465 info build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/mkdirp
+466 info linkStuff mkdirp@0.3.5
+467 silly linkStuff mkdirp@0.3.5 has /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules as its parent node_modules
+468 verbose linkBins mkdirp@0.3.5
+469 verbose linkMans mkdirp@0.3.5
+470 verbose rebuildBundles mkdirp@0.3.5
+471 info install mkdirp@0.3.5
+472 info postinstall mkdirp@0.3.5
+473 verbose unlock done using /Users/zhangyizhi/.npm/_locks/mkdirp-0773352ec0419b96.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/mkdirp
+474 verbose write writing to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/package.json
+475 info preinstall busboy@0.2.13
+476 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/package.json
+477 silly prepareForInstallMany adding dicer@0.2.5 from busboy dependencies
+478 silly prepareForInstallMany adding readable-stream@1.1.x from busboy dependencies
+479 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/package.json
+480 silly cache add args [ 'dicer@0.2.5', null ]
+481 verbose cache add spec dicer@0.2.5
+482 silly cache add args [ 'readable-stream@1.1.x', null ]
+483 verbose cache add spec readable-stream@1.1.x
+484 silly cache add parsed spec Result {
+484 silly cache add   raw: 'dicer@0.2.5',
+484 silly cache add   scope: null,
+484 silly cache add   name: 'dicer',
+484 silly cache add   rawSpec: '0.2.5',
+484 silly cache add   spec: '0.2.5',
+484 silly cache add   type: 'version' }
+485 silly addNamed dicer@0.2.5
+486 verbose addNamed "0.2.5" is a plain semver version for dicer
+487 silly mapToRegistry name dicer
+488 silly mapToRegistry using default registry
+489 silly mapToRegistry registry https://registry.npmjs.org/
+490 silly mapToRegistry uri https://registry.npmjs.org/dicer
+491 verbose addNameVersion registry:https://registry.npmjs.org/dicer not in flight; fetching
+492 silly cache add parsed spec Result {
+492 silly cache add   raw: 'readable-stream@1.1.x',
+492 silly cache add   scope: null,
+492 silly cache add   name: 'readable-stream',
+492 silly cache add   rawSpec: '1.1.x',
+492 silly cache add   spec: '>=1.1.0 <1.2.0',
+492 silly cache add   type: 'range' }
+493 silly addNamed readable-stream@>=1.1.0 <1.2.0
+494 verbose addNamed ">=1.1.0 <1.2.0" is a valid semver range for readable-stream
+495 silly addNameRange { name: 'readable-stream',
+495 silly addNameRange   range: '>=1.1.0 <1.2.0',
+495 silly addNameRange   hasData: false }
+496 silly mapToRegistry name readable-stream
+497 silly mapToRegistry using default registry
+498 silly mapToRegistry registry https://registry.npmjs.org/
+499 silly mapToRegistry uri https://registry.npmjs.org/readable-stream
+500 verbose addNameRange registry:https://registry.npmjs.org/readable-stream not in flight; fetching
+501 verbose request uri https://registry.npmjs.org/dicer
+502 verbose request no auth needed
+503 info attempt registry request try #1 at 17:55:28
+504 verbose etag "5EAVL2STWF3TD4HV2VN4AEVNI"
+505 http request GET https://registry.npmjs.org/dicer
+506 verbose request uri https://registry.npmjs.org/readable-stream
+507 verbose request no auth needed
+508 info attempt registry request try #1 at 17:55:28
+509 verbose etag "E9VURFQDJSVN7SKYIIMYUOYYK"
+510 http request GET https://registry.npmjs.org/readable-stream
+511 http 304 https://registry.npmjs.org/media-typer
+512 verbose headers { date: 'Mon, 04 Jul 2016 09:55:26 GMT',
+512 verbose headers   via: '1.1 varnish',
+512 verbose headers   'cache-control': 'max-age=300',
+512 verbose headers   etag: '"5ORHZTRRI5PL86YTBCZIWPFWT"',
+512 verbose headers   age: '53',
+512 verbose headers   connection: 'keep-alive',
+512 verbose headers   'x-served-by': 'cache-lcy1124-LCY',
+512 verbose headers   'x-cache': 'HIT',
+512 verbose headers   'x-cache-hits': '2',
+512 verbose headers   'x-timer': 'S1467626126.061629,VS0,VE0',
+512 verbose headers   vary: 'Accept-Encoding' }
+513 silly get cb [ 304,
+513 silly get   { date: 'Mon, 04 Jul 2016 09:55:26 GMT',
+513 silly get     via: '1.1 varnish',
+513 silly get     'cache-control': 'max-age=300',
+513 silly get     etag: '"5ORHZTRRI5PL86YTBCZIWPFWT"',
+513 silly get     age: '53',
+513 silly get     connection: 'keep-alive',
+513 silly get     'x-served-by': 'cache-lcy1124-LCY',
+513 silly get     'x-cache': 'HIT',
+513 silly get     'x-cache-hits': '2',
+513 silly get     'x-timer': 'S1467626126.061629,VS0,VE0',
+513 silly get     vary: 'Accept-Encoding' } ]
+514 verbose etag https://registry.npmjs.org/media-typer from cache
+515 verbose get saving media-typer to /Users/zhangyizhi/.npm/registry.npmjs.org/media-typer/.cache.json
+516 silly cache afterAdd media-typer@0.3.0
+517 verbose afterAdd /Users/zhangyizhi/.npm/media-typer/0.3.0/package/package.json not in flight; writing
+518 verbose afterAdd /Users/zhangyizhi/.npm/media-typer/0.3.0/package/package.json written
+519 http 304 https://registry.npmjs.org/readable-stream
+520 verbose headers { date: 'Mon, 04 Jul 2016 09:55:26 GMT',
+520 verbose headers   via: '1.1 varnish',
+520 verbose headers   'cache-control': 'max-age=300',
+520 verbose headers   etag: '"E9VURFQDJSVN7SKYIIMYUOYYK"',
+520 verbose headers   age: '109',
+520 verbose headers   connection: 'keep-alive',
+520 verbose headers   'x-served-by': 'cache-lcy1129-LCY',
+520 verbose headers   'x-cache': 'HIT',
+520 verbose headers   'x-cache-hits': '43',
+520 verbose headers   'x-timer': 'S1467626126.162959,VS0,VE0',
+520 verbose headers   vary: 'Accept-Encoding' }
+521 silly get cb [ 304,
+521 silly get   { date: 'Mon, 04 Jul 2016 09:55:26 GMT',
+521 silly get     via: '1.1 varnish',
+521 silly get     'cache-control': 'max-age=300',
+521 silly get     etag: '"E9VURFQDJSVN7SKYIIMYUOYYK"',
+521 silly get     age: '109',
+521 silly get     connection: 'keep-alive',
+521 silly get     'x-served-by': 'cache-lcy1129-LCY',
+521 silly get     'x-cache': 'HIT',
+521 silly get     'x-cache-hits': '43',
+521 silly get     'x-timer': 'S1467626126.162959,VS0,VE0',
+521 silly get     vary: 'Accept-Encoding' } ]
+522 verbose etag https://registry.npmjs.org/readable-stream from cache
+523 verbose get saving readable-stream to /Users/zhangyizhi/.npm/registry.npmjs.org/readable-stream/.cache.json
+524 http 304 https://registry.npmjs.org/mime-types
+525 verbose headers { date: 'Mon, 04 Jul 2016 09:55:26 GMT',
+525 verbose headers   via: '1.1 varnish',
+525 verbose headers   'cache-control': 'max-age=300',
+525 verbose headers   etag: '"3O7DWUBEADFVPGVCL21NGLBAG"',
+525 verbose headers   age: '161',
+525 verbose headers   connection: 'keep-alive',
+525 verbose headers   'x-served-by': 'cache-lcy1125-LCY',
+525 verbose headers   'x-cache': 'HIT',
+525 verbose headers   'x-cache-hits': '32',
+525 verbose headers   'x-timer': 'S1467626126.172948,VS0,VE0',
+525 verbose headers   vary: 'Accept-Encoding' }
+526 silly get cb [ 304,
+526 silly get   { date: 'Mon, 04 Jul 2016 09:55:26 GMT',
+526 silly get     via: '1.1 varnish',
+526 silly get     'cache-control': 'max-age=300',
+526 silly get     etag: '"3O7DWUBEADFVPGVCL21NGLBAG"',
+526 silly get     age: '161',
+526 silly get     connection: 'keep-alive',
+526 silly get     'x-served-by': 'cache-lcy1125-LCY',
+526 silly get     'x-cache': 'HIT',
+526 silly get     'x-cache-hits': '32',
+526 silly get     'x-timer': 'S1467626126.172948,VS0,VE0',
+526 silly get     vary: 'Accept-Encoding' } ]
+527 verbose etag https://registry.npmjs.org/mime-types from cache
+528 verbose get saving mime-types to /Users/zhangyizhi/.npm/registry.npmjs.org/mime-types/.cache.json
+529 silly addNameRange number 2 { name: 'readable-stream',
+529 silly addNameRange   range: '>=1.1.0 <1.2.0',
+529 silly addNameRange   hasData: true }
+530 silly addNameRange versions [ 'readable-stream',
+530 silly addNameRange   [ '0.0.1',
+530 silly addNameRange     '0.0.2',
+530 silly addNameRange     '0.0.3',
+530 silly addNameRange     '0.0.4',
+530 silly addNameRange     '0.1.0',
+530 silly addNameRange     '0.2.0',
+530 silly addNameRange     '0.3.0',
+530 silly addNameRange     '0.3.1',
+530 silly addNameRange     '1.0.0',
+530 silly addNameRange     '1.0.1',
+530 silly addNameRange     '1.0.2',
+530 silly addNameRange     '1.0.15',
+530 silly addNameRange     '1.0.17',
+530 silly addNameRange     '1.1.7',
+530 silly addNameRange     '1.1.8',
+530 silly addNameRange     '1.1.9',
+530 silly addNameRange     '1.0.24',
+530 silly addNameRange     '1.0.25',
+530 silly addNameRange     '1.1.10',
+530 silly addNameRange     '1.0.25-1',
+530 silly addNameRange     '1.1.11',
+530 silly addNameRange     '1.0.26',
+530 silly addNameRange     '1.0.26-1',
+530 silly addNameRange     '1.1.11-1',
+530 silly addNameRange     '1.0.26-2',
+530 silly addNameRange     '1.1.12',
+530 silly addNameRange     '1.0.26-3',
+530 silly addNameRange     '1.0.26-4',
+530 silly addNameRange     '1.1.12-1',
+530 silly addNameRange     '1.0.27-1',
+530 silly addNameRange     '1.1.13-1',
+530 silly addNameRange     '1.0.31',
+530 silly addNameRange     '1.1.13',
+530 silly addNameRange     '1.0.32',
+530 silly addNameRange     '1.0.32-1',
+530 silly addNameRange     '1.0.33-1',
+530 silly addNameRange     '1.0.33-2',
+530 silly addNameRange     '1.0.33',
+530 silly addNameRange     '2.0.0',
+530 silly addNameRange     '2.0.1',
+530 silly addNameRange     '2.0.2',
+530 silly addNameRange     '2.0.3',
+530 silly addNameRange     '2.0.4',
+530 silly addNameRange     '2.0.5',
+530 silly addNameRange     '2.0.6',
+530 silly addNameRange     '1.0.34',
+530 silly addNameRange     '1.1.14',
+530 silly addNameRange     '2.1.0',
+530 silly addNameRange     '2.1.1',
+530 silly addNameRange     '2.1.2',
+530 silly addNameRange     '2.1.3',
+530 silly addNameRange     '2.1.4' ] ]
+531 silly addNamed readable-stream@1.1.14
+532 verbose addNamed "1.1.14" is a plain semver version for readable-stream
+533 silly addNameRange number 2 { name: 'mime-types', range: '>=2.0.9 <2.1.0', hasData: true }
+534 silly addNameRange versions [ 'mime-types',
+534 silly addNameRange   [ '0.1.0',
+534 silly addNameRange     '1.0.0',
+534 silly addNameRange     '1.0.1',
+534 silly addNameRange     '1.0.2',
+534 silly addNameRange     '2.0.0',
+534 silly addNameRange     '2.0.1',
+534 silly addNameRange     '2.0.2',
+534 silly addNameRange     '2.0.3',
+534 silly addNameRange     '2.0.4',
+534 silly addNameRange     '2.0.5',
+534 silly addNameRange     '2.0.6',
+534 silly addNameRange     '2.0.7',
+534 silly addNameRange     '2.0.8',
+534 silly addNameRange     '2.0.9',
+534 silly addNameRange     '2.0.10',
+534 silly addNameRange     '2.0.11',
+534 silly addNameRange     '2.0.12',
+534 silly addNameRange     '2.0.13',
+534 silly addNameRange     '2.0.14',
+534 silly addNameRange     '2.1.0',
+534 silly addNameRange     '2.1.1',
+534 silly addNameRange     '2.1.2',
+534 silly addNameRange     '2.1.3',
+534 silly addNameRange     '2.1.4',
+534 silly addNameRange     '2.1.5',
+534 silly addNameRange     '2.1.6',
+534 silly addNameRange     '2.1.7',
+534 silly addNameRange     '2.1.8',
+534 silly addNameRange     '2.1.9',
+534 silly addNameRange     '2.1.10',
+534 silly addNameRange     '2.1.11' ] ]
+535 silly addNamed mime-types@2.0.14
+536 verbose addNamed "2.0.14" is a plain semver version for mime-types
+537 silly mapToRegistry name mime-types
+538 silly mapToRegistry using default registry
+539 silly mapToRegistry registry https://registry.npmjs.org/
+540 silly mapToRegistry uri https://registry.npmjs.org/mime-types
+541 verbose addRemoteTarball https://registry.npmjs.org/mime-types/-/mime-types-2.0.14.tgz not in flight; adding
+542 verbose addRemoteTarball [ 'https://registry.npmjs.org/mime-types/-/mime-types-2.0.14.tgz',
+542 verbose addRemoteTarball   '310e159db23e077f8bb22b748dabfa4957140aa6' ]
+543 silly cache afterAdd readable-stream@1.1.14
+544 verbose afterAdd /Users/zhangyizhi/.npm/readable-stream/1.1.14/package/package.json not in flight; writing
+545 info retry fetch attempt 1 at 17:55:29
+546 info attempt registry request try #1 at 17:55:29
+547 http fetch GET https://registry.npmjs.org/mime-types/-/mime-types-2.0.14.tgz
+548 verbose afterAdd /Users/zhangyizhi/.npm/readable-stream/1.1.14/package/package.json written
+549 http 304 https://registry.npmjs.org/dicer
+550 verbose headers { date: 'Mon, 04 Jul 2016 09:55:26 GMT',
+550 verbose headers   via: '1.1 varnish',
+550 verbose headers   'cache-control': 'max-age=300',
+550 verbose headers   etag: '"5EAVL2STWF3TD4HV2VN4AEVNI"',
+550 verbose headers   age: '27',
+550 verbose headers   connection: 'keep-alive',
+550 verbose headers   'x-served-by': 'cache-lcy1122-LCY',
+550 verbose headers   'x-cache': 'HIT',
+550 verbose headers   'x-cache-hits': '1',
+550 verbose headers   'x-timer': 'S1467626126.818146,VS0,VE0',
+550 verbose headers   vary: 'Accept-Encoding' }
+551 silly get cb [ 304,
+551 silly get   { date: 'Mon, 04 Jul 2016 09:55:26 GMT',
+551 silly get     via: '1.1 varnish',
+551 silly get     'cache-control': 'max-age=300',
+551 silly get     etag: '"5EAVL2STWF3TD4HV2VN4AEVNI"',
+551 silly get     age: '27',
+551 silly get     connection: 'keep-alive',
+551 silly get     'x-served-by': 'cache-lcy1122-LCY',
+551 silly get     'x-cache': 'HIT',
+551 silly get     'x-cache-hits': '1',
+551 silly get     'x-timer': 'S1467626126.818146,VS0,VE0',
+551 silly get     vary: 'Accept-Encoding' } ]
+552 verbose etag https://registry.npmjs.org/dicer from cache
+553 verbose get saving dicer to /Users/zhangyizhi/.npm/registry.npmjs.org/dicer/.cache.json
+554 silly cache afterAdd dicer@0.2.5
+555 verbose afterAdd /Users/zhangyizhi/.npm/dicer/0.2.5/package/package.json not in flight; writing
+556 verbose afterAdd /Users/zhangyizhi/.npm/dicer/0.2.5/package/package.json written
+557 silly install resolved [ { name: 'readable-stream',
+557 silly install resolved     version: '1.1.14',
+557 silly install resolved     description: 'Streams3, a user-land copy of the stream library from Node.js v0.11.x',
+557 silly install resolved     main: 'readable.js',
+557 silly install resolved     dependencies:
+557 silly install resolved      { 'core-util-is': '~1.0.0',
+557 silly install resolved        isarray: '0.0.1',
+557 silly install resolved        string_decoder: '~0.10.x',
+557 silly install resolved        inherits: '~2.0.1' },
+557 silly install resolved     devDependencies: { tap: '~0.2.6' },
+557 silly install resolved     scripts: { test: 'tap test/simple/*.js' },
+557 silly install resolved     repository:
+557 silly install resolved      { type: 'git',
+557 silly install resolved        url: 'git://github.com/isaacs/readable-stream.git' },
+557 silly install resolved     keywords: [ 'readable', 'stream', 'pipe' ],
+557 silly install resolved     browser: { util: false },
+557 silly install resolved     author:
+557 silly install resolved      { name: 'Isaac Z. Schlueter',
+557 silly install resolved        email: 'i@izs.me',
+557 silly install resolved        url: 'http://blog.izs.me/' },
+557 silly install resolved     license: 'MIT',
+557 silly install resolved     gitHead: '52550840cb1d6e8a98ef9a909a4bea360bc6f7da',
+557 silly install resolved     bugs: { url: 'https://github.com/isaacs/readable-stream/issues' },
+557 silly install resolved     _id: 'readable-stream@1.1.14',
+557 silly install resolved     _shasum: '7cf4c54ef648e3813084c636dd2079e166c081d9',
+557 silly install resolved     _from: 'readable-stream@>=1.1.0 <1.2.0',
+557 silly install resolved     _npmVersion: '3.8.3',
+557 silly install resolved     _nodeVersion: '5.10.1',
+557 silly install resolved     _npmUser: { name: 'cwmma', email: 'calvin.metcalf@gmail.com' },
+557 silly install resolved     dist:
+557 silly install resolved      { shasum: '7cf4c54ef648e3813084c636dd2079e166c081d9',
+557 silly install resolved        tarball: 'https://registry.npmjs.org/readable-stream/-/readable-stream-1.1.14.tgz' },
+557 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+557 silly install resolved     _npmOperationalInternal:
+557 silly install resolved      { host: 'packages-16-east.internal.npmjs.com',
+557 silly install resolved        tmp: 'tmp/readable-stream-1.1.14.tgz_1460563293219_0.5682175166439265' },
+557 silly install resolved     directories: {},
+557 silly install resolved     _resolved: 'https://registry.npmjs.org/readable-stream/-/readable-stream-1.1.14.tgz',
+557 silly install resolved     readme: 'ERROR: No README data found!',
+557 silly install resolved     homepage: 'https://github.com/isaacs/readable-stream#readme' },
+557 silly install resolved   { name: 'dicer',
+557 silly install resolved     version: '0.2.5',
+557 silly install resolved     author: { name: 'Brian White', email: 'mscdex@mscdex.net' },
+557 silly install resolved     description: 'A very fast streaming multipart parser for node.js',
+557 silly install resolved     main: './lib/Dicer',
+557 silly install resolved     dependencies: { streamsearch: '0.1.2', 'readable-stream': '1.1.x' },
+557 silly install resolved     scripts: { test: 'node test/test.js' },
+557 silly install resolved     engines: { node: '>=0.8.0' },
+557 silly install resolved     keywords:
+557 silly install resolved      [ 'parser',
+557 silly install resolved        'parse',
+557 silly install resolved        'parsing',
+557 silly install resolved        'multipart',
+557 silly install resolved        'form-data',
+557 silly install resolved        'streaming' ],
+557 silly install resolved     licenses: [ [Object] ],
+557 silly install resolved     repository:
+557 silly install resolved      { type: 'git',
+557 silly install resolved        url: 'git+ssh://git@github.com/mscdex/dicer.git' },
+557 silly install resolved     bugs: { url: 'https://github.com/mscdex/dicer/issues' },
+557 silly install resolved     homepage: 'https://github.com/mscdex/dicer#readme',
+557 silly install resolved     _id: 'dicer@0.2.5',
+557 silly install resolved     _shasum: '5996c086bb33218c812c090bddc09cd12facb70f',
+557 silly install resolved     _resolved: 'https://registry.npmjs.org/dicer/-/dicer-0.2.5.tgz',
+557 silly install resolved     _from: 'dicer@0.2.5',
+557 silly install resolved     _npmVersion: '3.3.6',
+557 silly install resolved     _nodeVersion: '5.0.0',
+557 silly install resolved     _npmUser: { name: 'mscdex', email: 'mscdex@mscdex.net' },
+557 silly install resolved     maintainers: [ [Object] ],
+557 silly install resolved     dist:
+557 silly install resolved      { shasum: '5996c086bb33218c812c090bddc09cd12facb70f',
+557 silly install resolved        tarball: 'https://registry.npmjs.org/dicer/-/dicer-0.2.5.tgz' },
+557 silly install resolved     directories: {},
+557 silly install resolved     readme: 'ERROR: No README data found!' } ]
+558 info install readable-stream@1.1.14 into /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy
+559 info install dicer@0.2.5 into /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy
+560 info installOne readable-stream@1.1.14
+561 verbose installOne of readable-stream to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy not in flight; installing
+562 info installOne dicer@0.2.5
+563 verbose installOne of dicer to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy not in flight; installing
+564 verbose lock using /Users/zhangyizhi/.npm/_locks/readable-stream-7891c54ce5582a29.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream
+565 silly install write writing readable-stream 1.1.14 to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream
+566 verbose lock using /Users/zhangyizhi/.npm/_locks/dicer-d746bee3d74e1828.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer
+567 silly install write writing dicer 0.2.5 to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer
+568 verbose unbuild node_modules/multer/node_modules/busboy/node_modules/readable-stream
+569 verbose unbuild node_modules/multer/node_modules/busboy/node_modules/dicer
+570 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream is being purged from base /Users/zhangyizhi/GitHub/tryNode2.0_js
+571 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream
+572 verbose tar unpack /Users/zhangyizhi/.npm/readable-stream/1.1.14/package.tgz
+573 verbose tar unpacking to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream
+574 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream is being purged
+575 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream
+576 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer is being purged from base /Users/zhangyizhi/GitHub/tryNode2.0_js
+577 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer
+578 silly gunzTarPerm modes [ '755', '644' ]
+579 verbose tar unpack /Users/zhangyizhi/.npm/dicer/0.2.5/package.tgz
+580 verbose tar unpacking to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer
+581 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer is being purged
+582 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer
+583 silly gunzTarPerm modes [ '755', '644' ]
+584 silly gunzTarPerm extractEntry package.json
+585 silly gunzTarPerm extractEntry
+586 silly gunzTarPerm modified mode [ '', 509, 493 ]
+587 silly gunzTarPerm extractEntry .npmignore
+588 silly gunzTarPerm extractEntry README.md
+589 silly gunzTarPerm extractEntry .travis.yml
+590 silly gunzTarPerm modified mode [ '.travis.yml', 436, 420 ]
+591 silly gunzTarPerm extractEntry LICENSE
+592 silly gunzTarPerm modified mode [ 'LICENSE', 436, 420 ]
+593 silly gunzTarPerm extractEntry README.md
+594 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+595 silly gunzTarPerm extractEntry bench/
+596 silly gunzTarPerm modified mode [ 'bench/', 509, 493 ]
+597 silly gunzTarPerm extractEntry bench/dicer-bench-multipart-parser.js
+598 silly gunzTarPerm modified mode [ 'bench/dicer-bench-multipart-parser.js', 436, 420 ]
+599 silly gunzTarPerm extractEntry LICENSE
+600 silly gunzTarPerm extractEntry duplex.js
+601 silly gunzTarPerm extractEntry bench/formidable-bench-multipart-parser.js
+602 silly gunzTarPerm modified mode [ 'bench/formidable-bench-multipart-parser.js', 436, 420 ]
+603 silly gunzTarPerm extractEntry bench/multipartser-bench-multipart-parser.js
+604 silly gunzTarPerm modified mode [ 'bench/multipartser-bench-multipart-parser.js', 436, 420 ]
+605 silly gunzTarPerm extractEntry writable.js
+606 silly gunzTarPerm extractEntry passthrough.js
+607 silly gunzTarPerm extractEntry bench/multiparty-bench-multipart-parser.js
+608 silly gunzTarPerm modified mode [ 'bench/multiparty-bench-multipart-parser.js', 436, 420 ]
+609 silly gunzTarPerm extractEntry readable.js
+610 silly gunzTarPerm extractEntry transform.js
+611 silly gunzTarPerm extractEntry bench/parted-bench-multipart-parser.js
+612 silly gunzTarPerm modified mode [ 'bench/parted-bench-multipart-parser.js', 436, 420 ]
+613 silly gunzTarPerm extractEntry bench/parted-multipart.js
+614 silly gunzTarPerm modified mode [ 'bench/parted-multipart.js', 436, 420 ]
+615 silly gunzTarPerm extractEntry lib/
+616 silly gunzTarPerm modified mode [ 'lib/', 509, 493 ]
+617 silly gunzTarPerm extractEntry float.patch
+618 silly gunzTarPerm extractEntry lib/_stream_duplex.js
+619 silly gunzTarPerm extractEntry lib/_stream_passthrough.js
+620 silly gunzTarPerm extractEntry lib/_stream_readable.js
+621 silly gunzTarPerm extractEntry lib/_stream_transform.js
+622 silly gunzTarPerm extractEntry lib/_stream_writable.js
+623 silly gunzTarPerm extractEntry lib/Dicer.js
+624 silly gunzTarPerm modified mode [ 'lib/Dicer.js', 436, 420 ]
+625 silly gunzTarPerm extractEntry lib/HeaderParser.js
+626 silly gunzTarPerm modified mode [ 'lib/HeaderParser.js', 436, 420 ]
+627 silly gunzTarPerm extractEntry lib/PartStream.js
+628 silly gunzTarPerm modified mode [ 'lib/PartStream.js', 436, 420 ]
+629 silly gunzTarPerm extractEntry package.json
+630 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+631 silly gunzTarPerm extractEntry test/
+632 silly gunzTarPerm modified mode [ 'test/', 509, 493 ]
+633 silly gunzTarPerm extractEntry test/fixtures/
+634 silly gunzTarPerm modified mode [ 'test/fixtures/', 509, 493 ]
+635 silly gunzTarPerm extractEntry test/fixtures/many-noend/
+636 silly gunzTarPerm modified mode [ 'test/fixtures/many-noend/', 509, 493 ]
+637 silly gunzTarPerm extractEntry test/fixtures/many-noend/original
+638 silly gunzTarPerm modified mode [ 'test/fixtures/many-noend/original', 436, 420 ]
+639 silly gunzTarPerm extractEntry test/fixtures/many-noend/part1
+640 silly gunzTarPerm modified mode [ 'test/fixtures/many-noend/part1', 436, 420 ]
+641 silly gunzTarPerm extractEntry test/fixtures/many-noend/part1.header
+642 silly gunzTarPerm modified mode [ 'test/fixtures/many-noend/part1.header', 436, 420 ]
+643 silly gunzTarPerm extractEntry test/fixtures/many-noend/part2
+644 silly gunzTarPerm modified mode [ 'test/fixtures/many-noend/part2', 436, 420 ]
+645 silly gunzTarPerm extractEntry test/fixtures/many-noend/part2.header
+646 silly gunzTarPerm modified mode [ 'test/fixtures/many-noend/part2.header', 436, 420 ]
+647 silly gunzTarPerm extractEntry test/fixtures/many-noend/part3
+648 silly gunzTarPerm modified mode [ 'test/fixtures/many-noend/part3', 436, 420 ]
+649 silly gunzTarPerm extractEntry test/fixtures/many-noend/part3.header
+650 silly gunzTarPerm modified mode [ 'test/fixtures/many-noend/part3.header', 436, 420 ]
+651 silly gunzTarPerm extractEntry test/fixtures/many-noend/part4
+652 silly gunzTarPerm modified mode [ 'test/fixtures/many-noend/part4', 436, 420 ]
+653 silly gunzTarPerm extractEntry test/fixtures/many-noend/part4.header
+654 silly gunzTarPerm modified mode [ 'test/fixtures/many-noend/part4.header', 436, 420 ]
+655 silly gunzTarPerm extractEntry test/fixtures/many-noend/part5
+656 silly gunzTarPerm modified mode [ 'test/fixtures/many-noend/part5', 436, 420 ]
+657 silly gunzTarPerm extractEntry test/fixtures/many-noend/part5.header
+658 silly gunzTarPerm modified mode [ 'test/fixtures/many-noend/part5.header', 436, 420 ]
+659 silly gunzTarPerm extractEntry test/fixtures/many-noend/part6
+660 silly gunzTarPerm modified mode [ 'test/fixtures/many-noend/part6', 436, 420 ]
+661 silly gunzTarPerm extractEntry test/fixtures/many-noend/part6.header
+662 silly gunzTarPerm modified mode [ 'test/fixtures/many-noend/part6.header', 436, 420 ]
+663 silly gunzTarPerm extractEntry test/fixtures/many-noend/part7.header
+664 silly gunzTarPerm modified mode [ 'test/fixtures/many-noend/part7.header', 436, 420 ]
+665 silly gunzTarPerm extractEntry test/fixtures/many-wrongboundary/
+666 silly gunzTarPerm modified mode [ 'test/fixtures/many-wrongboundary/', 509, 493 ]
+667 silly gunzTarPerm extractEntry test/fixtures/many-wrongboundary/original
+668 silly gunzTarPerm modified mode [ 'test/fixtures/many-wrongboundary/original', 436, 420 ]
+669 silly gunzTarPerm extractEntry test/fixtures/many-wrongboundary/preamble
+670 silly gunzTarPerm modified mode [ 'test/fixtures/many-wrongboundary/preamble', 436, 420 ]
+671 silly gunzTarPerm extractEntry test/fixtures/many-wrongboundary/preamble.error
+672 silly gunzTarPerm modified mode [ 'test/fixtures/many-wrongboundary/preamble.error', 436, 420 ]
+673 silly gunzTarPerm extractEntry test/fixtures/many/
+674 silly gunzTarPerm modified mode [ 'test/fixtures/many/', 509, 493 ]
+675 silly gunzTarPerm extractEntry test/fixtures/many/original
+676 silly gunzTarPerm modified mode [ 'test/fixtures/many/original', 436, 420 ]
+677 silly gunzTarPerm extractEntry test/fixtures/many/part1
+678 silly gunzTarPerm modified mode [ 'test/fixtures/many/part1', 436, 420 ]
+679 silly gunzTarPerm extractEntry test/fixtures/many/part1.header
+680 silly gunzTarPerm modified mode [ 'test/fixtures/many/part1.header', 436, 420 ]
+681 silly gunzTarPerm extractEntry test/fixtures/many/part2
+682 silly gunzTarPerm modified mode [ 'test/fixtures/many/part2', 436, 420 ]
+683 silly gunzTarPerm extractEntry test/fixtures/many/part2.header
+684 silly gunzTarPerm modified mode [ 'test/fixtures/many/part2.header', 436, 420 ]
+685 silly gunzTarPerm extractEntry test/fixtures/many/part3
+686 silly gunzTarPerm modified mode [ 'test/fixtures/many/part3', 436, 420 ]
+687 verbose write writing to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/package.json
+688 silly gunzTarPerm extractEntry test/fixtures/many/part3.header
+689 silly gunzTarPerm modified mode [ 'test/fixtures/many/part3.header', 436, 420 ]
+690 silly gunzTarPerm extractEntry test/fixtures/many/part4
+691 silly gunzTarPerm modified mode [ 'test/fixtures/many/part4', 436, 420 ]
+692 info preinstall readable-stream@1.1.14
+693 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/package.json
+694 silly gunzTarPerm extractEntry test/fixtures/many/part4.header
+695 silly gunzTarPerm modified mode [ 'test/fixtures/many/part4.header', 436, 420 ]
+696 silly gunzTarPerm extractEntry test/fixtures/many/part5
+697 silly gunzTarPerm modified mode [ 'test/fixtures/many/part5', 436, 420 ]
+698 silly prepareForInstallMany adding core-util-is@~1.0.0 from readable-stream dependencies
+699 silly prepareForInstallMany adding isarray@0.0.1 from readable-stream dependencies
+700 silly prepareForInstallMany adding string_decoder@~0.10.x from readable-stream dependencies
+701 silly prepareForInstallMany adding inherits@~2.0.1 from readable-stream dependencies
+702 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/package.json
+703 silly gunzTarPerm extractEntry test/fixtures/many/part5.header
+704 silly gunzTarPerm modified mode [ 'test/fixtures/many/part5.header', 436, 420 ]
+705 silly gunzTarPerm extractEntry test/fixtures/many/part6
+706 silly gunzTarPerm modified mode [ 'test/fixtures/many/part6', 436, 420 ]
+707 silly cache add args [ 'core-util-is@~1.0.0', null ]
+708 verbose cache add spec core-util-is@~1.0.0
+709 silly cache add args [ 'isarray@0.0.1', null ]
+710 verbose cache add spec isarray@0.0.1
+711 silly cache add parsed spec Result {
+711 silly cache add   raw: 'core-util-is@~1.0.0',
+711 silly cache add   scope: null,
+711 silly cache add   name: 'core-util-is',
+711 silly cache add   rawSpec: '~1.0.0',
+711 silly cache add   spec: '>=1.0.0 <1.1.0',
+711 silly cache add   type: 'range' }
+712 silly addNamed core-util-is@>=1.0.0 <1.1.0
+713 verbose addNamed ">=1.0.0 <1.1.0" is a valid semver range for core-util-is
+714 silly addNameRange { name: 'core-util-is', range: '>=1.0.0 <1.1.0', hasData: false }
+715 silly mapToRegistry name core-util-is
+716 silly mapToRegistry using default registry
+717 silly mapToRegistry registry https://registry.npmjs.org/
+718 silly mapToRegistry uri https://registry.npmjs.org/core-util-is
+719 verbose addNameRange registry:https://registry.npmjs.org/core-util-is not in flight; fetching
+720 silly cache add parsed spec Result {
+720 silly cache add   raw: 'isarray@0.0.1',
+720 silly cache add   scope: null,
+720 silly cache add   name: 'isarray',
+720 silly cache add   rawSpec: '0.0.1',
+720 silly cache add   spec: '0.0.1',
+720 silly cache add   type: 'version' }
+721 silly addNamed isarray@0.0.1
+722 verbose addNamed "0.0.1" is a plain semver version for isarray
+723 silly mapToRegistry name isarray
+724 silly mapToRegistry using default registry
+725 silly mapToRegistry registry https://registry.npmjs.org/
+726 silly mapToRegistry uri https://registry.npmjs.org/isarray
+727 verbose addNameVersion registry:https://registry.npmjs.org/isarray not in flight; fetching
+728 silly cache add args [ 'string_decoder@~0.10.x', null ]
+729 verbose cache add spec string_decoder@~0.10.x
+730 silly cache add parsed spec Result {
+730 silly cache add   raw: 'string_decoder@~0.10.x',
+730 silly cache add   scope: null,
+730 silly cache add   name: 'string_decoder',
+730 silly cache add   rawSpec: '~0.10.x',
+730 silly cache add   spec: '>=0.10.0 <0.11.0',
+730 silly cache add   type: 'range' }
+731 silly addNamed string_decoder@>=0.10.0 <0.11.0
+732 verbose addNamed ">=0.10.0 <0.11.0" is a valid semver range for string_decoder
+733 silly addNameRange { name: 'string_decoder',
+733 silly addNameRange   range: '>=0.10.0 <0.11.0',
+733 silly addNameRange   hasData: false }
+734 silly mapToRegistry name string_decoder
+735 silly mapToRegistry using default registry
+736 silly mapToRegistry registry https://registry.npmjs.org/
+737 silly mapToRegistry uri https://registry.npmjs.org/string_decoder
+738 verbose addNameRange registry:https://registry.npmjs.org/string_decoder not in flight; fetching
+739 silly cache add args [ 'inherits@~2.0.1', null ]
+740 verbose cache add spec inherits@~2.0.1
+741 silly cache add parsed spec Result {
+741 silly cache add   raw: 'inherits@~2.0.1',
+741 silly cache add   scope: null,
+741 silly cache add   name: 'inherits',
+741 silly cache add   rawSpec: '~2.0.1',
+741 silly cache add   spec: '>=2.0.1 <2.1.0',
+741 silly cache add   type: 'range' }
+742 silly addNamed inherits@>=2.0.1 <2.1.0
+743 verbose addNamed ">=2.0.1 <2.1.0" is a valid semver range for inherits
+744 silly addNameRange { name: 'inherits', range: '>=2.0.1 <2.1.0', hasData: false }
+745 silly mapToRegistry name inherits
+746 silly mapToRegistry using default registry
+747 silly mapToRegistry registry https://registry.npmjs.org/
+748 silly mapToRegistry uri https://registry.npmjs.org/inherits
+749 verbose addNameRange registry:https://registry.npmjs.org/inherits not in flight; fetching
+750 verbose request uri https://registry.npmjs.org/core-util-is
+751 verbose request no auth needed
+752 info attempt registry request try #1 at 17:55:30
+753 verbose etag "75RK9UUWAHLYO40UZKLLOJ8YF"
+754 http request GET https://registry.npmjs.org/core-util-is
+755 verbose request uri https://registry.npmjs.org/isarray
+756 verbose request no auth needed
+757 info attempt registry request try #1 at 17:55:30
+758 verbose etag "9BAUPW5RTV3W0838KA6Y08NTG"
+759 http request GET https://registry.npmjs.org/isarray
+760 verbose request uri https://registry.npmjs.org/string_decoder
+761 verbose request no auth needed
+762 info attempt registry request try #1 at 17:55:30
+763 verbose etag "3SLQP4XEWUIBONOV855WOPR0B"
+764 http request GET https://registry.npmjs.org/string_decoder
+765 verbose request uri https://registry.npmjs.org/inherits
+766 verbose request no auth needed
+767 info attempt registry request try #1 at 17:55:30
+768 verbose etag "DW5AARMI0EU78WM0DVWHCUX08"
+769 http request GET https://registry.npmjs.org/inherits
+770 silly gunzTarPerm extractEntry test/fixtures/many/part6.header
+771 silly gunzTarPerm modified mode [ 'test/fixtures/many/part6.header', 436, 420 ]
+772 silly gunzTarPerm extractEntry test/fixtures/many/part7
+773 silly gunzTarPerm modified mode [ 'test/fixtures/many/part7', 436, 420 ]
+774 silly gunzTarPerm extractEntry test/fixtures/many/part7.header
+775 silly gunzTarPerm modified mode [ 'test/fixtures/many/part7.header', 436, 420 ]
+776 silly gunzTarPerm extractEntry test/fixtures/nested-full/
+777 silly gunzTarPerm modified mode [ 'test/fixtures/nested-full/', 509, 493 ]
+778 silly gunzTarPerm extractEntry test/fixtures/nested-full/original
+779 silly gunzTarPerm modified mode [ 'test/fixtures/nested-full/original', 436, 420 ]
+780 silly gunzTarPerm extractEntry test/fixtures/nested-full/part1
+781 silly gunzTarPerm modified mode [ 'test/fixtures/nested-full/part1', 436, 420 ]
+782 silly gunzTarPerm extractEntry test/fixtures/nested-full/part1.header
+783 silly gunzTarPerm modified mode [ 'test/fixtures/nested-full/part1.header', 436, 420 ]
+784 silly gunzTarPerm extractEntry test/fixtures/nested-full/part2
+785 silly gunzTarPerm modified mode [ 'test/fixtures/nested-full/part2', 436, 420 ]
+786 silly gunzTarPerm extractEntry test/fixtures/nested-full/part2.header
+787 silly gunzTarPerm modified mode [ 'test/fixtures/nested-full/part2.header', 436, 420 ]
+788 silly gunzTarPerm extractEntry test/fixtures/nested-full/preamble.header
+789 silly gunzTarPerm modified mode [ 'test/fixtures/nested-full/preamble.header', 436, 420 ]
+790 silly gunzTarPerm extractEntry test/fixtures/nested/
+791 silly gunzTarPerm modified mode [ 'test/fixtures/nested/', 509, 493 ]
+792 silly gunzTarPerm extractEntry test/fixtures/nested/original
+793 silly gunzTarPerm modified mode [ 'test/fixtures/nested/original', 436, 420 ]
+794 silly gunzTarPerm extractEntry test/fixtures/nested/part1
+795 silly gunzTarPerm modified mode [ 'test/fixtures/nested/part1', 436, 420 ]
+796 silly gunzTarPerm extractEntry test/fixtures/nested/part1.header
+797 silly gunzTarPerm modified mode [ 'test/fixtures/nested/part1.header', 436, 420 ]
+798 silly gunzTarPerm extractEntry test/fixtures/nested/part2
+799 silly gunzTarPerm modified mode [ 'test/fixtures/nested/part2', 436, 420 ]
+800 silly gunzTarPerm extractEntry test/fixtures/nested/part2.header
+801 silly gunzTarPerm modified mode [ 'test/fixtures/nested/part2.header', 436, 420 ]
+802 silly gunzTarPerm extractEntry test/test-endfinish.js
+803 silly gunzTarPerm modified mode [ 'test/test-endfinish.js', 436, 420 ]
+804 silly gunzTarPerm extractEntry test/test-headerparser.js
+805 silly gunzTarPerm modified mode [ 'test/test-headerparser.js', 436, 420 ]
+806 silly gunzTarPerm extractEntry test/test-multipart-extra-trailer.js
+807 silly gunzTarPerm modified mode [ 'test/test-multipart-extra-trailer.js', 436, 420 ]
+808 silly gunzTarPerm extractEntry test/test-multipart-nolisteners.js
+809 silly gunzTarPerm modified mode [ 'test/test-multipart-nolisteners.js', 436, 420 ]
+810 silly gunzTarPerm extractEntry test/test-multipart.js
+811 silly gunzTarPerm modified mode [ 'test/test-multipart.js', 436, 420 ]
+812 silly gunzTarPerm extractEntry test/test.js
+813 silly gunzTarPerm modified mode [ 'test/test.js', 436, 420 ]
+814 verbose write writing to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer/package.json
+815 info preinstall dicer@0.2.5
+816 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer/package.json
+817 silly prepareForInstallMany adding streamsearch@0.1.2 from dicer dependencies
+818 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer/package.json
+819 silly cache add args [ 'streamsearch@0.1.2', null ]
+820 verbose cache add spec streamsearch@0.1.2
+821 silly cache add parsed spec Result {
+821 silly cache add   raw: 'streamsearch@0.1.2',
+821 silly cache add   scope: null,
+821 silly cache add   name: 'streamsearch',
+821 silly cache add   rawSpec: '0.1.2',
+821 silly cache add   spec: '0.1.2',
+821 silly cache add   type: 'version' }
+822 silly addNamed streamsearch@0.1.2
+823 verbose addNamed "0.1.2" is a plain semver version for streamsearch
+824 silly mapToRegistry name streamsearch
+825 silly mapToRegistry using default registry
+826 silly mapToRegistry registry https://registry.npmjs.org/
+827 silly mapToRegistry uri https://registry.npmjs.org/streamsearch
+828 verbose addNameVersion registry:https://registry.npmjs.org/streamsearch not in flight; fetching
+829 verbose request uri https://registry.npmjs.org/streamsearch
+830 verbose request no auth needed
+831 info attempt registry request try #1 at 17:55:30
+832 verbose etag "2WH6656VS9T8MLWVMD3PRSF7H"
+833 http request GET https://registry.npmjs.org/streamsearch
+834 http fetch 200 https://registry.npmjs.org/mime-types/-/mime-types-2.0.14.tgz
+835 silly fetchAndShaCheck shasum 310e159db23e077f8bb22b748dabfa4957140aa6
+836 verbose addTmpTarball /var/folders/nc/t1m74zt536z1tkgxc_qxlmyr0000gn/T/npm-27711-6d0b3140/registry.npmjs.org/mime-types/-/mime-types-2.0.14.tgz not in flight; adding
+837 verbose addTmpTarball already have metadata; skipping unpack for mime-types@2.0.14
+838 silly cache afterAdd mime-types@2.0.14
+839 verbose afterAdd /Users/zhangyizhi/.npm/mime-types/2.0.14/package/package.json not in flight; writing
+840 verbose afterAdd /Users/zhangyizhi/.npm/mime-types/2.0.14/package/package.json written
+841 silly install resolved [ { name: 'media-typer',
+841 silly install resolved     description: 'Simple RFC 6838 media type parser and formatter',
+841 silly install resolved     version: '0.3.0',
+841 silly install resolved     author:
+841 silly install resolved      { name: 'Douglas Christopher Wilson',
+841 silly install resolved        email: 'doug@somethingdoug.com' },
+841 silly install resolved     license: 'MIT',
+841 silly install resolved     repository:
+841 silly install resolved      { type: 'git',
+841 silly install resolved        url: 'git+https://github.com/jshttp/media-typer.git' },
+841 silly install resolved     devDependencies: { istanbul: '0.3.2', mocha: '~1.21.4', should: '~4.0.4' },
+841 silly install resolved     files: [ 'LICENSE', 'HISTORY.md', 'index.js' ],
+841 silly install resolved     engines: { node: '>= 0.6' },
+841 silly install resolved     scripts:
+841 silly install resolved      { test: 'mocha --reporter spec --check-leaks --bail test/',
+841 silly install resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/',
+841 silly install resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/' },
+841 silly install resolved     gitHead: 'd49d41ffd0bb5a0655fa44a59df2ec0bfc835b16',
+841 silly install resolved     bugs: { url: 'https://github.com/jshttp/media-typer/issues' },
+841 silly install resolved     homepage: 'https://github.com/jshttp/media-typer',
+841 silly install resolved     _id: 'media-typer@0.3.0',
+841 silly install resolved     _shasum: '8710d7af0aa626f8fffa1ce00168545263255748',
+841 silly install resolved     _from: 'media-typer@0.3.0',
+841 silly install resolved     _npmVersion: '1.4.21',
+841 silly install resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+841 silly install resolved     maintainers: [ [Object] ],
+841 silly install resolved     dist:
+841 silly install resolved      { shasum: '8710d7af0aa626f8fffa1ce00168545263255748',
+841 silly install resolved        tarball: 'https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz' },
+841 silly install resolved     directories: {},
+841 silly install resolved     _resolved: 'https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz',
+841 silly install resolved     readme: 'ERROR: No README data found!' },
+841 silly install resolved   { name: 'mime-types',
+841 silly install resolved     description: 'The ultimate javascript content-type utility.',
+841 silly install resolved     version: '2.0.14',
+841 silly install resolved     contributors: [ [Object], [Object], [Object] ],
+841 silly install resolved     license: 'MIT',
+841 silly install resolved     keywords: [ 'mime', 'types' ],
+841 silly install resolved     repository: { type: 'git', url: 'https://github.com/jshttp/mime-types' },
+841 silly install resolved     dependencies: { 'mime-db': '~1.12.0' },
+841 silly install resolved     devDependencies: { istanbul: '0.3.9', mocha: '~1.21.5' },
+841 silly install resolved     files: [ 'HISTORY.md', 'LICENSE', 'index.js' ],
+841 silly install resolved     engines: { node: '>= 0.6' },
+841 silly install resolved     scripts:
+841 silly install resolved      { test: 'mocha --reporter spec test/test.js',
+841 silly install resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot test/test.js',
+841 silly install resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot test/test.js' },
+841 silly install resolved     gitHead: '7d53a3351581eb3d7ae1e846ea860037bce6fe3f',
+841 silly install resolved     bugs: { url: 'https://github.com/jshttp/mime-types/issues' },
+841 silly install resolved     homepage: 'https://github.com/jshttp/mime-types',
+841 silly install resolved     _id: 'mime-types@2.0.14',
+841 silly install resolved     _shasum: '310e159db23e077f8bb22b748dabfa4957140aa6',
+841 silly install resolved     _from: 'mime-types@>=2.0.9 <2.1.0',
+841 silly install resolved     _npmVersion: '1.4.28',
+841 silly install resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+841 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+841 silly install resolved     dist:
+841 silly install resolved      { shasum: '310e159db23e077f8bb22b748dabfa4957140aa6',
+841 silly install resolved        tarball: 'https://registry.npmjs.org/mime-types/-/mime-types-2.0.14.tgz' },
+841 silly install resolved     directories: {},
+841 silly install resolved     _resolved: 'https://registry.npmjs.org/mime-types/-/mime-types-2.0.14.tgz' } ]
+842 info install media-typer@0.3.0 into /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is
+843 info install mime-types@2.0.14 into /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is
+844 info installOne media-typer@0.3.0
+845 verbose installOne of media-typer to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is not in flight; installing
+846 info installOne mime-types@2.0.14
+847 verbose installOne of mime-types to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is not in flight; installing
+848 verbose lock using /Users/zhangyizhi/.npm/_locks/media-typer-f7d6fbff4e0cb418.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/media-typer
+849 silly install write writing media-typer 0.3.0 to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/media-typer
+850 verbose lock using /Users/zhangyizhi/.npm/_locks/mime-types-0993962ea7b76f77.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types
+851 silly install write writing mime-types 2.0.14 to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types
+852 verbose unbuild node_modules/multer/node_modules/type-is/node_modules/media-typer
+853 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/media-typer is being purged from base /Users/zhangyizhi/GitHub/tryNode2.0_js
+854 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/media-typer
+855 verbose tar unpack /Users/zhangyizhi/.npm/media-typer/0.3.0/package.tgz
+856 verbose tar unpacking to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/media-typer
+857 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/media-typer is being purged
+858 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/media-typer
+859 verbose unbuild node_modules/multer/node_modules/type-is/node_modules/mime-types
+860 silly gunzTarPerm modes [ '755', '644' ]
+861 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types is being purged from base /Users/zhangyizhi/GitHub/tryNode2.0_js
+862 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types
+863 verbose tar unpack /Users/zhangyizhi/.npm/mime-types/2.0.14/package.tgz
+864 verbose tar unpacking to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types
+865 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types is being purged
+866 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types
+867 silly gunzTarPerm modes [ '755', '644' ]
+868 silly gunzTarPerm extractEntry package.json
+869 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+870 silly gunzTarPerm extractEntry package.json
+871 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+872 silly gunzTarPerm extractEntry README.md
+873 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+874 silly gunzTarPerm extractEntry LICENSE
+875 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+876 silly gunzTarPerm extractEntry README.md
+877 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+878 silly gunzTarPerm extractEntry LICENSE
+879 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+880 silly gunzTarPerm extractEntry index.js
+881 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+882 silly gunzTarPerm extractEntry HISTORY.md
+883 silly gunzTarPerm modified mode [ 'HISTORY.md', 438, 420 ]
+884 silly gunzTarPerm extractEntry index.js
+885 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+886 silly gunzTarPerm extractEntry HISTORY.md
+887 silly gunzTarPerm modified mode [ 'HISTORY.md', 438, 420 ]
+888 verbose write writing to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/media-typer/package.json
+889 verbose write writing to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types/package.json
+890 info preinstall media-typer@0.3.0
+891 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/media-typer/package.json
+892 info preinstall mime-types@2.0.14
+893 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/media-typer/package.json
+894 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types/package.json
+895 silly install resolved []
+896 verbose about to build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/media-typer
+897 info build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/media-typer
+898 info linkStuff media-typer@0.3.0
+899 silly linkStuff media-typer@0.3.0 has /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules as its parent node_modules
+900 silly prepareForInstallMany adding mime-db@~1.12.0 from mime-types dependencies
+901 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types/package.json
+902 verbose linkBins media-typer@0.3.0
+903 verbose linkMans media-typer@0.3.0
+904 verbose rebuildBundles media-typer@0.3.0
+905 info install media-typer@0.3.0
+906 silly cache add args [ 'mime-db@~1.12.0', null ]
+907 verbose cache add spec mime-db@~1.12.0
+908 silly cache add parsed spec Result {
+908 silly cache add   raw: 'mime-db@~1.12.0',
+908 silly cache add   scope: null,
+908 silly cache add   name: 'mime-db',
+908 silly cache add   rawSpec: '~1.12.0',
+908 silly cache add   spec: '>=1.12.0 <1.13.0',
+908 silly cache add   type: 'range' }
+909 silly addNamed mime-db@>=1.12.0 <1.13.0
+910 verbose addNamed ">=1.12.0 <1.13.0" is a valid semver range for mime-db
+911 silly addNameRange { name: 'mime-db', range: '>=1.12.0 <1.13.0', hasData: false }
+912 silly mapToRegistry name mime-db
+913 silly mapToRegistry using default registry
+914 silly mapToRegistry registry https://registry.npmjs.org/
+915 silly mapToRegistry uri https://registry.npmjs.org/mime-db
+916 verbose addNameRange registry:https://registry.npmjs.org/mime-db not in flight; fetching
+917 info postinstall media-typer@0.3.0
+918 verbose unlock done using /Users/zhangyizhi/.npm/_locks/media-typer-f7d6fbff4e0cb418.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/media-typer
+919 verbose request uri https://registry.npmjs.org/mime-db
+920 verbose request no auth needed
+921 info attempt registry request try #1 at 17:55:30
+922 verbose etag "DE1E5EXFAKV0S1L2M4PVTQ4O1"
+923 http request GET https://registry.npmjs.org/mime-db
+924 http 304 https://registry.npmjs.org/string_decoder
+925 verbose headers { date: 'Mon, 04 Jul 2016 09:55:27 GMT',
+925 verbose headers   via: '1.1 varnish',
+925 verbose headers   'cache-control': 'max-age=300',
+925 verbose headers   etag: '"3SLQP4XEWUIBONOV855WOPR0B"',
+925 verbose headers   age: '10',
+925 verbose headers   connection: 'keep-alive',
+925 verbose headers   'x-served-by': 'cache-lcy1132-LCY',
+925 verbose headers   'x-cache': 'HIT',
+925 verbose headers   'x-cache-hits': '4',
+925 verbose headers   'x-timer': 'S1467626127.866001,VS0,VE0',
+925 verbose headers   vary: 'Accept-Encoding' }
+926 silly get cb [ 304,
+926 silly get   { date: 'Mon, 04 Jul 2016 09:55:27 GMT',
+926 silly get     via: '1.1 varnish',
+926 silly get     'cache-control': 'max-age=300',
+926 silly get     etag: '"3SLQP4XEWUIBONOV855WOPR0B"',
+926 silly get     age: '10',
+926 silly get     connection: 'keep-alive',
+926 silly get     'x-served-by': 'cache-lcy1132-LCY',
+926 silly get     'x-cache': 'HIT',
+926 silly get     'x-cache-hits': '4',
+926 silly get     'x-timer': 'S1467626127.866001,VS0,VE0',
+926 silly get     vary: 'Accept-Encoding' } ]
+927 verbose etag https://registry.npmjs.org/string_decoder from cache
+928 verbose get saving string_decoder to /Users/zhangyizhi/.npm/registry.npmjs.org/string_decoder/.cache.json
+929 silly addNameRange number 2 { name: 'string_decoder',
+929 silly addNameRange   range: '>=0.10.0 <0.11.0',
+929 silly addNameRange   hasData: true }
+930 silly addNameRange versions [ 'string_decoder',
+930 silly addNameRange   [ '0.0.0',
+930 silly addNameRange     '0.0.1',
+930 silly addNameRange     '0.10.24',
+930 silly addNameRange     '0.11.10',
+930 silly addNameRange     '0.10.25',
+930 silly addNameRange     '0.11.10-1',
+930 silly addNameRange     '0.10.25-1',
+930 silly addNameRange     '0.10.31' ] ]
+931 silly addNamed string_decoder@0.10.31
+932 verbose addNamed "0.10.31" is a plain semver version for string_decoder
+933 http 304 https://registry.npmjs.org/inherits
+934 verbose headers { date: 'Mon, 04 Jul 2016 09:55:27 GMT',
+934 verbose headers   via: '1.1 varnish',
+934 verbose headers   'cache-control': 'max-age=300',
+934 verbose headers   etag: '"DW5AARMI0EU78WM0DVWHCUX08"',
+934 verbose headers   age: '97',
+934 verbose headers   connection: 'keep-alive',
+934 verbose headers   'x-served-by': 'cache-lcy1130-LCY',
+934 verbose headers   'x-cache': 'HIT',
+934 verbose headers   'x-cache-hits': '28',
+934 verbose headers   'x-timer': 'S1467626127.867187,VS0,VE0',
+934 verbose headers   vary: 'Accept-Encoding' }
+935 silly get cb [ 304,
+935 silly get   { date: 'Mon, 04 Jul 2016 09:55:27 GMT',
+935 silly get     via: '1.1 varnish',
+935 silly get     'cache-control': 'max-age=300',
+935 silly get     etag: '"DW5AARMI0EU78WM0DVWHCUX08"',
+935 silly get     age: '97',
+935 silly get     connection: 'keep-alive',
+935 silly get     'x-served-by': 'cache-lcy1130-LCY',
+935 silly get     'x-cache': 'HIT',
+935 silly get     'x-cache-hits': '28',
+935 silly get     'x-timer': 'S1467626127.867187,VS0,VE0',
+935 silly get     vary: 'Accept-Encoding' } ]
+936 verbose etag https://registry.npmjs.org/inherits from cache
+937 verbose get saving inherits to /Users/zhangyizhi/.npm/registry.npmjs.org/inherits/.cache.json
+938 http 304 https://registry.npmjs.org/streamsearch
+939 verbose headers { date: 'Mon, 04 Jul 2016 09:55:27 GMT',
+939 verbose headers   via: '1.1 varnish',
+939 verbose headers   'cache-control': 'max-age=300',
+939 verbose headers   etag: '"2WH6656VS9T8MLWVMD3PRSF7H"',
+939 verbose headers   age: '116',
+939 verbose headers   connection: 'keep-alive',
+939 verbose headers   'x-served-by': 'cache-lcy1123-LCY',
+939 verbose headers   'x-cache': 'HIT',
+939 verbose headers   'x-cache-hits': '1',
+939 verbose headers   'x-timer': 'S1467626127.868091,VS0,VE2',
+939 verbose headers   vary: 'Accept-Encoding' }
+940 silly get cb [ 304,
+940 silly get   { date: 'Mon, 04 Jul 2016 09:55:27 GMT',
+940 silly get     via: '1.1 varnish',
+940 silly get     'cache-control': 'max-age=300',
+940 silly get     etag: '"2WH6656VS9T8MLWVMD3PRSF7H"',
+940 silly get     age: '116',
+940 silly get     connection: 'keep-alive',
+940 silly get     'x-served-by': 'cache-lcy1123-LCY',
+940 silly get     'x-cache': 'HIT',
+940 silly get     'x-cache-hits': '1',
+940 silly get     'x-timer': 'S1467626127.868091,VS0,VE2',
+940 silly get     vary: 'Accept-Encoding' } ]
+941 verbose etag https://registry.npmjs.org/streamsearch from cache
+942 verbose get saving streamsearch to /Users/zhangyizhi/.npm/registry.npmjs.org/streamsearch/.cache.json
+943 silly cache afterAdd string_decoder@0.10.31
+944 verbose afterAdd /Users/zhangyizhi/.npm/string_decoder/0.10.31/package/package.json not in flight; writing
+945 http 304 https://registry.npmjs.org/isarray
+946 verbose headers { date: 'Mon, 04 Jul 2016 09:55:27 GMT',
+946 verbose headers   via: '1.1 varnish',
+946 verbose headers   'cache-control': 'max-age=300',
+946 verbose headers   etag: '"9BAUPW5RTV3W0838KA6Y08NTG"',
+946 verbose headers   age: '285',
+946 verbose headers   connection: 'keep-alive',
+946 verbose headers   'x-served-by': 'cache-lcy1127-LCY',
+946 verbose headers   'x-cache': 'HIT',
+946 verbose headers   'x-cache-hits': '90',
+946 verbose headers   'x-timer': 'S1467626127.876956,VS0,VE0',
+946 verbose headers   vary: 'Accept-Encoding' }
+947 silly get cb [ 304,
+947 silly get   { date: 'Mon, 04 Jul 2016 09:55:27 GMT',
+947 silly get     via: '1.1 varnish',
+947 silly get     'cache-control': 'max-age=300',
+947 silly get     etag: '"9BAUPW5RTV3W0838KA6Y08NTG"',
+947 silly get     age: '285',
+947 silly get     connection: 'keep-alive',
+947 silly get     'x-served-by': 'cache-lcy1127-LCY',
+947 silly get     'x-cache': 'HIT',
+947 silly get     'x-cache-hits': '90',
+947 silly get     'x-timer': 'S1467626127.876956,VS0,VE0',
+947 silly get     vary: 'Accept-Encoding' } ]
+948 verbose etag https://registry.npmjs.org/isarray from cache
+949 verbose get saving isarray to /Users/zhangyizhi/.npm/registry.npmjs.org/isarray/.cache.json
+950 silly addNameRange number 2 { name: 'inherits', range: '>=2.0.1 <2.1.0', hasData: true }
+951 silly addNameRange versions [ 'inherits', [ '1.0.0', '2.0.0', '2.0.1', '1.0.1', '1.0.2' ] ]
+952 silly addNamed inherits@2.0.1
+953 verbose addNamed "2.0.1" is a plain semver version for inherits
+954 verbose afterAdd /Users/zhangyizhi/.npm/string_decoder/0.10.31/package/package.json written
+955 http 200 https://registry.npmjs.org/core-util-is
+956 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+956 verbose headers   etag: '"C4JXVFVYMJ44SI0RVQVZN0R3K"',
+956 verbose headers   'content-type': 'application/json',
+956 verbose headers   'content-encoding': 'gzip',
+956 verbose headers   'cache-control': 'max-age=300',
+956 verbose headers   'content-length': '1009',
+956 verbose headers   'accept-ranges': 'bytes',
+956 verbose headers   date: 'Mon, 04 Jul 2016 09:55:27 GMT',
+956 verbose headers   via: '1.1 varnish',
+956 verbose headers   age: '297',
+956 verbose headers   connection: 'keep-alive',
+956 verbose headers   'x-served-by': 'cache-lcy1123-LCY',
+956 verbose headers   'x-cache': 'HIT',
+956 verbose headers   'x-cache-hits': '83',
+956 verbose headers   'x-timer': 'S1467626127.878481,VS0,VE0',
+956 verbose headers   vary: 'Accept-Encoding' }
+957 silly get cb [ 200,
+957 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+957 silly get     etag: '"C4JXVFVYMJ44SI0RVQVZN0R3K"',
+957 silly get     'content-type': 'application/json',
+957 silly get     'content-encoding': 'gzip',
+957 silly get     'cache-control': 'max-age=300',
+957 silly get     'content-length': '1009',
+957 silly get     'accept-ranges': 'bytes',
+957 silly get     date: 'Mon, 04 Jul 2016 09:55:27 GMT',
+957 silly get     via: '1.1 varnish',
+957 silly get     age: '297',
+957 silly get     connection: 'keep-alive',
+957 silly get     'x-served-by': 'cache-lcy1123-LCY',
+957 silly get     'x-cache': 'HIT',
+957 silly get     'x-cache-hits': '83',
+957 silly get     'x-timer': 'S1467626127.878481,VS0,VE0',
+957 silly get     vary: 'Accept-Encoding' } ]
+958 verbose get saving core-util-is to /Users/zhangyizhi/.npm/registry.npmjs.org/core-util-is/.cache.json
+959 silly cache afterAdd inherits@2.0.1
+960 verbose afterAdd /Users/zhangyizhi/.npm/inherits/2.0.1/package/package.json not in flight; writing
+961 silly cache afterAdd streamsearch@0.1.2
+962 verbose afterAdd /Users/zhangyizhi/.npm/streamsearch/0.1.2/package/package.json not in flight; writing
+963 silly cache afterAdd isarray@0.0.1
+964 verbose afterAdd /Users/zhangyizhi/.npm/isarray/0.0.1/package/package.json not in flight; writing
+965 silly addNameRange number 2 { name: 'core-util-is', range: '>=1.0.0 <1.1.0', hasData: true }
+966 silly addNameRange versions [ 'core-util-is', [ '1.0.0', '1.0.1', '1.0.2' ] ]
+967 silly addNamed core-util-is@1.0.2
+968 verbose addNamed "1.0.2" is a plain semver version for core-util-is
+969 verbose afterAdd /Users/zhangyizhi/.npm/inherits/2.0.1/package/package.json written
+970 verbose afterAdd /Users/zhangyizhi/.npm/streamsearch/0.1.2/package/package.json written
+971 silly install resolved [ { name: 'streamsearch',
+971 silly install resolved     version: '0.1.2',
+971 silly install resolved     author: { name: 'Brian White', email: 'mscdex@mscdex.net' },
+971 silly install resolved     description: 'Streaming Boyer-Moore-Horspool searching for node.js',
+971 silly install resolved     main: './lib/sbmh',
+971 silly install resolved     engines: { node: '>=0.8.0' },
+971 silly install resolved     keywords:
+971 silly install resolved      [ 'stream',
+971 silly install resolved        'horspool',
+971 silly install resolved        'boyer-moore-horspool',
+971 silly install resolved        'boyer-moore',
+971 silly install resolved        'search' ],
+971 silly install resolved     licenses: [ [Object] ],
+971 silly install resolved     repository:
+971 silly install resolved      { type: 'git',
+971 silly install resolved        url: 'git+ssh://git@github.com/mscdex/streamsearch.git' },
+971 silly install resolved     readme: 'Description\n===========\n\nstreamsearch is a module for [node.js](http://nodejs.org/) that allows searching a stream using the Boyer-Moore-Horspool algorithm.\n\nThis module is based heavily on the Streaming Boyer-Moore-Horspool C++ implementation by Hongli Lai [here](https://github.com/FooBarWidget/boyer-moore-horspool).\n\n\nRequirements\n============\n\n* [node.js](http://nodejs.org/) -- v0.8.0 or newer\n\n\nInstallation\n============\n\n    npm install streamsearch\n\nExample\n=======\n\n```javascript\n  var StreamSearch = require(\'streamsearch\'),\n      inspect = require(\'util\').inspect;\n\n  var needle = new Buffer([13, 10]), // CRLF\n      s = new StreamSearch(needle),\n      chunks = [\n        new Buffer(\'foo\'),\n        new Buffer(\' bar\'),\n        new Buffer(\'\\r\'),\n        new Buffer(\'\\n\'),\n        new Buffer(\'baz, hello\\r\'),\n        new Buffer(\'\\n world.\'),\n        new Buffer(\'\\r\\n Node.JS rules!!\\r\\n\\r\\n\')\n      ];\n  s.on(\'info\', function(isMatch, data, start, end) {\n    if (data)\n      console.log(\'data: \' + inspect(data.toString(\'ascii\', start, end)));\n    if (isMatch)\n      console.log(\'match!\');\n  });\n  for (var i = 0, len = chunks.length; i < len; ++i)\n    s.push(chunks[i]);\n\n  // output:\n  //\n  // data: \'foo\'\n  // data: \' bar\'\n  // match!\n  // data: \'baz, hello\'\n  // match!\n  // data: \' world.\'\n  // match!\n  // data: \' Node.JS rules!!\'\n  // match!\n  // data: \'\'\n  // match!\n```\n\n\nAPI\n===\n\nEvents\n------\n\n* **info**(< _boolean_ >isMatch[, < _Buffer_ >chunk, < _integer_ >start, < _integer_ >end]) - A match _may_ or _may not_ have been made. In either case, a preceding `chunk` of data _may_ be available that did not match the needle. Data (if available) is in `chunk` between `start` (inclusive) and `end` (exclusive).\n\n\nProperties\n----------\n\n* **maxMatches** - < _integer_ > - The maximum number of matches. Defaults to Infinity.\n\n* **matches** - < _integer_ > - The current match count.\n\n\nFunctions\n---------\n\n* **(constructor)**(< _mixed_ >needle) - Creates and returns a new instance for searching for a _Buffer_ or _string_ `needle`.\n\n* **push**(< _Buffer_ >chunk) - _integer_ - Processes `chunk`. The return value is the last processed index in `chunk` + 1.\n\n* **reset**() - _(void)_ - Resets internal state. Useful for when you wish to start searching a new/different stream for example.\n',
+971 silly install resolved     readmeFilename: 'README.md',
+971 silly install resolved     _id: 'streamsearch@0.1.2',
+971 silly install resolved     dist:
+971 silly install resolved      { shasum: '808b9d0e56fc273d809ba57338e929919a1a9f1a',
+971 silly install resolved        tarball: 'https://registry.npmjs.org/streamsearch/-/streamsearch-0.1.2.tgz' },
+971 silly install resolved     _from: 'streamsearch@0.1.2',
+971 silly install resolved     _resolved: 'https://registry.npmjs.org/streamsearch/-/streamsearch-0.1.2.tgz',
+971 silly install resolved     scripts: {},
+971 silly install resolved     _npmVersion: '1.2.18',
+971 silly install resolved     _npmUser: { name: 'mscdex', email: 'mscdex@mscdex.net' },
+971 silly install resolved     maintainers: [ [Object] ],
+971 silly install resolved     directories: {},
+971 silly install resolved     _shasum: '808b9d0e56fc273d809ba57338e929919a1a9f1a',
+971 silly install resolved     bugs: { url: 'https://github.com/mscdex/streamsearch/issues' },
+971 silly install resolved     homepage: 'https://github.com/mscdex/streamsearch#readme' } ]
+972 info install streamsearch@0.1.2 into /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer
+973 info installOne streamsearch@0.1.2
+974 verbose installOne of streamsearch to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer not in flight; installing
+975 verbose lock using /Users/zhangyizhi/.npm/_locks/streamsearch-dc594848b2f6dbb3.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer/node_modules/streamsearch
+976 verbose afterAdd /Users/zhangyizhi/.npm/isarray/0.0.1/package/package.json written
+977 silly install write writing streamsearch 0.1.2 to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer/node_modules/streamsearch
+978 silly cache afterAdd core-util-is@1.0.2
+979 verbose afterAdd /Users/zhangyizhi/.npm/core-util-is/1.0.2/package/package.json not in flight; writing
+980 verbose unbuild node_modules/multer/node_modules/busboy/node_modules/dicer/node_modules/streamsearch
+981 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer/node_modules/streamsearch is being purged from base /Users/zhangyizhi/GitHub/tryNode2.0_js
+982 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer/node_modules/streamsearch
+983 verbose tar unpack /Users/zhangyizhi/.npm/streamsearch/0.1.2/package.tgz
+984 verbose tar unpacking to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer/node_modules/streamsearch
+985 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer/node_modules/streamsearch is being purged
+986 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer/node_modules/streamsearch
+987 silly gunzTarPerm modes [ '755', '644' ]
+988 verbose afterAdd /Users/zhangyizhi/.npm/core-util-is/1.0.2/package/package.json written
+989 silly install resolved [ { name: 'string_decoder',
+989 silly install resolved     version: '0.10.31',
+989 silly install resolved     description: 'The string_decoder module from Node core',
+989 silly install resolved     main: 'index.js',
+989 silly install resolved     dependencies: {},
+989 silly install resolved     devDependencies: { tap: '~0.4.8' },
+989 silly install resolved     scripts: { test: 'tap test/simple/*.js' },
+989 silly install resolved     repository:
+989 silly install resolved      { type: 'git',
+989 silly install resolved        url: 'git://github.com/rvagg/string_decoder.git' },
+989 silly install resolved     homepage: 'https://github.com/rvagg/string_decoder',
+989 silly install resolved     keywords: [ 'string', 'decoder', 'browser', 'browserify' ],
+989 silly install resolved     license: 'MIT',
+989 silly install resolved     gitHead: 'd46d4fd87cf1d06e031c23f1ba170ca7d4ade9a0',
+989 silly install resolved     bugs: { url: 'https://github.com/rvagg/string_decoder/issues' },
+989 silly install resolved     _id: 'string_decoder@0.10.31',
+989 silly install resolved     _shasum: '62e203bc41766c6c28c9fc84301dab1c5310fa94',
+989 silly install resolved     _from: 'string_decoder@>=0.10.0 <0.11.0',
+989 silly install resolved     _npmVersion: '1.4.23',
+989 silly install resolved     _npmUser: { name: 'rvagg', email: 'rod@vagg.org' },
+989 silly install resolved     maintainers: [ [Object], [Object] ],
+989 silly install resolved     dist:
+989 silly install resolved      { shasum: '62e203bc41766c6c28c9fc84301dab1c5310fa94',
+989 silly install resolved        tarball: 'https://registry.npmjs.org/string_decoder/-/string_decoder-0.10.31.tgz' },
+989 silly install resolved     directories: {},
+989 silly install resolved     _resolved: 'https://registry.npmjs.org/string_decoder/-/string_decoder-0.10.31.tgz',
+989 silly install resolved     readme: 'ERROR: No README data found!' },
+989 silly install resolved   { name: 'inherits',
+989 silly install resolved     description: 'Browser-friendly inheritance fully compatible with standard node.js inherits()',
+989 silly install resolved     version: '2.0.1',
+989 silly install resolved     keywords:
+989 silly install resolved      [ 'inheritance',
+989 silly install resolved        'class',
+989 silly install resolved        'klass',
+989 silly install resolved        'oop',
+989 silly install resolved        'object-oriented',
+989 silly install resolved        'inherits',
+989 silly install resolved        'browser',
+989 silly install resolved        'browserify' ],
+989 silly install resolved     main: './inherits.js',
+989 silly install resolved     browser: './inherits_browser.js',
+989 silly install resolved     repository: { type: 'git', url: 'git://github.com/isaacs/inherits.git' },
+989 silly install resolved     license: 'ISC',
+989 silly install resolved     scripts: { test: 'node test' },
+989 silly install resolved     bugs: { url: 'https://github.com/isaacs/inherits/issues' },
+989 silly install resolved     _id: 'inherits@2.0.1',
+989 silly install resolved     dist:
+989 silly install resolved      { shasum: 'b17d08d326b4423e568eff719f91b0b1cbdf69f1',
+989 silly install resolved        tarball: 'https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz' },
+989 silly install resolved     _from: 'inherits@>=2.0.1 <2.1.0',
+989 silly install resolved     _npmVersion: '1.3.8',
+989 silly install resolved     _npmUser: { name: 'isaacs', email: 'i@izs.me' },
+989 silly install resolved     maintainers: [ [Object] ],
+989 silly install resolved     directories: {},
+989 silly install resolved     _shasum: 'b17d08d326b4423e568eff719f91b0b1cbdf69f1',
+989 silly install resolved     _resolved: 'https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz',
+989 silly install resolved     readme: 'ERROR: No README data found!',
+989 silly install resolved     homepage: 'https://github.com/isaacs/inherits#readme' },
+989 silly install resolved   { name: 'isarray',
+989 silly install resolved     description: 'Array#isArray for older browsers',
+989 silly install resolved     version: '0.0.1',
+989 silly install resolved     repository:
+989 silly install resolved      { type: 'git',
+989 silly install resolved        url: 'git://github.com/juliangruber/isarray.git' },
+989 silly install resolved     homepage: 'https://github.com/juliangruber/isarray',
+989 silly install resolved     main: 'index.js',
+989 silly install resolved     scripts: { test: 'tap test/*.js' },
+989 silly install resolved     dependencies: {},
+989 silly install resolved     devDependencies: { tap: '*' },
+989 silly install resolved     keywords: [ 'browser', 'isarray', 'array' ],
+989 silly install resolved     author:
+989 silly install resolved      { name: 'Julian Gruber',
+989 silly install resolved        email: 'mail@juliangruber.com',
+989 silly install resolved        url: 'http://juliangruber.com' },
+989 silly install resolved     license: 'MIT',
+989 silly install resolved     _id: 'isarray@0.0.1',
+989 silly install resolved     dist:
+989 silly install resolved      { shasum: '8a18acfca9a8f4177e09abfc6038939b05d1eedf',
+989 silly install resolved        tarball: 'https://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz' },
+989 silly install resolved     _from: 'isarray@0.0.1',
+989 silly install resolved     _npmVersion: '1.2.18',
+989 silly install resolved     _npmUser: { name: 'juliangruber', email: 'julian@juliangruber.com' },
+989 silly install resolved     maintainers: [ [Object] ],
+989 silly install resolved     directories: {},
+989 silly install resolved     _shasum: '8a18acfca9a8f4177e09abfc6038939b05d1eedf',
+989 silly install resolved     _resolved: 'https://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz',
+989 silly install resolved     bugs: { url: 'https://github.com/juliangruber/isarray/issues' },
+989 silly install resolved     readme: 'ERROR: No README data found!' },
+989 silly install resolved   { name: 'core-util-is',
+989 silly install resolved     version: '1.0.2',
+989 silly install resolved     description: 'The `util.is*` functions introduced in Node v0.12.',
+989 silly install resolved     main: 'lib/util.js',
+989 silly install resolved     repository: { type: 'git', url: 'git://github.com/isaacs/core-util-is.git' },
+989 silly install resolved     keywords:
+989 silly install resolved      [ 'util',
+989 silly install resolved        'isBuffer',
+989 silly install resolved        'isArray',
+989 silly install resolved        'isNumber',
+989 silly install resolved        'isString',
+989 silly install resolved        'isRegExp',
+989 silly install resolved        'isThis',
+989 silly install resolved        'isThat',
+989 silly install resolved        'polyfill' ],
+989 silly install resolved     author:
+989 silly install resolved      { name: 'Isaac Z. Schlueter',
+989 silly install resolved        email: 'i@izs.me',
+989 silly install resolved        url: 'http://blog.izs.me/' },
+989 silly install resolved     license: 'MIT',
+989 silly install resolved     bugs: { url: 'https://github.com/isaacs/core-util-is/issues' },
+989 silly install resolved     scripts: { test: 'tap test.js' },
+989 silly install resolved     devDependencies: { tap: '^2.3.0' },
+989 silly install resolved     gitHead: 'a177da234df5638b363ddc15fa324619a38577c8',
+989 silly install resolved     homepage: 'https://github.com/isaacs/core-util-is#readme',
+989 silly install resolved     _id: 'core-util-is@1.0.2',
+989 silly install resolved     _shasum: 'b5fd54220aa2bc5ab57aab7140c940754503c1a7',
+989 silly install resolved     _from: 'core-util-is@>=1.0.0 <1.1.0',
+989 silly install resolved     _npmVersion: '3.3.2',
+989 silly install resolved     _nodeVersion: '4.0.0',
+989 silly install resolved     _npmUser: { name: 'isaacs', email: 'i@izs.me' },
+989 silly install resolved     dist:
+989 silly install resolved      { shasum: 'b5fd54220aa2bc5ab57aab7140c940754503c1a7',
+989 silly install resolved        tarball: 'https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz' },
+989 silly install resolved     maintainers: [ [Object] ],
+989 silly install resolved     directories: {},
+989 silly install resolved     _resolved: 'https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz',
+989 silly install resolved     readme: 'ERROR: No README data found!' } ]
+990 info install string_decoder@0.10.31 into /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream
+991 info install inherits@2.0.1 into /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream
+992 info install isarray@0.0.1 into /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream
+993 info install core-util-is@1.0.2 into /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream
+994 info installOne string_decoder@0.10.31
+995 verbose installOne of string_decoder to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream not in flight; installing
+996 info installOne inherits@2.0.1
+997 verbose installOne of inherits to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream not in flight; installing
+998 info installOne isarray@0.0.1
+999 verbose installOne of isarray to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream not in flight; installing
+1000 info installOne core-util-is@1.0.2
+1001 verbose installOne of core-util-is to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream not in flight; installing
+1002 verbose lock using /Users/zhangyizhi/.npm/_locks/string-decoder-4e762e689446f0d6.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/string_decoder
+1003 verbose lock using /Users/zhangyizhi/.npm/_locks/inherits-4233c9f51bc3f3b0.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/inherits
+1004 verbose lock using /Users/zhangyizhi/.npm/_locks/isarray-10561d41ba0126a1.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/isarray
+1005 verbose lock using /Users/zhangyizhi/.npm/_locks/core-util-is-be120b83410b8447.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/core-util-is
+1006 silly install write writing string_decoder 0.10.31 to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/string_decoder
+1007 silly install write writing inherits 2.0.1 to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/inherits
+1008 silly install write writing isarray 0.0.1 to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/isarray
+1009 silly install write writing core-util-is 1.0.2 to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/core-util-is
+1010 silly gunzTarPerm extractEntry package.json
+1011 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+1012 verbose unbuild node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/string_decoder
+1013 verbose unbuild node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/inherits
+1014 verbose unbuild node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/isarray
+1015 verbose unbuild node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/core-util-is
+1016 silly gunzTarPerm extractEntry README.md
+1017 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+1018 silly gunzTarPerm extractEntry LICENSE
+1019 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+1020 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/string_decoder is being purged from base /Users/zhangyizhi/GitHub/tryNode2.0_js
+1021 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/string_decoder
+1022 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/inherits is being purged from base /Users/zhangyizhi/GitHub/tryNode2.0_js
+1023 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/inherits
+1024 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/isarray is being purged from base /Users/zhangyizhi/GitHub/tryNode2.0_js
+1025 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/isarray
+1026 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/core-util-is is being purged from base /Users/zhangyizhi/GitHub/tryNode2.0_js
+1027 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/core-util-is
+1028 verbose tar unpack /Users/zhangyizhi/.npm/string_decoder/0.10.31/package.tgz
+1029 verbose tar unpacking to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/string_decoder
+1030 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/string_decoder is being purged
+1031 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/string_decoder
+1032 verbose tar unpack /Users/zhangyizhi/.npm/inherits/2.0.1/package.tgz
+1033 verbose tar unpacking to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/inherits
+1034 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/inherits is being purged
+1035 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/inherits
+1036 verbose tar unpack /Users/zhangyizhi/.npm/isarray/0.0.1/package.tgz
+1037 verbose tar unpacking to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/isarray
+1038 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/isarray is being purged
+1039 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/isarray
+1040 verbose tar unpack /Users/zhangyizhi/.npm/core-util-is/1.0.2/package.tgz
+1041 verbose tar unpacking to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/core-util-is
+1042 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/core-util-is is being purged
+1043 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/core-util-is
+1044 silly gunzTarPerm modes [ '755', '644' ]
+1045 silly gunzTarPerm modes [ '755', '644' ]
+1046 silly gunzTarPerm modes [ '755', '644' ]
+1047 silly gunzTarPerm modes [ '755', '644' ]
+1048 silly gunzTarPerm extractEntry lib/sbmh.js
+1049 silly gunzTarPerm modified mode [ 'lib/sbmh.js', 438, 420 ]
+1050 silly gunzTarPerm extractEntry package.json
+1051 silly gunzTarPerm extractEntry package.json
+1052 silly gunzTarPerm extractEntry package.json
+1053 silly gunzTarPerm extractEntry package.json
+1054 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+1055 silly gunzTarPerm extractEntry README.md
+1056 silly gunzTarPerm extractEntry index.js
+1057 silly gunzTarPerm extractEntry README.md
+1058 silly gunzTarPerm extractEntry LICENSE
+1059 silly gunzTarPerm extractEntry .npmignore
+1060 silly gunzTarPerm modified mode [ '.npmignore', 436, 420 ]
+1061 silly gunzTarPerm extractEntry README.md
+1062 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+1063 silly gunzTarPerm extractEntry README.md
+1064 silly gunzTarPerm extractEntry LICENSE
+1065 silly gunzTarPerm extractEntry inherits.js
+1066 silly gunzTarPerm extractEntry inherits_browser.js
+1067 silly gunzTarPerm extractEntry build/build.js
+1068 silly gunzTarPerm extractEntry component.json
+1069 silly gunzTarPerm extractEntry LICENSE
+1070 silly gunzTarPerm modified mode [ 'LICENSE', 436, 420 ]
+1071 silly gunzTarPerm extractEntry index.js
+1072 silly gunzTarPerm modified mode [ 'index.js', 436, 420 ]
+1073 silly gunzTarPerm extractEntry test.js
+1074 silly gunzTarPerm extractEntry float.patch
+1075 silly gunzTarPerm extractEntry test.js
+1076 silly gunzTarPerm extractEntry lib/util.js
+1077 verbose write writing to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer/node_modules/streamsearch/package.json
+1078 info preinstall streamsearch@0.1.2
+1079 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer/node_modules/streamsearch/package.json
+1080 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer/node_modules/streamsearch/package.json
+1081 silly install resolved []
+1082 verbose about to build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer/node_modules/streamsearch
+1083 info build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer/node_modules/streamsearch
+1084 verbose write writing to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/isarray/package.json
+1085 verbose write writing to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/string_decoder/package.json
+1086 info linkStuff streamsearch@0.1.2
+1087 silly linkStuff streamsearch@0.1.2 has /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer/node_modules as its parent node_modules
+1088 verbose write writing to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/inherits/package.json
+1089 info preinstall isarray@0.0.1
+1090 info preinstall string_decoder@0.10.31
+1091 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/isarray/package.json
+1092 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/string_decoder/package.json
+1093 verbose write writing to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/core-util-is/package.json
+1094 info preinstall inherits@2.0.1
+1095 verbose linkBins streamsearch@0.1.2
+1096 verbose linkMans streamsearch@0.1.2
+1097 verbose rebuildBundles streamsearch@0.1.2
+1098 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/isarray/package.json
+1099 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/string_decoder/package.json
+1100 info install streamsearch@0.1.2
+1101 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/inherits/package.json
+1102 info preinstall core-util-is@1.0.2
+1103 info postinstall streamsearch@0.1.2
+1104 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/core-util-is/package.json
+1105 verbose unlock done using /Users/zhangyizhi/.npm/_locks/streamsearch-dc594848b2f6dbb3.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer/node_modules/streamsearch
+1106 verbose about to build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer
+1107 info build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer
+1108 silly install resolved []
+1109 verbose about to build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/isarray
+1110 info build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/isarray
+1111 silly install resolved []
+1112 verbose about to build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/string_decoder
+1113 info build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/string_decoder
+1114 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/inherits/package.json
+1115 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/core-util-is/package.json
+1116 info linkStuff dicer@0.2.5
+1117 silly linkStuff dicer@0.2.5 has /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules as its parent node_modules
+1118 info linkStuff isarray@0.0.1
+1119 silly linkStuff isarray@0.0.1 has /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules as its parent node_modules
+1120 info linkStuff string_decoder@0.10.31
+1121 silly linkStuff string_decoder@0.10.31 has /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules as its parent node_modules
+1122 silly install resolved []
+1123 verbose about to build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/inherits
+1124 info build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/inherits
+1125 silly install resolved []
+1126 verbose about to build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/core-util-is
+1127 info build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/core-util-is
+1128 info linkStuff inherits@2.0.1
+1129 silly linkStuff inherits@2.0.1 has /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules as its parent node_modules
+1130 info linkStuff core-util-is@1.0.2
+1131 silly linkStuff core-util-is@1.0.2 has /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules as its parent node_modules
+1132 verbose linkBins dicer@0.2.5
+1133 verbose linkMans dicer@0.2.5
+1134 verbose rebuildBundles dicer@0.2.5
+1135 verbose linkBins isarray@0.0.1
+1136 verbose linkMans isarray@0.0.1
+1137 verbose rebuildBundles isarray@0.0.1
+1138 verbose rebuildBundles [ 'streamsearch' ]
+1139 info install dicer@0.2.5
+1140 info install isarray@0.0.1
+1141 verbose linkBins string_decoder@0.10.31
+1142 verbose linkMans string_decoder@0.10.31
+1143 verbose rebuildBundles string_decoder@0.10.31
+1144 info install string_decoder@0.10.31
+1145 info postinstall dicer@0.2.5
+1146 info postinstall isarray@0.0.1
+1147 info postinstall string_decoder@0.10.31
+1148 verbose unlock done using /Users/zhangyizhi/.npm/_locks/dicer-d746bee3d74e1828.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/dicer
+1149 verbose unlock done using /Users/zhangyizhi/.npm/_locks/isarray-10561d41ba0126a1.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/isarray
+1150 verbose linkBins inherits@2.0.1
+1151 verbose linkMans inherits@2.0.1
+1152 verbose rebuildBundles inherits@2.0.1
+1153 verbose unlock done using /Users/zhangyizhi/.npm/_locks/string-decoder-4e762e689446f0d6.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/string_decoder
+1154 info install inherits@2.0.1
+1155 info postinstall inherits@2.0.1
+1156 verbose linkBins core-util-is@1.0.2
+1157 verbose linkMans core-util-is@1.0.2
+1158 verbose rebuildBundles core-util-is@1.0.2
+1159 info install core-util-is@1.0.2
+1160 verbose unlock done using /Users/zhangyizhi/.npm/_locks/inherits-4233c9f51bc3f3b0.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/inherits
+1161 info postinstall core-util-is@1.0.2
+1162 verbose unlock done using /Users/zhangyizhi/.npm/_locks/core-util-is-be120b83410b8447.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream/node_modules/core-util-is
+1163 verbose about to build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream
+1164 info build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream
+1165 info linkStuff readable-stream@1.1.14
+1166 silly linkStuff readable-stream@1.1.14 has /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules as its parent node_modules
+1167 http 304 https://registry.npmjs.org/mime-db
+1168 verbose headers { date: 'Mon, 04 Jul 2016 09:55:27 GMT',
+1168 verbose headers   via: '1.1 varnish',
+1168 verbose headers   'cache-control': 'max-age=300',
+1168 verbose headers   etag: '"DE1E5EXFAKV0S1L2M4PVTQ4O1"',
+1168 verbose headers   age: '84',
+1168 verbose headers   connection: 'keep-alive',
+1168 verbose headers   'x-served-by': 'cache-lcy1122-LCY',
+1168 verbose headers   'x-cache': 'HIT',
+1168 verbose headers   'x-cache-hits': '16',
+1168 verbose headers   'x-timer': 'S1467626127.945264,VS0,VE0',
+1168 verbose headers   vary: 'Accept-Encoding' }
+1169 silly get cb [ 304,
+1169 silly get   { date: 'Mon, 04 Jul 2016 09:55:27 GMT',
+1169 silly get     via: '1.1 varnish',
+1169 silly get     'cache-control': 'max-age=300',
+1169 silly get     etag: '"DE1E5EXFAKV0S1L2M4PVTQ4O1"',
+1169 silly get     age: '84',
+1169 silly get     connection: 'keep-alive',
+1169 silly get     'x-served-by': 'cache-lcy1122-LCY',
+1169 silly get     'x-cache': 'HIT',
+1169 silly get     'x-cache-hits': '16',
+1169 silly get     'x-timer': 'S1467626127.945264,VS0,VE0',
+1169 silly get     vary: 'Accept-Encoding' } ]
+1170 verbose etag https://registry.npmjs.org/mime-db from cache
+1171 verbose get saving mime-db to /Users/zhangyizhi/.npm/registry.npmjs.org/mime-db/.cache.json
+1172 verbose linkBins readable-stream@1.1.14
+1173 verbose linkMans readable-stream@1.1.14
+1174 verbose rebuildBundles readable-stream@1.1.14
+1175 silly addNameRange number 2 { name: 'mime-db', range: '>=1.12.0 <1.13.0', hasData: true }
+1176 silly addNameRange versions [ 'mime-db',
+1176 silly addNameRange   [ '0.0.0',
+1176 silly addNameRange     '1.0.0',
+1176 silly addNameRange     '1.0.1',
+1176 silly addNameRange     '1.0.2',
+1176 silly addNameRange     '1.0.3',
+1176 silly addNameRange     '1.1.0',
+1176 silly addNameRange     '1.1.1',
+1176 silly addNameRange     '1.1.2',
+1176 silly addNameRange     '1.2.0',
+1176 silly addNameRange     '1.3.0',
+1176 silly addNameRange     '1.3.1',
+1176 silly addNameRange     '1.4.0',
+1176 silly addNameRange     '1.5.0',
+1176 silly addNameRange     '1.6.0',
+1176 silly addNameRange     '1.6.1',
+1176 silly addNameRange     '1.7.0',
+1176 silly addNameRange     '1.8.0',
+1176 silly addNameRange     '1.9.0',
+1176 silly addNameRange     '1.9.1',
+1176 silly addNameRange     '1.10.0',
+1176 silly addNameRange     '1.11.0',
+1176 silly addNameRange     '1.12.0',
+1176 silly addNameRange     '1.13.0',
+1176 silly addNameRange     '1.14.0',
+1176 silly addNameRange     '1.15.0',
+1176 silly addNameRange     '1.16.0',
+1176 silly addNameRange     '1.17.0',
+1176 silly addNameRange     '1.18.0',
+1176 silly addNameRange     '1.19.0',
+1176 silly addNameRange     '1.20.0',
+1176 silly addNameRange     '1.21.0',
+1176 silly addNameRange     '1.22.0',
+1176 silly addNameRange     '1.23.0' ] ]
+1177 silly addNamed mime-db@1.12.0
+1178 verbose addNamed "1.12.0" is a plain semver version for mime-db
+1179 verbose rebuildBundles [ 'core-util-is', 'inherits', 'isarray', 'string_decoder' ]
+1180 info install readable-stream@1.1.14
+1181 silly mapToRegistry name mime-db
+1182 silly mapToRegistry using default registry
+1183 silly mapToRegistry registry https://registry.npmjs.org/
+1184 silly mapToRegistry uri https://registry.npmjs.org/mime-db
+1185 verbose addRemoteTarball https://registry.npmjs.org/mime-db/-/mime-db-1.12.0.tgz not in flight; adding
+1186 verbose addRemoteTarball [ 'https://registry.npmjs.org/mime-db/-/mime-db-1.12.0.tgz',
+1186 verbose addRemoteTarball   '3d0c63180f458eb10d325aaa37d7c58ae312e9d7' ]
+1187 info postinstall readable-stream@1.1.14
+1188 info retry fetch attempt 1 at 17:55:31
+1189 info attempt registry request try #1 at 17:55:31
+1190 http fetch GET https://registry.npmjs.org/mime-db/-/mime-db-1.12.0.tgz
+1191 verbose unlock done using /Users/zhangyizhi/.npm/_locks/readable-stream-7891c54ce5582a29.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy/node_modules/readable-stream
+1192 verbose about to build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy
+1193 info build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy
+1194 info linkStuff busboy@0.2.13
+1195 silly linkStuff busboy@0.2.13 has /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules as its parent node_modules
+1196 verbose linkBins busboy@0.2.13
+1197 verbose linkMans busboy@0.2.13
+1198 verbose rebuildBundles busboy@0.2.13
+1199 verbose rebuildBundles [ 'dicer', 'readable-stream' ]
+1200 info install busboy@0.2.13
+1201 info postinstall busboy@0.2.13
+1202 verbose unlock done using /Users/zhangyizhi/.npm/_locks/busboy-36193f060a6d97fd.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/busboy
+1203 http fetch 200 https://registry.npmjs.org/mime-db/-/mime-db-1.12.0.tgz
+1204 silly fetchAndShaCheck shasum 3d0c63180f458eb10d325aaa37d7c58ae312e9d7
+1205 verbose addTmpTarball /var/folders/nc/t1m74zt536z1tkgxc_qxlmyr0000gn/T/npm-27711-6d0b3140/registry.npmjs.org/mime-db/-/mime-db-1.12.0.tgz not in flight; adding
+1206 verbose addTmpTarball already have metadata; skipping unpack for mime-db@1.12.0
+1207 silly cache afterAdd mime-db@1.12.0
+1208 verbose afterAdd /Users/zhangyizhi/.npm/mime-db/1.12.0/package/package.json not in flight; writing
+1209 verbose afterAdd /Users/zhangyizhi/.npm/mime-db/1.12.0/package/package.json written
+1210 silly install resolved [ { name: 'mime-db',
+1210 silly install resolved     description: 'Media Type Database',
+1210 silly install resolved     version: '1.12.0',
+1210 silly install resolved     contributors: [ [Object], [Object], [Object] ],
+1210 silly install resolved     license: 'MIT',
+1210 silly install resolved     keywords: [ 'mime', 'db', 'type', 'types', 'database', 'charset', 'charsets' ],
+1210 silly install resolved     repository: { type: 'git', url: 'https://github.com/jshttp/mime-db' },
+1210 silly install resolved     devDependencies:
+1210 silly install resolved      { bluebird: '2.9.27',
+1210 silly install resolved        co: '4.5.4',
+1210 silly install resolved        cogent: '1.0.1',
+1210 silly install resolved        'csv-parse': '0.1.2',
+1210 silly install resolved        gnode: '0.1.1',
+1210 silly install resolved        istanbul: '0.3.9',
+1210 silly install resolved        mocha: '1.21.5',
+1210 silly install resolved        'raw-body': '2.1.0',
+1210 silly install resolved        'stream-to-array': '2' },
+1210 silly install resolved     files: [ 'HISTORY.md', 'LICENSE', 'README.md', 'db.json', 'index.js' ],
+1210 silly install resolved     engines: { node: '>= 0.6' },
+1210 silly install resolved     scripts:
+1210 silly install resolved      { build: 'node scripts/build',
+1210 silly install resolved        fetch: 'gnode scripts/extensions && gnode scripts/types',
+1210 silly install resolved        test: 'mocha --reporter spec --bail --check-leaks test/',
+1210 silly install resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/',
+1210 silly install resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/',
+1210 silly install resolved        update: 'npm run fetch && npm run build' },
+1210 silly install resolved     gitHead: 'cf35cbba6b22f4a3b3eef9a32129ea5b7f0f91ee',
+1210 silly install resolved     bugs: { url: 'https://github.com/jshttp/mime-db/issues' },
+1210 silly install resolved     homepage: 'https://github.com/jshttp/mime-db',
+1210 silly install resolved     _id: 'mime-db@1.12.0',
+1210 silly install resolved     _shasum: '3d0c63180f458eb10d325aaa37d7c58ae312e9d7',
+1210 silly install resolved     _from: 'mime-db@>=1.12.0 <1.13.0',
+1210 silly install resolved     _npmVersion: '1.4.28',
+1210 silly install resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+1210 silly install resolved     maintainers: [ [Object], [Object] ],
+1210 silly install resolved     dist:
+1210 silly install resolved      { shasum: '3d0c63180f458eb10d325aaa37d7c58ae312e9d7',
+1210 silly install resolved        tarball: 'https://registry.npmjs.org/mime-db/-/mime-db-1.12.0.tgz' },
+1210 silly install resolved     directories: {},
+1210 silly install resolved     _resolved: 'https://registry.npmjs.org/mime-db/-/mime-db-1.12.0.tgz' } ]
+1211 info install mime-db@1.12.0 into /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types
+1212 info installOne mime-db@1.12.0
+1213 verbose installOne of mime-db to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types not in flight; installing
+1214 verbose lock using /Users/zhangyizhi/.npm/_locks/mime-db-5efda4790a037a47.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types/node_modules/mime-db
+1215 silly install write writing mime-db 1.12.0 to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types/node_modules/mime-db
+1216 verbose unbuild node_modules/multer/node_modules/type-is/node_modules/mime-types/node_modules/mime-db
+1217 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types/node_modules/mime-db is being purged from base /Users/zhangyizhi/GitHub/tryNode2.0_js
+1218 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types/node_modules/mime-db
+1219 verbose tar unpack /Users/zhangyizhi/.npm/mime-db/1.12.0/package.tgz
+1220 verbose tar unpacking to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types/node_modules/mime-db
+1221 silly gentlyRm /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types/node_modules/mime-db is being purged
+1222 verbose gentlyRm don't care about contents; nuking /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types/node_modules/mime-db
+1223 silly gunzTarPerm modes [ '755', '644' ]
+1224 silly gunzTarPerm extractEntry package.json
+1225 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+1226 silly gunzTarPerm extractEntry README.md
+1227 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+1228 silly gunzTarPerm extractEntry LICENSE
+1229 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+1230 silly gunzTarPerm extractEntry index.js
+1231 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+1232 silly gunzTarPerm extractEntry HISTORY.md
+1233 silly gunzTarPerm modified mode [ 'HISTORY.md', 438, 420 ]
+1234 silly gunzTarPerm extractEntry db.json
+1235 silly gunzTarPerm modified mode [ 'db.json', 438, 420 ]
+1236 verbose write writing to /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/package.json
+1237 info preinstall mime-db@1.12.0
+1238 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/package.json
+1239 verbose readDependencies loading dependencies from /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/package.json
+1240 silly install resolved []
+1241 verbose about to build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types/node_modules/mime-db
+1242 info build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types/node_modules/mime-db
+1243 info linkStuff mime-db@1.12.0
+1244 silly linkStuff mime-db@1.12.0 has /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types/node_modules as its parent node_modules
+1245 verbose linkBins mime-db@1.12.0
+1246 verbose linkMans mime-db@1.12.0
+1247 verbose rebuildBundles mime-db@1.12.0
+1248 info install mime-db@1.12.0
+1249 info postinstall mime-db@1.12.0
+1250 verbose unlock done using /Users/zhangyizhi/.npm/_locks/mime-db-5efda4790a037a47.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types/node_modules/mime-db
+1251 verbose about to build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types
+1252 info build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types
+1253 info linkStuff mime-types@2.0.14
+1254 silly linkStuff mime-types@2.0.14 has /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules as its parent node_modules
+1255 verbose linkBins mime-types@2.0.14
+1256 verbose linkMans mime-types@2.0.14
+1257 verbose rebuildBundles mime-types@2.0.14
+1258 verbose rebuildBundles [ 'mime-db' ]
+1259 info install mime-types@2.0.14
+1260 info postinstall mime-types@2.0.14
+1261 verbose unlock done using /Users/zhangyizhi/.npm/_locks/mime-types-0993962ea7b76f77.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is/node_modules/mime-types
+1262 verbose about to build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is
+1263 info build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is
+1264 info linkStuff type-is@1.5.7
+1265 silly linkStuff type-is@1.5.7 has /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules as its parent node_modules
+1266 verbose linkBins type-is@1.5.7
+1267 verbose linkMans type-is@1.5.7
+1268 verbose rebuildBundles type-is@1.5.7
+1269 verbose rebuildBundles [ 'media-typer', 'mime-types' ]
+1270 info install type-is@1.5.7
+1271 info postinstall type-is@1.5.7
+1272 verbose unlock done using /Users/zhangyizhi/.npm/_locks/type-is-73f2ec2e717d0ba8.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer/node_modules/type-is
+1273 verbose about to build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer
+1274 info build /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer
+1275 info linkStuff multer@0.1.8
+1276 silly linkStuff multer@0.1.8 has /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules as its parent node_modules
+1277 verbose linkBins multer@0.1.8
+1278 verbose linkMans multer@0.1.8
+1279 verbose rebuildBundles multer@0.1.8
+1280 verbose rebuildBundles [ 'busboy', 'mkdirp', 'qs', 'type-is' ]
+1281 info install multer@0.1.8
+1282 info postinstall multer@0.1.8
+1283 verbose unlock done using /Users/zhangyizhi/.npm/_locks/multer-c8b9ae482393caa3.lock for /Users/zhangyizhi/GitHub/tryNode2.0_js/node_modules/multer
+1284 verbose validateInstall loading /Users/zhangyizhi/GitHub/tryNode2.0_js/package.json for validation
+1285 verbose stack Error: The package connect@3.4.1 does not satisfy its siblings' peerDependencies requirements!
+1285 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+1285 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:268:7
+1285 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+1285 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+1285 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+1285 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+1285 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+1285 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+1285 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+1285 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+1286 verbose cwd /Users/zhangyizhi/GitHub/tryNode2.0_js
+1287 error Darwin 15.5.0
+1288 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "multer@0.1.8"
+1289 error node v4.3.1
+1290 error npm  v2.14.12
+1291 error code EPEERINVALID
+1292 error peerinvalid The package connect@3.4.1 does not satisfy its siblings' peerDependencies requirements!
+1292 error peerinvalid Peer session-mongoose@0.5.2 wants connect@^2.0
+1293 verbose exit [ 1, true ]

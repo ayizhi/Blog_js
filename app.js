@@ -10,13 +10,25 @@ var flash = require('connect-flash');
 var db = require('./models/db');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
+var multer = require('multer');
+
 var app = express();
+
 
 //设置端口
 app.set('port',process.env.PORT || 3000);
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs');
 
+
+app.use(multer({
+	dest: './public/images',
+	rename: function(filedname,filename){
+		console.log(filedname,filename)
+		return filename
+	}
+
+}))
 app.use(flash());
 app.use(logger('dev'));
 /*
@@ -52,6 +64,8 @@ app.use(session({
 		url: settings.dbUrl
 	})
 }));
+
+
 
 
 

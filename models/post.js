@@ -5,7 +5,7 @@ var db = require('./db');
 module.exports = Post;
 
 var Posts = db.buildModel('post',{
-	name: {type: String},
+	name: {type: String,ref:'user'},
 	title: {type: String},
 	post: {type: String},
 	time: {
@@ -42,11 +42,21 @@ Post.prototype.save = function(callback){
 	db.addData(Posts,post,callback);
 }
 
-Post.get = function(name,callback){
+Post.getAll = function(name,callback){
 	var data;
 	data = name ? {'name':name}:null;
 	db.findData(Posts,data,callback);
 }
 
+Post.getOne = function(name,day,title,callback){
+	data = {
+		'name': name,
+		'time.day': day,
+		'title': title,
+	} || null;
+	db.findData(Posts,data,callback)
+}
+
+Post.model = Posts;
 
 

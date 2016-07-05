@@ -3,19 +3,26 @@ var router = express.Router();
 var User = require('../models/user.js');
 var Post = require('../models/post.js');
 var crypto = require('crypto');
+var markdown = require('markdown').markdown;
+var db = require('../models/db.js');
+
 
 
 
 module.exports = function(app){
 	app.get('/',function(req,res){
-		Post.get(null,function(reply,result){
+		Post.getAll(null,function(reply,result){
 			var posts = [];
 			if(reply.status){
 				posts = result;
 			};
 
-			console.log(posts)
-			console.log(req.session.user);
+			posts.forEach(function(doc){
+
+				doc.post = markdown.toHTML(doc.post);
+			})
+
+
 
 			res.render('index',{
 				title: '主页',
@@ -40,7 +47,7 @@ module.exports = function(app){
 
 	app.post('/reg',checknotLogin);
 	app.post('/reg',function(req,res){
-		console.log(req.body)
+
 		var username = req.body.name;
 		var password = req.body.password;
 		var password_confirm = req.body['password-confirm'];
@@ -67,7 +74,7 @@ module.exports = function(app){
 				return res.redirect('/reg')
 			}
 			newRegister.save(function(status,result){
-				console.log(status,result)
+
 				if(status.status == 'false'){
 					req.flash('error',status.message);
 					return res.redirect('/reg');
@@ -97,6 +104,7 @@ module.exports = function(app){
 		var md5 = crypto.createHash('md5');
 		password = md5.update(password).digest('hex');
 		User.get(name,function(reply,result){
+
 			if(!reply.status){
 				console.log(reply.message);
 				return res.redirect('/login');
@@ -123,14 +131,20 @@ module.exports = function(app){
 			user: req.session.user,
 			success: req.flash('success').toString(),
 			error: req.flash('error').toString(),
-		});;
+		});
 	});
 
 	app.post('/post',checkLogin)
 	app.post('/post',function(req,res){
 		var currentUser = req.session.user;
-		console.log('asd asd asd sad ads as: ',currentUser)
-		var post = new Post(currentUser[0].name,req.body.title,req.body.post);
+
+		if(currentUser.length){
+			currentUser = currentUser[0]
+		}else{
+			currentUser = currentUser;
+		}
+
+		var post = new Post(currentUser.name,req.body.title,req.body.post);
 		post.save(function(reply,result){
 			if(!reply.status){
 				req.flash('error',reply.message);
@@ -147,6 +161,53 @@ module.exports = function(app){
 		req.flash('success','登出成功');
 		res.redirect('/');
 	});
+
+	app.get('/upload',checkLogin);
+	app.get('/upload',function(req,res){
+		res.render('upload',{
+			title: '文件上传',
+			user: req.session.user,
+			success: req.flash('success').toString(),
+			error:req.flash('error').toString()
+		})
+	});
+
+	app.post('/upload',checkLogin);
+	app.post('/upload',function(req,res){
+		req.flash('success','上传成功');
+		return res.redirect('/upload');
+	});
+
+	app.get('/u/:name',function(req,res){
+		User.get(req.params.name,function(reply,user){
+			if(!reply){
+				req.flash('error',reply.message)
+				return res.redirect('/')
+			}
+
+			console.log(user);
+
+			Post.getAll(user.name,function(reply,posts){
+
+				console.log(posts);
+
+				if(!reply){
+					req.flash('error',reply.message)
+					return res.redirect('/')
+				};
+
+				res.render('user',{
+					title: user.name,
+					posts: posts,
+					user: req.session.user,
+					success: req.flash('success').toString(),
+					error:req.flash('error').toString()
+				})
+			})
+		})
+	})
+
+
 
 	function checkLogin(req,res,next){
 		if(!req.session.user){

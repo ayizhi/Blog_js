@@ -3,7 +3,7 @@ var db = require('./db');
 module.exports = User;
 
 var Users = db.buildModel('user',{
-		name: {type: String},
+		name: {type: String,ref:'post'},
 		password: {type: String},
 		email: {type: String},
 	})
@@ -28,7 +28,9 @@ User.prototype.save = function(callback){
 //查
 User.get = function(name,callback){
 	db.findData(Users,{name:name},callback)
-}
+};
+
+User.model = Users;
 
 
 
