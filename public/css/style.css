@@ -19,6 +19,14 @@ ul.sideBar li{
 	line-height: 30px;
 }
 
+h2{
+	margin: 10px;
+}
+p{
+	margin: 5px;
+}
+
+
 
 header{
 	margin: 16px 128px;
@@ -28,8 +36,9 @@ header{
 }
 
 div.article{
-	float: left;
 	margin: 5px 20px;
+    width: 600px;
+    float: left;
 }
 
 
@@ -46,4 +55,8 @@ input{
 	line-height: 30px;
 	text-align: center;
 	background-color: pink;
+}
+
+textarea{
+	border: 1px solid #ccc;
 }

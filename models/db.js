@@ -54,8 +54,8 @@ runValidators: if true, runs update validators on this command. Update validator
 setDefaultsOnInsert: if this and upsert are true, mongoose will apply the defaults specified in the model's schema if a new document is created. This option only works on MongoDB >= 2.4 because it relies on MongoDB's $setOnInsert operator.
 strict (boolean) overrides the strict option for this update
 overwrite (boolean) disables update-only mode, allowing you to overwrite the doc (false)*/
-exports.updateData = function(model,conditions,callback,options){
-	model.update(conditions,options,function(err,result){
+exports.updateData = function(model,conditions,update,callback,options){
+	model.update(conditions,update,options,function(err,result){
 		if(err){
 			console.log(err);
 			callback({'status':false,'message':'update fail'},result);	

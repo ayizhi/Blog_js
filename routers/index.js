@@ -68,7 +68,7 @@ module.exports = function(app){
 		})
 
 		User.get(username,function(status,result){
-			console.log(status,result)
+
 			if(status.status){
 				req.flash('error','改用户已经存在');
 				return res.redirect('/reg')
@@ -80,7 +80,6 @@ module.exports = function(app){
 					return res.redirect('/reg');
 				}
 				req.flash('success','注册成功');
-				console.log('注册成功')
 				req.session.user = result;
 				res.redirect('/')
 			})
@@ -106,14 +105,12 @@ module.exports = function(app){
 		User.get(name,function(reply,result){
 
 			if(!reply.status){
-				console.log(reply.message);
 				return res.redirect('/login');
 			}
 			
 			var dbPassword = result[0].password;
 
 			if(dbPassword != password){
-				console.log('密码错误')
 				req.flash('error','密码错误！');
 				return res.redirect('/login');
 			}
@@ -185,12 +182,12 @@ module.exports = function(app){
 				return res.redirect('/')
 			}
 
-			console.log(user);
+			//user有可能是array还是obj
+			if(user.length){
+				user = user[0];
+			}
 
 			Post.getAll(user.name,function(reply,posts){
-
-				console.log(posts);
-
 				if(!reply){
 					req.flash('error',reply.message)
 					return res.redirect('/')
@@ -204,6 +201,89 @@ module.exports = function(app){
 					error:req.flash('error').toString()
 				})
 			})
+		})
+	});
+
+	app.get('/u/:name/:day/:title',function(req,res){
+		Post.getOne(req.params.name,req.params.day,req.params.title,function(reply,post){
+			console.log('========',req.params.name,req.params.day,req.params.title)
+			console.log('-========------=====',post)
+
+			if(!reply.status){
+				req.flash('error',reply.message)
+				return res.redirect('/');
+			}
+		
+
+			if(post.length){
+				post = post[0]
+			}
+
+			res.render('article',{
+				title: req.params.title,
+				post: post,
+				user: req.session.user,
+				success: req.flash('success').toString(),
+				error: req.flash('error').toString()
+			});
+		});
+	});
+
+	app.get('/edit/:name/:day/:title',checkLogin);
+	app.get('/edit/:name/:day/:title',function(req,res){
+		var currentUser = req.session.user;
+		Post.edit(req.params.name,req.params.day,req.params.title,function(reply,post){
+			if(!reply.status){
+				req.flash('error',reply.message);
+				return res.redirect('/');
+			}
+
+			if(post.length){
+				post = post[0]
+			}
+
+			res.render('edit',{
+				title: '编辑',
+				day:req.params.day,
+				title:req.params.title,
+				name:req.params.name,
+				post: post,
+				user: req.session.user,
+				success: req.flash('success').toString(),
+				error: req.flash('error').toString(),
+			})
+		})
+	});
+
+	app.post('/edit/:name/:day/:title',checkLogin);
+	app.post('/edit/:name/:day/:title',function(req,res){
+		var currentUser = req.session.user;
+		Post.update(req.params.name,req.params.day,req.params.title,req.body.post,function(reply,result){
+			var url = encodeURI('/u/' + req.params.name + '/' + req.params.day + '/' + req.params.title);
+				
+			console.log('-==========',url)
+			if(!reply.status){
+				req.flash('error',reply.message);
+				return res.redirect(url);
+			}
+
+			req.flash('success',reply.message);
+			res.redirect(url)
+		
+		})
+	})
+
+	app.get('/remove/:name/:day/:title',checkLogin);
+	app.get('/remove/:name/:day/:title',function(req,res){
+		var currentUser = req.session.user;
+		Post.remove(req.params.name,req.params.day,req.params.title,function(reply){
+			if(!reply.status){
+				req.flash('error',reply.message);
+				return redirect('back');
+			}
+
+			req.flash('success',reply.message);
+			res.redirect('/');
 		})
 	})
 

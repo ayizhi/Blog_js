@@ -33,9 +33,9 @@ Post.prototype.save = function(callback){
 		minute: date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()),
 	};
 	var post = {
-		name: this.name,
+		name: this.name.trim(),
 		time: time,
-		title: this.title,
+		title: this.title.trim(),
 		post: this.post
 	};
 
@@ -51,11 +51,44 @@ Post.getAll = function(name,callback){
 Post.getOne = function(name,day,title,callback){
 	data = {
 		'name': name,
-		'time.day': day,
+		// 'time.day': day,
 		'title': title,
 	} || null;
+
+	console.log('1233425345324626411234',data)
 	db.findData(Posts,data,callback)
 }
+
+
+Post.edit = function(name,day,title,callback){
+	data = {
+		'name': name,
+		'time.day': day,
+		'title': title,
+	} || null
+
+	db.findData(Posts,data,callback);
+}
+
+Post.update = function(name,day,title,post,callback){
+	db.updateData(Posts,{
+		'name': name,
+		'time.day': day,
+		'title': title,
+	},{
+		post:post
+	},callback)
+}
+
+Post.remove = function(name,day,title,callback){
+	db.removeData(Posts,{
+		'name': name,
+		'time.day': day,
+		'title': title, 
+	},callback)
+}
+
+
 
 Post.model = Posts;
 
