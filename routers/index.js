@@ -222,6 +222,7 @@ module.exports = function(app){
 			if(post.length){
 				post = post[0]
 			}
+			console.log(req.params.day,post.time.day,'=======')
 
 			res.render('article',{
 				title: req.params.title,
@@ -235,7 +236,7 @@ module.exports = function(app){
 
 	app.post('/u/:name/:day/:title',function(req,res){
 		var date = new Date();
-		var time = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + '' + date.getHours() + ':' + (date.getMinutes()<10? '0'+ date.getMinutes() : date.getMinutes());
+		var time = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + (date.getMinutes()<10? '0'+ date.getMinutes() : date.getMinutes());
 		var comment = {
 			name:req.body.name,
 			email: req.body.email,
@@ -243,8 +244,12 @@ module.exports = function(app){
 			time: time,
 			content: req.body.content
 		};
+		console.log('-=1=3=1=2312')
 		var newComment = new Comment(req.params.name,req.params.day,req.params.title,comment);
 		newComment.save(function(reply,result){
+
+			console.log(reply)
+
 			if(!reply.status){
 				req.flash('error',reply.message);
 				return res.redirect('back');

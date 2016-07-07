@@ -15,17 +15,21 @@ Comment.prototype.save = function(callback){
 	var name = this.name,
 		day = this.day,
 		title = this.title,
-		commemnt = this.comment;
+		comment = this.comment;
 
-	db.updateData(Post.model,{
-		name: name,
-		'time.day': day,
-		title: title,
-	},{
-		$push: {comments: comment}
-	},function(reply,result){
-		if(callback){
-			callback(reply,result)
-		}
-	})
+		
+
+	console.log(name.trim(),day,title,comment,'========');
+// 	Post.update = function(name,day,title,post,callback){
+// 	db.updateData(Posts,{
+// 		'name': name,
+// 		'time.day': day,
+// 		'title': title,
+// 	},{
+// 		post:post
+// 	},callback)
+// }
+	Post.updateComment(name.trim(),day,title,comment,callback)
+
+
 }

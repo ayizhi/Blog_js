@@ -13,7 +13,7 @@
 
 
 
-<form action="" method='post'>
+<form action="/u/<%= user.name %>/<%= post.time.day %>/<%= title %>" method='post'/>
 	<% if(user) { %>
 		姓名： <input type="text" name="name" value="<%= user.name %>"/><br/>
 		邮箱： <input type="text" name="email" value="<%= user.email %>"/><br/>

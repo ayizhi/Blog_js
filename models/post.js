@@ -15,6 +15,13 @@ var Posts = db.buildModel('post',{
 		day: {type:Date},
 		minute:{type:Date},
 	},
+	comments:{
+		name:{type: String},
+		email: {type: String},
+		website: {type: String},
+		time: {type: Date},
+		content: {type: String}
+	}
 })
 
 function Post(name,title,post){
@@ -77,9 +84,26 @@ Post.update = function(name,day,title,post,callback){
 		'time.day': day,
 		'title': title,
 	},{
-		post:post
+		post:post,
 	},callback)
 }
+
+Post.updateComment = function(name,day,title,comment,callback){
+	db.updateData(Posts,{
+		'name': name,
+		'time.day': day,
+		'title': title,
+	},{
+		$push:{comments:comment},
+	},callback)
+
+	console.log({
+		'name': name,
+		'time.day': day,
+		'title': title,
+	})
+}
+
 
 Post.remove = function(name,day,title,callback){
 	db.removeData(Posts,{
