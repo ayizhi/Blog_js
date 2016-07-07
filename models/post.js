@@ -36,7 +36,8 @@ Post.prototype.save = function(callback){
 		name: this.name.trim(),
 		time: time,
 		title: this.title.trim(),
-		post: this.post
+		post: this.post,
+		comments: []
 	};
 
 	db.addData(Posts,post,callback);
@@ -55,7 +56,7 @@ Post.getOne = function(name,day,title,callback){
 		'title': title,
 	} || null;
 
-	console.log('1233425345324626411234',data)
+
 	db.findData(Posts,data,callback)
 }
 

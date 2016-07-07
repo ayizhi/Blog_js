@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/user.js');
 var Post = require('../models/post.js');
+var Comment = require('../models/comment.js');
 var crypto = require('crypto');
 var markdown = require('markdown').markdown;
 var db = require('../models/db.js');
@@ -18,8 +19,14 @@ module.exports = function(app){
 			};
 
 			posts.forEach(function(doc){
-
-				doc.post = markdown.toHTML(doc.post);
+				if(doc){
+					doc.post = markdown.toHTML(doc.post);
+					if(doc.comments){
+						doc.comments.forEach(function(comment){
+							comment.content = markdown.toHTML(comment.content);
+						})
+					}
+				}
 			})
 
 
@@ -206,9 +213,6 @@ module.exports = function(app){
 
 	app.get('/u/:name/:day/:title',function(req,res){
 		Post.getOne(req.params.name,req.params.day,req.params.title,function(reply,post){
-			console.log('========',req.params.name,req.params.day,req.params.title)
-			console.log('-========------=====',post)
-
 			if(!reply.status){
 				req.flash('error',reply.message)
 				return res.redirect('/');
@@ -228,6 +232,27 @@ module.exports = function(app){
 			});
 		});
 	});
+
+	app.post('/u/:name/:day/:title',function(req,res){
+		var date = new Date();
+		var time = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + '' + date.getHours() + ':' + (date.getMinutes()<10? '0'+ date.getMinutes() : date.getMinutes());
+		var comment = {
+			name:req.body.name,
+			email: req.body.email,
+			website: req.body.website,
+			time: time,
+			content: req.body.content
+		};
+		var newComment = new Comment(req.params.name,req.params.day,req.params.title,comment);
+		newComment.save(function(reply,result){
+			if(!reply.status){
+				req.flash('error',reply.message);
+				return res.redirect('back');
+			}
+			req.flash('success',reply.message);
+			res.redirect('back');
+		})
+	})
 
 	app.get('/edit/:name/:day/:title',checkLogin);
 	app.get('/edit/:name/:day/:title',function(req,res){
@@ -254,6 +279,8 @@ module.exports = function(app){
 			})
 		})
 	});
+
+
 
 	app.post('/edit/:name/:day/:title',checkLogin);
 	app.post('/edit/:name/:day/:title',function(req,res){
