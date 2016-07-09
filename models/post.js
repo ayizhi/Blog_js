@@ -134,6 +134,18 @@ Post.remove = function(name,day,title,callback){
 	},callback)
 }
 
+Post.getArchive = function(callback){
+	db.findData(Posts,{
+		
+	},callback,{
+		sort: -1
+	},{
+		name: 1,
+		time: 1,
+		title: 1,
+	})
+}
+
 
 
 Post.model = Posts;

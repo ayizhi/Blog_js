@@ -320,6 +320,25 @@ module.exports = function(app){
 		})
 	})
 
+	app.get('/archive',function(req,res){
+		Post.getArchive(function(reply,result){
+			if(!reply.status){
+				req.flash('error',reply.message);
+				return res.redirect('/');
+			}
+
+			console.log('=======',result)
+			var posts = result;
+
+			res.render('archive',{
+				title: '存档',
+				posts: posts,
+				user: req.session.user,
+				success: req.flash('success').toString(),
+				error: req.flash('error').toString()
+			});
+		});
+	});
 
 
 	function checkLogin(req,res,next){
