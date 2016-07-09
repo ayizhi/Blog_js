@@ -12,29 +12,24 @@ var db = require('../models/db.js');
 
 module.exports = function(app){
 	app.get('/',function(req,res){
-		Post.getAll(null,function(reply,result){
-			var posts = [];
-			if(reply.status){
-				posts = result;
+		var page = req.query.p ? parseInt(req.query.p) : 1;
+		console.log(page);
+		Post.getTen(null,page,function(reply,result,total){
+			posts = result;
+			if(!reply.status){
+				posts = [];
 			};
 
-			posts.forEach(function(doc){
-				if(doc){
-					doc.post = markdown.toHTML(doc.post);
-					if(doc.comments){
-						doc.comments.forEach(function(comment){
-							comment.content = markdown.toHTML(comment.content);
-						})
-					}
-				}
-			})
 
-
+			console.log('=1=24==124312',page * 10 <= total,page,total)
 
 			res.render('index',{
 				title: '主页',
-				user: req.session.user,
 				posts: posts,
+				page: page,
+				isFirstPage: page == 1,
+				isLastPage: page * 10 >= total,
+				user: req.session.user,
 				success: req.flash('success').toString(),
 				error: req.flash('error').toString() 
 			})
@@ -194,7 +189,10 @@ module.exports = function(app){
 				user = user[0];
 			}
 
-			Post.getAll(user.name,function(reply,posts){
+			var page = req.query.p ? parseInt(req.query.p) : 1;
+
+
+			Post.getTen(user.name,page,function(reply,posts,total){
 				if(!reply){
 					req.flash('error',reply.message)
 					return res.redirect('/')
@@ -203,6 +201,9 @@ module.exports = function(app){
 				res.render('user',{
 					title: user.name,
 					posts: posts,
+					page:page,
+					isFirstPage: page == 1,
+					isLastPage: page * 10 >= total ,
 					user: req.session.user,
 					success: req.flash('success').toString(),
 					error:req.flash('error').toString()

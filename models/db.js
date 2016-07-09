@@ -102,7 +102,7 @@ exports.removeData = function(model,conditions,callback){
 //fields:需要查询的字段
 //options: {'skip':10,'limit':'10'...etc}
 //例子:Blog.find({}, null, {sort: {'_id': -1}, skip : ( pageIndex - 1 ) * pageSize, limit : pageSize },function)
-exports.findData = function(model,conditions,callback,fields,options){
+exports.findData = function(model,conditions,callback,options,fields){
 	model.find(conditions,fields,options,function(err,result){
 		if(err){
 			console.log(err);

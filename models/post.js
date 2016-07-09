@@ -56,6 +56,27 @@ Post.getAll = function(name,callback){
 	db.findData(Posts,data,callback);
 }
 
+Post.getTen =  function(name,page,callback){
+	var limit = 10;
+	var skip = (page - 1) * limit ;
+	var data = name? {name: name} : {};
+
+
+
+
+	Posts.count({},function(err,count){
+		var total = count;
+		db.findData(Posts,data,function(reply,result){
+			callback(reply,result,total)
+		},{
+			skip: skip,
+			limit: limit
+		})
+
+	})
+	
+}
+
 Post.getOne = function(name,day,title,callback){
 	data = {
 		'name': name,
