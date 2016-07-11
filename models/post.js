@@ -21,13 +21,15 @@ var Posts = db.buildModel('post',{
 		website: {type: String},
 		time: {type: Date},
 		content: {type: String}
-	}
+	},
+	tags:{type: Object},
 })
 
-function Post(name,title,post){
+function Post(name,title,post,tags){
 	this.name = name;
 	this.title = title;
 	this.post = post;
+	this.tags = tags;
 }
 
 Post.prototype.save = function(callback){
@@ -44,6 +46,7 @@ Post.prototype.save = function(callback){
 		time: time,
 		title: this.title.trim(),
 		post: this.post,
+		tags: this.tags,
 		comments: []
 	};
 
@@ -138,7 +141,7 @@ Post.getArchive = function(callback){
 	db.findData(Posts,{
 		
 	},callback,{
-		sort: -1
+		sort: {'time.day': -1}
 	},{
 		name: 1,
 		time: 1,

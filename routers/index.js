@@ -13,15 +13,11 @@ var db = require('../models/db.js');
 module.exports = function(app){
 	app.get('/',function(req,res){
 		var page = req.query.p ? parseInt(req.query.p) : 1;
-		console.log(page);
 		Post.getTen(null,page,function(reply,result,total){
 			posts = result;
 			if(!reply.status){
 				posts = [];
 			};
-
-
-			console.log('=1=24==124312',page * 10 <= total,page,total)
 
 			res.render('index',{
 				title: '主页',
@@ -143,6 +139,8 @@ module.exports = function(app){
 			currentUser = currentUser;
 		}
 
+		var tags = [req.body.tag1,req.body.tag2,req.body.tag3];
+
 		var post = new Post(currentUser.name,req.body.title,req.body.post);
 		post.save(function(reply,result){
 			if(!reply.status){
@@ -223,12 +221,20 @@ module.exports = function(app){
 			if(post.length){
 				post = post[0]
 			}
-			console.log(req.params.day,post.time.day,'=======')
+
+			if(req.session.user.length){
+				var user = req.session.user[0];
+			}else{
+				var user = req.session.user;
+			}
+
+
+			console.log(req.session.user,'/dasdas/')
 
 			res.render('article',{
 				title: req.params.title,
 				post: post,
-				user: req.session.user,
+				user: user,
 				success: req.flash('success').toString(),
 				error: req.flash('error').toString()
 			});
@@ -243,14 +249,12 @@ module.exports = function(app){
 			email: req.body.email,
 			website: req.body.website,
 			time: time,
-			content: req.body.content
+			content: req.body.content,
+
 		};
-		console.log('-=1=3=1=2312')
+
 		var newComment = new Comment(req.params.name,req.params.day,req.params.title,comment);
 		newComment.save(function(reply,result){
-
-			console.log(reply)
-
 			if(!reply.status){
 				req.flash('error',reply.message);
 				return res.redirect('back');
@@ -293,8 +297,7 @@ module.exports = function(app){
 		var currentUser = req.session.user;
 		Post.update(req.params.name,req.params.day,req.params.title,req.body.post,function(reply,result){
 			var url = encodeURI('/u/' + req.params.name + '/' + req.params.day + '/' + req.params.title);
-				
-			console.log('-==========',url)
+	
 			if(!reply.status){
 				req.flash('error',reply.message);
 				return res.redirect(url);
@@ -326,8 +329,6 @@ module.exports = function(app){
 				req.flash('error',reply.message);
 				return res.redirect('/');
 			}
-
-			console.log('=======',result)
 			var posts = result;
 
 			res.render('archive',{

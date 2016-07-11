@@ -17,19 +17,6 @@ Comment.prototype.save = function(callback){
 		title = this.title,
 		comment = this.comment;
 
-		
-
-	console.log(name.trim(),day,title,comment,'========');
-// 	Post.update = function(name,day,title,post,callback){
-// 	db.updateData(Posts,{
-// 		'name': name,
-// 		'time.day': day,
-// 		'title': title,
-// 	},{
-// 		post:post
-// 	},callback)
-// }
 	Post.updateComment(name.trim(),day,title,comment,callback)
-
 
 }
