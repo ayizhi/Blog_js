@@ -139,9 +139,10 @@ module.exports = function(app){
 			currentUser = currentUser;
 		}
 
-		var tags = [req.body.tag1,req.body.tag2,req.body.tag3];
+		var tags = [req.body.tag1.trim(),req.body.tag2.trim(),req.body.tag3.trim()];
+		console.log('tags',tags);
 
-		var post = new Post(currentUser.name,req.body.title,req.body.post);
+		var post = new Post(currentUser.name,req.body.title,req.body.post,tags);
 		post.save(function(reply,result){
 			if(!reply.status){
 				req.flash('error',reply.message);
@@ -340,16 +341,16 @@ module.exports = function(app){
 
 	app.get('/tags',function(req,res){
 		var user = req.session.user || req.session.user[0];
-		Post.getTags(function(reply,result){
-			if(!reply.status){
+		Post.getTags(function(err,data){
+			if(err){
 				req.flash('error',reply.message);
 				return res.redirect('/');
 			}
-			var posts = result;
+			var tags = data;
 
 			res.render('tags',{
 				title: '标签',
-				posts: posts,
+				tags: tags,
 				user: user,
 				success: req.flash('success').toString(),
 				error: req.flash('error').toString()

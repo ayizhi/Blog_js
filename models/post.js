@@ -73,7 +73,8 @@ Post.getTen =  function(name,page,callback){
 			callback(reply,result,total)
 		},{
 			skip: skip,
-			limit: limit
+			limit: limit,
+			sort: {'time.day':-1},
 		})
 
 	})
