@@ -228,9 +228,6 @@ module.exports = function(app){
 				var user = req.session.user;
 			}
 
-
-			console.log(req.session.user,'/dasdas/')
-
 			res.render('article',{
 				title: req.params.title,
 				post: post,
@@ -341,6 +338,42 @@ module.exports = function(app){
 		});
 	});
 
+	app.get('/tags',function(req,res){
+		var user = req.session.user || req.session.user[0];
+		Post.getTags(function(reply,result){
+			if(!reply.status){
+				req.flash('error',reply.message);
+				return res.redirect('/');
+			}
+			var posts = result;
+
+			res.render('tags',{
+				title: '标签',
+				posts: posts,
+				user: user,
+				success: req.flash('success').toString(),
+				error: req.flash('error').toString()
+			})
+		})
+	})
+
+	app.get('/tags/:tag',function(req,res){
+		var tag = req.params.tag;
+		Post.getTag(tag,function(reply,result){
+			if(!reply.status){
+				req.flash('error',reply.message);
+				return res.redirect('/');
+			}
+
+			res.render('tags',{
+				title: 'TAG:' + req.params.tag,
+				posts: posts,
+				user: req.session.user,
+				success: req.flash('success').toString(),
+				error: req.flash('error').toString()
+			})
+		})
+	})
 
 	function checkLogin(req,res,next){
 		if(!req.session.user){

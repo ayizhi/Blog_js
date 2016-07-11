@@ -149,6 +149,23 @@ Post.getArchive = function(callback){
 	})
 }
 
+Post.getTags = function(callback){
+	Posts.find().distinct('tags',function(err,data){
+		callback(err,data)
+	})
+}
+
+Post.getTag = function(tag,callback){
+	db.findData(Posts,{
+		tags: tag,
+	},callback,{
+		sort: {'time.day': -1}
+	},{
+		name: 1,
+		time: 1,
+		title: 1
+	})
+}
 
 
 Post.model = Posts;
