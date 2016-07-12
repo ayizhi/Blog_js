@@ -3,6 +3,7 @@
 <% if(post.comments){ %>
 	<% post.comments.forEach(function(comment,index){ %>
 		<p class="comment-info">
+			<img src="<%= comment.head %>" class="l_head" alt="">
 			<a href="<%= comment.website %>"><%= comment.name %>' : '</a>
 			<span><%= comment.content %></span>
 		</p>

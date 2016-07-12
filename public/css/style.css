@@ -92,3 +92,11 @@ button.submit{
     font-size: 1rem;
     margin: 0 20px;
 }
+
+
+.l_head{
+	    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+}

@@ -8,7 +8,12 @@
 <% } %>
 
 <% posts.forEach(function(post,index){ %>
-	<p><h2><a href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a></h2></p>
+	<p>
+		<h2>
+			<a href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a>
+			<a href="/u/<%= post.name %>"><img src="<%= post.head %>" class="r_head" alt=""></a>
+		</h2>
+	</p>
 	<p class="info">
 		作者：<a href="/u/<%= post.name %>"><%= post.name %></a>
 		日期：<%= post.time.minute %>
@@ -22,7 +27,7 @@
 		<%}%>
 	</p>
 	<p><%= post.post %></p>
-	<p class="info">阅读: <%= post.pv %> | 评论: <%= post.comments.length %></p>
+	<p class="info">阅读: <%= post.pv || 0 %> | 评论: <%= post.comments.length %></p>
 <% }) %>
 
 <%- include paging %>

@@ -22,17 +22,19 @@ var Posts = db.buildModel('post',{
 		email: {type: String},
 		website: {type: String},
 		time: {type: Date},
-		content: {type: String}
+		content: {type: String},
+		head: {type: String},
 	}],
 	pv: {type: Number},
 	tags:{type: Object},
 })
 
-function Post(name,title,post,tags){
+function Post(name,title,post,tags,head){
 	this.name = name;
 	this.title = title;
 	this.post = post;
 	this.tags = tags;
+	this.head = head;
 }
 
 Post.prototype.save = function(callback){
@@ -52,6 +54,7 @@ Post.prototype.save = function(callback){
 		tags: this.tags,
 		comments: [],
 		pv: 0,
+		head: this.head,
 	};
 
 	db.addData(Posts,post,callback);
@@ -103,11 +106,6 @@ Post.getOne = function(name,day,title,callback){
 				callback(reply,doc);
 				return;
 			}
-
-			// result.post = (result.post);
-			// result.comments.forEach(function(comment){
-			// 	comment.content = markdown.toHTML(comment.content);
-			// });
 			callback(reply,doc);
 		})
 
