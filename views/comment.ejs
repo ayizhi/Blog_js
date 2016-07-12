@@ -1,12 +1,12 @@
 <br/>
 
-<% if(post.commnets){ %>
+<% if(post.comments){ %>
 	<% post.comments.forEach(function(comment,index){ %>
-		<p>
-			<a href="<%= comment.website %>"><%= comment.name %></a>
-			<span class="info">回复于<%= comment.time %></span>
+		<p class="comment-info">
+			<a href="<%= comment.website %>"><%= comment.name %>' : '</a>
+			<span><%= comment.content %></span>
 		</p>
-		<p><%= comment.content %></p>
+		<p class="comment-time">回复于<%= comment.time %></p>		
 	<% }) %>
 <% } %>
 

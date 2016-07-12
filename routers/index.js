@@ -374,6 +374,34 @@ module.exports = function(app){
 				error: req.flash('error').toString()
 			})
 		})
+	});
+
+
+	app.get('/search',function(req,res){
+		Post.search(req.query.keyword,function(reply,result){
+			if(!reply.status){
+				req.flash('error',reply.message);
+				return res.redirect('/');
+			}
+
+			res.render('search',{
+				title: 'SEARCH: ' + req.query.keyword,
+				posts: result,
+				user: req.session.user,
+				success: req.flash('success').toString(),
+				error: req.flash('error').toString()
+			})
+		})
+	});
+
+	app.get('/links',function(req,res){
+		console.log('12312312312312')
+		res.render('links',{
+			title: '友情链接',
+			user: req.session.user,
+			success: req.flash('success').toString(),
+			error: req.flash('error').toString()
+		})
 	})
 
 	function checkLogin(req,res,next){

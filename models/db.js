@@ -100,8 +100,13 @@ exports.removeData = function(model,conditions,callback){
 //非关联
 //conditions:条件
 //fields:需要查询的字段
+//[fields] < Object, String > optional fields to select
+//限定查询结果中显示的字段，默认显示所有字段，除非主动限定不显示 _id 字段否则默认会显示的；
+//String，表示时，多个字段用空格分隔；如(‘name age -phone’)
+//Object，表示时，1/!false 表示显示的字段，0/false 表示不显示的字段；如({ name: 1, age: 1, phone: 0 })
 //options: {'skip':10,'limit':'10'...etc}
 //例子:Blog.find({}, null, {sort: {'_id': -1}, skip : ( pageIndex - 1 ) * pageSize, limit : pageSize },function)
+
 exports.findData = function(model,conditions,callback,options,fields){
 	model.find(conditions,fields,options,function(err,result){
 		if(err){

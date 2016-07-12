@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
 var db = require('./db');
+var markdown = require('markdown').markdown;
+
 
 
 module.exports = Post;
@@ -15,13 +17,14 @@ var Posts = db.buildModel('post',{
 		day: {type:Date},
 		minute:{type:Date},
 	},
-	comments:{
+	comments:[{
 		name:{type: String},
 		email: {type: String},
 		website: {type: String},
 		time: {type: Date},
 		content: {type: String}
-	},
+	}],
+	pv: {type: Number},
 	tags:{type: Object},
 })
 
@@ -47,7 +50,8 @@ Post.prototype.save = function(callback){
 		title: this.title.trim(),
 		post: this.post,
 		tags: this.tags,
-		comments: []
+		comments: [],
+		pv: 0,
 	};
 
 	db.addData(Posts,post,callback);
@@ -84,12 +88,30 @@ Post.getTen =  function(name,page,callback){
 Post.getOne = function(name,day,title,callback){
 	data = {
 		'name': name,
-		// 'time.day': day,
+		'time.day': day,
 		'title': title,
 	} || null;
 
 
-	db.findData(Posts,data,callback)
+	db.findData(Posts,data,function(reply,doc){
+		if(!reply.status){
+			callback(reply,doc);
+			return;
+		}
+		db.updateData(Posts,data,{$inc:{'pv':1}},function(reply,result){
+			if(!reply.status){
+				callback(reply,doc);
+				return;
+			}
+
+			// result.post = (result.post);
+			// result.comments.forEach(function(comment){
+			// 	comment.content = markdown.toHTML(comment.content);
+			// });
+			callback(reply,doc);
+		})
+
+	});
 }
 
 
@@ -139,9 +161,7 @@ Post.remove = function(name,day,title,callback){
 }
 
 Post.getArchive = function(callback){
-	db.findData(Posts,{
-		
-	},callback,{
+	db.findData(Posts,{},callback,{
 		sort: {'time.day': -1}
 	},{
 		name: 1,
@@ -166,6 +186,18 @@ Post.getTag = function(tag,callback){
 		time: 1,
 		title: 1
 	})
+}
+
+Post.search = function(keyword,callback){
+	var pattern = new RegExp(keyword,'i');
+	console.log('pattern: ',pattern);
+	db.findData(
+		Posts,
+		{title: pattern},
+		callback,
+		{sort: {time: -1}},
+		{name: 1,time: 1, title: 1}
+		)
 }
 
 
