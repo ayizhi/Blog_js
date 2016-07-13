@@ -191,7 +191,7 @@ module.exports = function(app){
 			var page = req.query.p ? parseInt(req.query.p) : 1;
 
 
-			Post.getTen(user.name,page,function(reply,posts,total){
+			Post.getTen(req.params.name,page,function(reply,posts,total){
 				if(!reply){
 					req.flash('error',reply.message)
 					return res.redirect('/')
@@ -223,16 +223,16 @@ module.exports = function(app){
 				post = post[0]
 			}
 
-			if(req.session.user.length){
-				var user = req.session.user[0];
-			}else{
-				var user = req.session.user;
+			var user = null;
+			if(req.session.user){
+				var user = req.session.user[0] || req.session.user;
 			}
+
 
 			res.render('article',{
 				title: req.params.title,
 				post: post,
-				user: user,
+				user: user || '',
 				success: req.flash('success').toString(),
 				error: req.flash('error').toString()
 			});
@@ -426,10 +426,9 @@ module.exports = function(app){
 
 			var currentUser = req.session.user[0] || req.session.user;
 			var post = result[0] || result;
-
 			var reprint_from = {
 				name: post.name,
-				day: post.day,
+				day: post.time.day,
 				title: post.title
 			};
 
@@ -438,10 +437,12 @@ module.exports = function(app){
 				head: currentUser.head,
 			};
 
+
+
 			Post.reprint(reprint_from,reprint_to,function(reply2,result2){
 				if(!reply2.status){
 					req.flash('error','转载失败');
-					return res.redirect(back);
+					return res.redirect('back');
 				}
 
 				req.flash('success','转载成功');

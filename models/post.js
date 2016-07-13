@@ -196,7 +196,6 @@ Post.getTag = function(tag,callback){
 
 Post.search = function(keyword,callback){
 	var pattern = new RegExp(keyword,'i');
-	console.log('pattern: ',pattern);
 	db.findData(
 		Posts,
 		{title: pattern},
@@ -216,7 +215,11 @@ Post.reprint = function(reprint_from,reprint_to,callback){
 			callback(reply);
 			return
 		}
-		var doc = result[0] || result;
+
+		var result = result[0] || result;
+		var doc = {};
+
+
 		var date = new Date();
 		var time = {
 			date: date,
@@ -226,7 +229,13 @@ Post.reprint = function(reprint_from,reprint_to,callback){
 			minute: date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()),
 		};
 
-		delete doc.id;
+
+
+		doc.post = result.post;
+		doc.tags = result.tags;
+		doc.__v = result.__v;
+		doc.title = result.title;
+
 		doc.name = reprint_to.name;
 		doc.head = reprint_to.head;
 		doc.time = time;
@@ -238,7 +247,7 @@ Post.reprint = function(reprint_from,reprint_to,callback){
 		doc.pv = 0;
 
 
-		//更新被转载原文的reprint_info
+
 		db.updateData(Posts,{
 			name: reprint_from.name,
 			'time.day': reprint_from.day,
