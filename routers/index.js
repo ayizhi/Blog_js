@@ -245,8 +245,13 @@ module.exports = function(app){
 
 		var head = 'http://pics.sc.chinaz.com/files/pic/pic9/201508/apic14052.jpg';
 
+		var currentUser = req.session.user.name || req.session.user[0].name;
+
+
+
+
 		var comment = {
-			name:req.body.name,
+			name: currentUser,
 			email: req.body.email,
 			website: req.body.website,
 			time: time,
@@ -254,7 +259,11 @@ module.exports = function(app){
 			head: head,
 		};
 
-		var newComment = new Comment(req.params.name,req.params.day,req.params.title,comment);
+		console.log(req.params,'======p======')
+		console.log(req.body,'======b=====')
+
+
+		var newComment = new Comment(req.body.post_name,req.params.day,req.params.title,comment);
 		newComment.save(function(reply,result){
 			if(!reply.status){
 				req.flash('error',reply.message);
@@ -371,7 +380,7 @@ module.exports = function(app){
 
 			res.render('tags',{
 				title: 'TAG:' + req.params.tag,
-				posts: posts,
+				posts: result,
 				user: req.session.user,
 				success: req.flash('success').toString(),
 				error: req.flash('error').toString()
@@ -406,9 +415,53 @@ module.exports = function(app){
 		})
 	});
 
+
+	app.get('/reprint/:name/:day/:title',checkLogin);
+	app.get('/reprint/:name/:day/:title',function(req,res){
+		Post.edit(req.params.name,req.params.day,req.params.title,function(reply,result){
+			if(!reply.status){
+				req.flash('error',reply.message);
+				return res.redirect(back);
+			}
+
+			var currentUser = req.session.user[0] || req.session.user;
+			var post = result[0] || result;
+
+			var reprint_from = {
+				name: post.name,
+				day: post.day,
+				title: post.title
+			};
+
+			var reprint_to = {
+				name: currentUser.name,
+				head: currentUser.head,
+			};
+
+			Post.reprint(reprint_from,reprint_to,function(reply2,result2){
+				if(!reply2.status){
+					req.flash('error','转载失败');
+					return res.redirect(back);
+				}
+
+				req.flash('success','转载成功');
+				var url = encodeURI('/u/' + post.name + '/' + post.time.day + '/' + post.time);
+				res.redirect(url);
+			})
+		})
+	})
+
+
+
+
+
+
+
+
 	app.use(function(req,res){
 		res.render('404');
 	})
+
 
 	function checkLogin(req,res,next){
 		if(!req.session.user){

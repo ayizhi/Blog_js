@@ -26,7 +26,19 @@ var Posts = db.buildModel('post',{
 		head: {type: String},
 	}],
 	pv: {type: Number},
-	tags:{type: Object},
+	tags: {type: Object},
+	reprint_info: {
+		reprint_from: {
+			name: {type: String},
+			day: {type: Date},
+			title: {type: String},
+		},
+		reprint_to: [{
+			name: {type: String},
+			day: {type: Date},
+			title: {type: String}
+		}]
+	},
 })
 
 function Post(name,title,post,tags,head){
@@ -35,6 +47,7 @@ function Post(name,title,post,tags,head){
 	this.post = post;
 	this.tags = tags;
 	this.head = head;
+
 }
 
 Post.prototype.save = function(callback){
@@ -55,6 +68,7 @@ Post.prototype.save = function(callback){
 		comments: [],
 		pv: 0,
 		head: this.head,
+		reprint_info: {},
 	};
 
 	db.addData(Posts,post,callback);
@@ -141,12 +155,6 @@ Post.updateComment = function(name,day,title,comment,callback){
 	},{
 		$push:{comments:comment},
 	},callback)
-
-	console.log({
-		'name': name,
-		'time.day': day,
-		'title': title,
-	})
 }
 
 
@@ -196,6 +204,70 @@ Post.search = function(keyword,callback){
 		{sort: {time: -1}},
 		{name: 1,time: 1, title: 1}
 		)
+}
+
+Post.reprint = function(reprint_from,reprint_to,callback){
+	db.findData(Posts,{
+		name: reprint_from.name,
+		'time.day': reprint_from.day,
+		title: reprint_from.title,
+	},function(reply,result){
+		if(!reply.status){
+			callback(reply);
+			return
+		}
+		var doc = result[0] || result;
+		var date = new Date();
+		var time = {
+			date: date,
+			year: date.getFullYear(),
+   			month: date.getFullYear() + '-' + (date.getMonth() + 1),
+			day: date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate(),
+			minute: date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()),
+		};
+
+		delete doc.id;
+		doc.name = reprint_to.name;
+		doc.head = reprint_to.head;
+		doc.time = time;
+		doc.title = ( doc.title.search(/[转载]/) > -1 ) ? doc.title : '[转载]' + doc.title;
+		doc.comments = [];
+		doc.reprint_info = {
+			reprint_from: reprint_from,
+		}
+		doc.pv = 0;
+
+
+		//更新被转载原文的reprint_info
+		db.updateData(Posts,{
+			name: reprint_from.name,
+			'time.day': reprint_from.day,
+			title: reprint_from.title	
+		},{
+			$push:{
+				'reprint_info.reprint_to':{
+					name: doc.name,
+					day: time.day,
+					title: doc.title,
+				}
+			}
+		},function(reply2,result2){
+			if(!reply2.status){
+				callback(reply2);
+				return
+			}
+		});
+
+		db.addData(Posts,doc,function(reply2,result2){
+			if(!reply2.status){
+				callback(reply2);
+				return
+			}
+
+			callback(reply2,result2);
+		})
+
+	})
 }
 
 
