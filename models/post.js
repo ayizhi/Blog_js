@@ -159,11 +159,50 @@ Post.updateComment = function(name,day,title,comment,callback){
 
 
 Post.remove = function(name,day,title,callback){
-	db.removeData(Posts,{
+	db.findData(Posts,{
 		'name': name,
 		'time.day': day,
-		'title': title, 
-	},callback)
+		'title': title,
+	},function(reply,result){
+		if(!reply.status){
+			callback(reply);
+			return
+		};
+
+		doc = result[0] || result;
+
+		var reprint_from = '';
+		if(doc.reprint_info.reprint_from){
+			reprint_form = doc.reprint_info.reprint_from;
+		}
+
+		if(reprint_from != ''){
+			db.update(Posts,{
+				name: reprint_from.name,
+				'time.day': reprint_from.day,
+				title: reprint_from.title,
+			},{
+				$pull: {
+					'reprint_info.reprint_to':{
+						name: name,
+						day: day,
+						title: title
+					}
+				}
+			},function(reply2,result2){
+				if(!reply2.status){
+					callback(reply);
+					return
+				}
+			})
+		}
+
+		db.removeData(Posts,{
+			'name': name,
+			'time.day': day,
+			'title': title, 
+		},callback)
+	})
 }
 
 Post.getArchive = function(callback){
